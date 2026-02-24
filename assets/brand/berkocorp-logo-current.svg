@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 200" role="img" aria-labelledby="title desc">
+  <title id="title">Berkocorp Logo</title>
+  <desc id="desc">Stylized coral icon with Berkocorp wordmark in deep navy serif type.</desc>
+  <g fill="none" stroke="#ff5c3d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 84L160 20L300 84" />
+    <path d="M160 20L160 182" />
+    <path d="M26 84L160 40" />
+    <path d="M48 100L160 61" />
+    <path d="M70 116L160 82" />
+    <path d="M92 132L160 103" />
+    <path d="M114 148L160 124" />
+    <path d="M136 164L160 145" />
+  </g>
+  <text
+    x="344"
+    y="137"
+    fill="#243249"
+    font-size="108"
+    font-family="'Cormorant Garamond', 'Times New Roman', serif"
+    font-weight="700"
+    letter-spacing="1.3"
+  >
+    BERKOCORP
+  </text>
+</svg>

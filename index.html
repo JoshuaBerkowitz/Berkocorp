@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berkocorp | Family Office</title>
+    <meta
+      name="description"
+      content="Berkocorp is a global family office investing across venture capital, private equity, and growth through fund commitments and direct investments."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sora:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="header-logo-link" href="#top" aria-label="Berkocorp home">
+          <img src="./assets/brand/transparent-logo-2.svg" alt="Berkocorp" class="header-logo" />
+        </a>
+        <nav class="site-nav" aria-label="Section navigation">
+          <a href="#about">About Us</a>
+          <a href="#invest">How We Invest</a>
+          <a href="#portfolio">Portfolio</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section-observe">
+        <div class="hero-background"></div>
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">Berkocorp Family Office</p>
+            <h1><span class="no-wrap">Long-horizon</span> capital for exceptional managers.</h1>
+            <p class="hero-text">
+              We are a global family office investing across venture capital, private equity, and growth
+              strategies through a mix of fund commitments and direct investments.
+            </p>
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="hero-action action-primary" href="#portfolio">View Portfolio</a>
+              <a class="hero-action action-secondary" href="mailto:joshua@berkocorp.ca">Contact Us</a>
+            </div>
+          </div>
+          <div class="hero-logo-frame" aria-hidden="true">
+            <div class="moonshot-chart">
+              <span class="chart-grid"></span>
+              <span class="chart-axis axis-x"></span>
+              <span class="chart-axis axis-y"></span>
+              <span class="chart-axis-label axis-label-x">Time</span>
+              <span class="chart-moon"></span>
+              <svg class="chart-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <polyline class="chart-polyline" points="12,85 52,58 82,26"></polyline>
+              </svg>
+              <span class="chart-rocket"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section-observe section-light">
+        <div class="container section-grid">
+          <h2>About Us</h2>
+          <div class="section-copy">
+            <p>
+              Berkocorp is the investment office of the Berkowitz family, with roots in Vancouver and operations in
+              Toronto.
+            </p>
+            <p>
+              Originating from a real estate business established in the 1950s, Berkocorp now focuses on private
+              equity and venture capital in North America, while continuing to manage legacy real estate holdings.
+            </p>
+            <ul class="about-highlights" aria-label="Berkocorp background highlights">
+              <li>Family owned and operated, with principal-led decision making.</li>
+              <li>Patient, long-term investors with a multi-generational perspective.</li>
+              <li>Concentrated in private markets, with a North America focus.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="invest" class="section-observe section-band">
+        <div class="container section-grid">
+          <h2>How We Invest</h2>
+          <div class="section-copy">
+            <p>
+              We back managers with differentiated perspectives, talent, or ecosystem position that can sustain a
+              long-term competitive advantage.
+            </p>
+            <p>
+              Our underwriting favors specialty and harder-to-parse strategies, with disciplined pacing designed to
+              build durable relationships over time.
+            </p>
+          </div>
+        </div>
+
+        <div class="container invest-grid" aria-label="How we invest details">
+          <article class="invest-card">
+            <p class="item-label">Manager Edge</p>
+            <p class="item-value">Differentiated by design</p>
+            <p>We look for unique perspective, talent, or positioning that compounds over time.</p>
+          </article>
+          <article class="invest-card">
+            <p class="item-label">Niche Bias</p>
+            <p class="item-value">Strategies that don't scale</p>
+            <p>We are drawn to niche sectors and hard-to-understand strategies where specialist insight matters.</p>
+          </article>
+          <article class="invest-card">
+            <p class="item-label">Security Type</p>
+            <p class="item-value">Equity only</p>
+            <p>We are optimists investing exclusively in equity for long-term value creation.</p>
+          </article>
+          <article class="invest-card">
+            <p class="item-label">Deployment Format</p>
+            <p class="item-value">Funds and directs</p>
+            <p>We make fund commitments, and direct investments alongside our partners.</p>
+          </article>
+          <article class="invest-card">
+            <p class="item-label">Geography</p>
+            <p class="item-value">North America focused</p>
+            <p>Primary focus is the U.S. and Canada, with select investments in Europe and Israel.</p>
+          </article>
+          <article class="invest-card">
+            <p class="item-label">Pacing</p>
+            <p class="item-value">Consistent deployment rhythm</p>
+            <p>We deploy at a steady pace to support long-term partnerships.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section-observe section-light">
+        <div class="container section-grid portfolio-intro">
+          <h2>Portfolio</h2>
+          <div class="section-copy">
+            <p>Use filters to refine the list and click any entry to visit the manager website.</p>
+          </div>
+        </div>
+
+        <div class="container filter-row" role="toolbar" aria-label="Portfolio filters">
+          <div class="button-group" data-filter-group="kind">
+            <button type="button" class="filter-button is-active" data-kind="all">All</button>
+            <button type="button" class="filter-button" data-kind="fund">Funds</button>
+            <button type="button" class="filter-button" data-kind="direct">Direct</button>
+          </div>
+          <div class="button-group" data-filter-group="label">
+            <button type="button" class="filter-button is-active" data-label="all">ALL</button>
+            <button type="button" class="filter-button" data-label="venture-capital">Venture Capital</button>
+            <button type="button" class="filter-button" data-label="private-equity">Private Equity</button>
+          </div>
+        </div>
+
+        <div class="container split-layout single-column">
+          <section class="portfolio-column" aria-labelledby="funds-heading">
+            <div class="column-head">
+              <h3 id="funds-heading">Investments</h3>
+              <span class="count" id="fund-count">0</span>
+            </div>
+            <div class="portfolio-grid" id="fund-grid"></div>
+            <button type="button" class="show-more-button" id="fund-show-more" hidden>Show more</button>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-observe">
+      <div class="container footer-inner">
+        <img src="./assets/brand/transparent-logo-2.svg" alt="Berkocorp" class="footer-logo" />
+        <p>
+          Contact: <a href="mailto:joshua@berkocorp.ca">joshua@berkocorp.ca</a>
+        </p>
+      </div>
+    </footer>
+
+    <template id="portfolio-card-template">
+      <article class="portfolio-card">
+        <div class="logo-shell" aria-hidden="true">
+          <img class="card-logo" alt="" loading="lazy" decoding="async" />
+          <div class="placeholder-logo"></div>
+        </div>
+        <div class="card-copy">
+          <a class="card-title" target="_blank" rel="noreferrer noopener"></a>
+          <div class="tag-row">
+            <span class="tag kind-tag"></span>
+            <span class="tag label-tag"></span>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
