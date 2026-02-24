@@ -35,13 +35,6 @@ body {
   overflow-x: hidden;
 }
 
-@supports (overflow: clip) {
-  html,
-  body {
-    overflow-x: clip;
-  }
-}
-
 body {
   font-family: "Sora", sans-serif;
   color: var(--ink-900);
@@ -176,7 +169,7 @@ a {
   --chart-progress: 0;
   position: relative;
   isolation: isolate;
-  overflow: clip;
+  overflow: hidden;
   color: var(--navy-900);
 }
 
@@ -1139,7 +1132,7 @@ h3 {
   position: relative;
   opacity: 1;
   transform: translateY(0);
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 .section-observe:not(.hero):not(.site-footer)::before {
@@ -1427,6 +1420,13 @@ h3 {
   .moonshot-chart {
     width: 100%;
     aspect-ratio: 16 / 10;
+  }
+
+  .section-observe:not(.site-footer) .section-grid,
+  .section-observe:not(.site-footer) .invest-grid,
+  .section-observe:not(.site-footer) .filter-row,
+  .section-observe:not(.site-footer) .split-layout {
+    transform: translate3d(0, calc(var(--section-scroll-y) * 0.52), 0);
   }
 
   .invest-grid {
