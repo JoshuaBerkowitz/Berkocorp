@@ -1550,14 +1550,7 @@ h3 {
     aspect-ratio: 16 / 10;
   }
 
-  .hover-label {
-    max-width: 42vw;
-    font-size: 0.55rem;
-    letter-spacing: 0.03em;
-    padding: 3px 7px;
-  }
-
-  .hover-label.mobile-hide {
+  .hover-label-cloud {
     display: none;
   }
 
