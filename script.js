@@ -1035,9 +1035,10 @@ function wireBrandMotionSystem() {
 
 function wireScrollMotion() {
   const hero = document.querySelector(".hero");
+  let ticking = false;
   let resizeTimer = 0;
 
-  function paintStaticHeroChart() {
+  function applyStaticHeroState() {
     if (hero) {
       hero.style.setProperty("--hero-bg-y", "0px");
       hero.style.setProperty("--hero-bg-s", "1");
@@ -1046,18 +1047,63 @@ function wireScrollMotion() {
       hero.style.setProperty("--hero-logo-y", "0px");
       hero.style.setProperty("--hero-logo-r", "0deg");
       hero.style.setProperty("--hero-logo-s", "1");
-      hero.style.setProperty("--chart-progress", "1");
     }
-    renderMoonshotChart(1, moonTargetInChart());
+  }
+
+  let heroOffsetTop = 0;
+  let heroHeight = 1;
+  let moonPoint = { x: 92, y: 11 };
+
+  function refreshGeometry() {
+    if (hero) {
+      heroOffsetTop = hero.offsetTop || 0;
+      heroHeight = Math.max(hero.offsetHeight || 0, 1);
+    }
+    moonPoint = moonTargetInChart();
+  }
+
+  function paintChartForScroll(scrollY) {
+    const heroProgress = clamp((scrollY - heroOffsetTop) / Math.max(heroHeight * 0.86, 1), 0, 1.2);
+    const chartProgress = prefersReducedMotion.matches ? 1 : clamp(heroProgress / 0.72, 0, 1);
+
+    if (hero) {
+      hero.style.setProperty("--chart-progress", chartProgress.toFixed(4));
+    }
+    renderMoonshotChart(chartProgress, moonPoint);
+  }
+
+  function update() {
+    ticking = false;
+    paintChartForScroll(window.scrollY || window.pageYOffset || 0);
+  }
+
+  function queueUpdate() {
+    if (ticking) {
+      return;
+    }
+    ticking = true;
+    window.requestAnimationFrame(update);
+  }
+
+  function handleViewportChange() {
+    refreshGeometry();
+    queueUpdate();
   }
 
   function handleResize() {
     window.clearTimeout(resizeTimer);
-    resizeTimer = window.setTimeout(paintStaticHeroChart, 120);
+    resizeTimer = window.setTimeout(handleViewportChange, 120);
   }
 
-  paintStaticHeroChart();
+  applyStaticHeroState();
+  refreshGeometry();
+  queueUpdate();
+
   if (!prefersReducedMotion.matches) {
+    window.addEventListener("scroll", queueUpdate, { passive: true });
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("orientationchange", handleResize, { passive: true });
+  } else {
     window.addEventListener("resize", handleResize);
     window.addEventListener("orientationchange", handleResize, { passive: true });
   }
