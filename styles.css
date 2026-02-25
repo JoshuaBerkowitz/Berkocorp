@@ -69,6 +69,7 @@ body::after {
   opacity: calc(0.04 + var(--scroll-progress) * 0.05);
   pointer-events: none;
   z-index: 90;
+  display: none;
 }
 
 .brand-cursor-glow {
@@ -1243,6 +1244,7 @@ h3 {
   transform: translate3d(0, calc(var(--section-scroll-y) * -1.4), 0);
   pointer-events: none;
   z-index: -1;
+  display: none;
 }
 
 .section-observe:not(.hero):not(.site-footer) > .section-grid {
@@ -1253,20 +1255,17 @@ h3 {
 .section-observe:not(.site-footer) .invest-grid,
 .section-observe:not(.site-footer) .filter-row,
 .section-observe:not(.site-footer) .split-layout {
-  transform: translate3d(0, calc(var(--section-scroll-y) * 0.56), 0)
-    scale(calc(0.986 + var(--section-focus) * 0.018));
-  opacity: calc(0.76 + var(--section-focus) * 0.24);
-  will-change: transform;
+  transform: none;
+  opacity: 1;
+  will-change: auto;
 }
 
 .section-observe:not(.site-footer) .invest-grid {
-  transform: translate3d(0, calc(var(--section-scroll-y) * 0.74), 0)
-    scale(calc(0.984 + var(--section-focus) * 0.02));
+  transform: none;
 }
 
 .section-observe:not(.site-footer) .split-layout {
-  transform: translate3d(0, calc(var(--section-scroll-y) * 0.66), 0)
-    scale(calc(0.986 + var(--section-focus) * 0.018));
+  transform: none;
 }
 
 .js-enabled .section-observe {
@@ -1462,31 +1461,6 @@ h3 {
   }
 }
 
-body.mobile-scroll-lite::after {
-  display: none;
-}
-
-body.mobile-scroll-lite .brand-cursor-glow,
-body.mobile-scroll-lite .hover-label-cloud,
-body.mobile-scroll-lite .section-observe:not(.hero):not(.site-footer)::before {
-  display: none !important;
-}
-
-body.mobile-scroll-lite .hero-background::after,
-body.mobile-scroll-lite .hero-logo-frame::before,
-body.mobile-scroll-lite .moonshot-chart::before,
-body.mobile-scroll-lite .section-band {
-  animation: none !important;
-}
-
-body.mobile-scroll-lite .section-observe:not(.site-footer) .section-grid,
-body.mobile-scroll-lite .section-observe:not(.site-footer) .invest-grid,
-body.mobile-scroll-lite .section-observe:not(.site-footer) .filter-row,
-body.mobile-scroll-lite .section-observe:not(.site-footer) .split-layout {
-  transform: none !important;
-  opacity: 1 !important;
-}
-
 @media (max-width: 1050px) {
   .hero-layout,
   .section-grid,
@@ -1578,7 +1552,7 @@ body.mobile-scroll-lite .section-observe:not(.site-footer) .split-layout {
   .section-observe:not(.site-footer) .invest-grid,
   .section-observe:not(.site-footer) .filter-row,
   .section-observe:not(.site-footer) .split-layout {
-    transform: translate3d(0, calc(var(--section-scroll-y) * 0.52), 0);
+    transform: none;
   }
 
   .invest-grid {

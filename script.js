@@ -511,7 +511,6 @@ const heroChartRoot = document.querySelector(".moonshot-chart");
 const heroChartPolyline = document.querySelector(".chart-polyline");
 const heroChartMoon = document.querySelector(".chart-moon");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const mobileScrollLiteQuery = window.matchMedia("(max-width: 900px), (pointer: coarse)");
 const FUNDS_PAGE_SIZE = 10;
 
 document.body.classList.add("js-enabled");
@@ -1036,33 +1035,17 @@ function wireBrandMotionSystem() {
 
 function wireScrollMotion() {
   if (prefersReducedMotion.matches) {
+    renderMoonshotChart(0.3);
     return;
   }
 
   const root = document.documentElement;
   const hero = document.querySelector(".hero");
-  const sections = Array.from(document.querySelectorAll("main .section-observe")).filter(
-    (section) => !section.classList.contains("hero")
-  );
-
-  const motionProfile = {
-    mobileLite: mobileScrollLiteQuery.matches,
-  };
   let ticking = false;
   let resizeTimer = 0;
   let heroOffsetTop = 0;
   let heroHeight = 1;
   let moonPoint = { x: 92, y: 11 };
-
-  function setMobileScrollLiteClass(enabled) {
-    document.body.classList.toggle("mobile-scroll-lite", enabled);
-  }
-
-  function resetSectionDepth(section) {
-    section.style.setProperty("--section-scroll-y", "0px");
-    section.style.setProperty("--section-scroll-opacity", "0.62");
-    section.style.setProperty("--section-focus", "0.7");
-  }
 
   function refreshGeometry() {
     if (hero) {
@@ -1082,64 +1065,19 @@ function wireScrollMotion() {
     root.style.setProperty("--scroll-progress", scrollProgress.toFixed(4));
 
     if (hero) {
-      let heroProgress = 0;
-      if (motionProfile.mobileLite) {
-        heroProgress = clamp((scrollY - heroOffsetTop) / Math.max(heroHeight * 0.86, 1), 0, 1.2);
-      } else {
-        const rect = hero.getBoundingClientRect();
-        heroProgress = clamp((-rect.top || 0) / Math.max(rect.height * 0.86, 1), 0, 1.2);
-      }
-
+      const heroProgress = clamp((scrollY - heroOffsetTop) / Math.max(heroHeight * 0.86, 1), 0, 1.2);
       const chartProgress = clamp(heroProgress / 0.72, 0, 1);
 
-      if (motionProfile.mobileLite) {
-        hero.style.setProperty("--hero-bg-y", "0px");
-        hero.style.setProperty("--hero-bg-s", "1");
-        hero.style.setProperty("--hero-copy-y", "0px");
-        hero.style.setProperty("--hero-copy-o", "1");
-        hero.style.setProperty("--hero-logo-y", "0px");
-        hero.style.setProperty("--hero-logo-r", "0deg");
-        hero.style.setProperty("--hero-logo-s", "1");
-      } else {
-        const copyOpacity = clamp(1 - heroProgress * 0.33, 0.56, 1);
-        hero.style.setProperty("--hero-bg-y", `${(heroProgress * 64).toFixed(2)}px`);
-        hero.style.setProperty("--hero-bg-s", `${(1 + heroProgress * 0.09).toFixed(4)}`);
-        hero.style.setProperty("--hero-copy-y", `${(heroProgress * -34).toFixed(2)}px`);
-        hero.style.setProperty("--hero-copy-o", copyOpacity.toFixed(3));
-        hero.style.setProperty("--hero-logo-y", `${(heroProgress * 10).toFixed(2)}px`);
-        hero.style.setProperty("--hero-logo-r", `${(heroProgress * 1.3).toFixed(2)}deg`);
-        hero.style.setProperty("--hero-logo-s", `${(1 + heroProgress * 0.04).toFixed(4)}`);
-      }
-
+      hero.style.setProperty("--hero-bg-y", "0px");
+      hero.style.setProperty("--hero-bg-s", "1");
+      hero.style.setProperty("--hero-copy-y", "0px");
+      hero.style.setProperty("--hero-copy-o", "1");
+      hero.style.setProperty("--hero-logo-y", "0px");
+      hero.style.setProperty("--hero-logo-r", "0deg");
+      hero.style.setProperty("--hero-logo-s", "1");
       hero.style.setProperty("--chart-progress", chartProgress.toFixed(4));
       renderMoonshotChart(chartProgress, moonPoint);
     }
-
-    if (motionProfile.mobileLite) {
-      return;
-    }
-
-    const sectionMeasurements = sections.map((section, index) => ({
-      section,
-      index,
-      rect: section.getBoundingClientRect(),
-    }));
-
-    sectionMeasurements.forEach(({ section, index, rect }) => {
-      if (rect.bottom < -120 || rect.top > viewportHeight + 120) {
-        resetSectionDepth(section);
-        return;
-      }
-
-      const centerOffset = rect.top + rect.height / 2 - viewportHeight / 2;
-      const normalized = clamp(centerOffset / (viewportHeight * 0.9), -1, 1);
-      const drift = -normalized * (16 + index * 2.2);
-      const focus = 1 - Math.min(Math.abs(normalized), 1);
-
-      section.style.setProperty("--section-scroll-y", `${drift.toFixed(2)}px`);
-      section.style.setProperty("--section-scroll-opacity", `${(0.58 + focus * 0.42).toFixed(3)}`);
-      section.style.setProperty("--section-focus", `${(0.64 + focus * 0.36).toFixed(3)}`);
-    });
   }
 
   function queueUpdate() {
@@ -1156,40 +1094,19 @@ function wireScrollMotion() {
   }
 
   function handleResize() {
-    if (motionProfile.mobileLite) {
-      return;
-    }
     window.clearTimeout(resizeTimer);
-    resizeTimer = window.setTimeout(handleViewportChange, 110);
+    resizeTimer = window.setTimeout(handleViewportChange, 120);
   }
 
   function handleOrientationChange() {
-    window.setTimeout(handleViewportChange, 90);
+    window.setTimeout(handleViewportChange, 120);
   }
 
-  function handleMotionProfileChange(event) {
-    motionProfile.mobileLite = event.matches;
-    setMobileScrollLiteClass(motionProfile.mobileLite);
-    if (motionProfile.mobileLite) {
-      sections.forEach(resetSectionDepth);
-    }
-    handleViewportChange();
-  }
-
-  setMobileScrollLiteClass(motionProfile.mobileLite);
-  if (motionProfile.mobileLite) {
-    sections.forEach(resetSectionDepth);
-  }
   refreshGeometry();
 
   window.addEventListener("scroll", queueUpdate, { passive: true });
   window.addEventListener("resize", handleResize);
   window.addEventListener("orientationchange", handleOrientationChange, { passive: true });
-  if (typeof mobileScrollLiteQuery.addEventListener === "function") {
-    mobileScrollLiteQuery.addEventListener("change", handleMotionProfileChange);
-  } else if (typeof mobileScrollLiteQuery.addListener === "function") {
-    mobileScrollLiteQuery.addListener(handleMotionProfileChange);
-  }
   update();
 }
 
@@ -1198,6 +1115,5 @@ wireShowMore();
 configurePortfolioLayout();
 wireStagger();
 wireReveal();
-wireBrandMotionSystem();
 wireScrollMotion();
 render();
