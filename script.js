@@ -905,6 +905,78 @@ function wireShowMore() {
   });
 }
 
+function wireHashNavigation() {
+  const header = document.querySelector(".site-header");
+
+  function isStickyHeaderActive() {
+    return window.matchMedia("(min-width: 721px)").matches;
+  }
+
+  function scrollOffset() {
+    if (!header || !isStickyHeaderActive()) {
+      return 10;
+    }
+    return Math.ceil(header.getBoundingClientRect().height) + 10;
+  }
+
+  function targetFromHash(hash) {
+    if (!hash || hash === "#") {
+      return null;
+    }
+    const id = decodeURIComponent(hash.slice(1));
+    return document.getElementById(id);
+  }
+
+  function unlockVerticalScroll() {
+    // Defensive reset for mobile Safari after hash navigation.
+    document.documentElement.style.removeProperty("overflow-y");
+    document.body.style.removeProperty("overflow-y");
+    document.body.style.removeProperty("position");
+  }
+
+  function scrollToHash(hash, { updateHistory = true, behavior = "smooth" } = {}) {
+    const target = targetFromHash(hash);
+    if (!target) {
+      return;
+    }
+
+    const top = window.scrollY + target.getBoundingClientRect().top - scrollOffset();
+    if (updateHistory) {
+      window.history.pushState(null, "", hash);
+    }
+    window.scrollTo({
+      top: Math.max(Math.floor(top), 0),
+      behavior,
+    });
+
+    window.requestAnimationFrame(unlockVerticalScroll);
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", (event) => {
+      const href = anchor.getAttribute("href");
+      if (!href || href === "#") {
+        return;
+      }
+      const target = targetFromHash(href);
+      if (!target) {
+        return;
+      }
+
+      event.preventDefault();
+      scrollToHash(href, { updateHistory: true, behavior: "smooth" });
+    });
+  });
+
+  window.addEventListener("hashchange", () => {
+    scrollToHash(window.location.hash, { updateHistory: false, behavior: "auto" });
+  });
+
+  if (window.location.hash) {
+    scrollToHash(window.location.hash, { updateHistory: false, behavior: "auto" });
+  }
+}
+
 function wireBrandMotionSystem() {
   if (prefersReducedMotion.matches || !window.matchMedia("(pointer: fine)").matches) {
     return;
@@ -1087,6 +1159,7 @@ function wireScrollMotion() {
 
 wireFilters();
 wireShowMore();
+wireHashNavigation();
 configurePortfolioLayout();
 wireStagger();
 wireReveal();

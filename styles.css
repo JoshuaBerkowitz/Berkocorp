@@ -207,6 +207,8 @@ a {
   gap: 36px;
   align-items: center;
   padding: clamp(56px, 9vw, 110px) 0;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-copy {
@@ -257,6 +259,57 @@ h1 {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+.hover-label-cloud {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hover-label {
+  --hl-r: 0deg;
+  --hl-delay: 0s;
+  --hl-dur: 10.4s;
+  --hl-dx: 5px;
+  --hl-dy: 4px;
+  --hl-o: 0.84;
+  position: absolute;
+  left: var(--hl-x, 50%);
+  top: var(--hl-y, 50%);
+  transform: translate(-50%, -50%) rotate(var(--hl-r));
+  transform-origin: center;
+  max-width: min(21ch, 18vw);
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px dashed rgba(36, 50, 73, 0.28);
+  background: rgba(253, 250, 245, 0.64);
+  color: rgba(36, 50, 73, 0.72);
+  opacity: var(--hl-o);
+  font-size: clamp(0.56rem, 0.72vw, 0.66rem);
+  line-height: 1.22;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-wrap: balance;
+  box-shadow: 0 7px 14px rgba(36, 50, 73, 0.09);
+  backdrop-filter: blur(3px);
+  animation: hoverLabelFloat var(--hl-dur) ease-in-out infinite;
+  animation-delay: var(--hl-delay);
+}
+
+.hover-label.is-accent {
+  border-color: rgba(255, 92, 61, 0.4);
+  background: rgba(255, 92, 61, 0.1);
+  color: rgba(144, 55, 37, 0.9);
+}
+
+.has-hover-labels .section-grid {
+  margin-top: 10px;
+}
+
+#invest.has-hover-labels .invest-grid {
+  margin-top: 48px;
 }
 
 .hero-action {
@@ -704,6 +757,8 @@ h1 {
   grid-template-columns: 0.82fr 1.18fr;
   gap: 30px;
   align-items: start;
+  position: relative;
+  z-index: 2;
 }
 
 h2 {
@@ -755,6 +810,8 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
+  position: relative;
+  z-index: 2;
 }
 
 .invest-grid article {
@@ -835,6 +892,8 @@ h2 {
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
 }
 
 .button-group {
@@ -880,6 +939,8 @@ h2 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
+  position: relative;
+  z-index: 2;
 }
 
 .split-layout.single-column {
@@ -1301,6 +1362,25 @@ h3 {
   }
 }
 
+@keyframes hoverLabelFloat {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(var(--hl-r)) translate3d(0, 0, 0);
+  }
+  30% {
+    transform: translate(-50%, -50%) rotate(calc(var(--hl-r) + 0.9deg))
+      translate3d(calc(var(--hl-dx) * 0.7), calc(var(--hl-dy) * -0.5), 0);
+  }
+  55% {
+    transform: translate(-50%, -50%) rotate(calc(var(--hl-r) - 0.6deg))
+      translate3d(calc(var(--hl-dx) * -0.45), calc(var(--hl-dy) * 0.85), 0);
+  }
+  78% {
+    transform: translate(-50%, -50%) rotate(calc(var(--hl-r) + 0.4deg))
+      translate3d(calc(var(--hl-dx) * 0.35), calc(var(--hl-dy) * 0.25), 0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1308,6 +1388,10 @@ h3 {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .hover-label {
+    transform: translate(-50%, -50%) rotate(var(--hl-r)) !important;
   }
 
   .js-enabled .section-observe,
@@ -1420,6 +1504,17 @@ h3 {
   .moonshot-chart {
     width: 100%;
     aspect-ratio: 16 / 10;
+  }
+
+  .hover-label {
+    max-width: 42vw;
+    font-size: 0.55rem;
+    letter-spacing: 0.03em;
+    padding: 3px 7px;
+  }
+
+  .hover-label.mobile-hide {
+    display: none;
   }
 
   .section-observe:not(.site-footer) .section-grid,
