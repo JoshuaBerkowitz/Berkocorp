@@ -1159,7 +1159,6 @@ function wireScrollMotion() {
 
 wireFilters();
 wireShowMore();
-wireHashNavigation();
 configurePortfolioLayout();
 wireStagger();
 wireReveal();

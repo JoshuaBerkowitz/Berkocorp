@@ -33,6 +33,15 @@ body {
   padding: 0;
   max-width: 100%;
   overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#top,
+#about,
+#invest,
+#portfolio {
+  scroll-margin-top: 96px;
 }
 
 body {
@@ -1465,6 +1474,13 @@ h3 {
 @media (max-width: 720px) {
   .site-header {
     position: static;
+  }
+
+  #top,
+  #about,
+  #invest,
+  #portfolio {
+    scroll-margin-top: 10px;
   }
 
   .nav-shell {
