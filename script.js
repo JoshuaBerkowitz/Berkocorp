@@ -507,6 +507,7 @@ const fundGrid = document.getElementById("fund-grid");
 const fundCount = document.getElementById("fund-count");
 const fundShowMoreButton = document.getElementById("fund-show-more");
 const template = document.getElementById("portfolio-card-template");
+const portfolioLogoTickerTrack = document.getElementById("portfolio-logo-ticker-track");
 const heroChartRoot = document.querySelector(".moonshot-chart");
 const heroChartPolyline = document.querySelector(".chart-polyline");
 const heroChartMoon = document.querySelector(".chart-moon");
@@ -746,14 +747,139 @@ function logoCandidatesFor(item) {
   return candidates;
 }
 
+function shuffled(items) {
+  const next = items.slice();
+  for (let index = next.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [next[index], next[swapIndex]] = [next[swapIndex], next[index]];
+  }
+  return next;
+}
+
+function createPortfolioTickerLogoNode(item) {
+  const chip = document.createElement("span");
+  chip.className = "portfolio-logo-chip";
+  chip.title = item.name;
+  chip.setAttribute("aria-label", `${item.name} logo`);
+  chip.dataset.kind = item.kind;
+  if (item.name.length > 22) {
+    chip.classList.add("is-long-name");
+  }
+
+  const logoMark = document.createElement("span");
+  logoMark.className = "portfolio-logo-mark";
+
+  const img = document.createElement("img");
+  img.alt = `${item.name} logo`;
+  img.loading = "lazy";
+  img.decoding = "async";
+  img.referrerPolicy = "no-referrer";
+
+  const fallback = document.createElement("span");
+  fallback.className = "portfolio-logo-fallback";
+  const symbolText = item.name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 4)
+    .map((part) => part[0]?.toUpperCase() || "")
+    .join("");
+  fallback.textContent = symbolText;
+  fallback.hidden = true;
+
+  const symbol = document.createElement("span");
+  symbol.className = "portfolio-logo-symbol";
+  symbol.textContent = symbolText;
+
+  const name = document.createElement("span");
+  name.className = "portfolio-logo-name";
+  name.textContent = item.name;
+
+  const meta = document.createElement("span");
+  meta.className = "portfolio-logo-meta";
+  meta.textContent = item.kind === "direct" ? "DIRECT" : "FUND";
+
+  const text = document.createElement("span");
+  text.className = "portfolio-logo-text";
+  text.appendChild(symbol);
+  text.appendChild(name);
+
+  logoMark.appendChild(img);
+  logoMark.appendChild(fallback);
+  chip.appendChild(logoMark);
+  chip.appendChild(text);
+  chip.appendChild(meta);
+
+  const candidates = logoCandidatesFor(item);
+
+  function loadNextCandidate() {
+    const next = candidates.shift();
+    if (!next) {
+      img.hidden = true;
+      fallback.hidden = false;
+      return;
+    }
+    fallback.hidden = true;
+    img.hidden = false;
+    img.classList.toggle("is-favicon", next.type === "favicon");
+    img.src = next.src;
+  }
+
+  img.addEventListener("error", loadNextCandidate);
+  loadNextCandidate();
+
+  return chip;
+}
+
+function wirePortfolioLogoTicker() {
+  if (!portfolioLogoTickerTrack) {
+    return;
+  }
+
+  const uniqueByName = new Map();
+  investments.forEach((item) => {
+    if (!uniqueByName.has(item.name)) {
+      uniqueByName.set(item.name, item);
+    }
+  });
+
+  const randomized = shuffled(Array.from(uniqueByName.values()));
+  const picked = randomized.slice(0, Math.min(20, randomized.length));
+
+  if (!picked.length) {
+    portfolioLogoTickerTrack.parentElement?.setAttribute("hidden", "true");
+    return;
+  }
+
+  portfolioLogoTickerTrack.innerHTML = "";
+  for (let runIndex = 0; runIndex < 2; runIndex += 1) {
+    const run = document.createElement("div");
+    run.className = "portfolio-logo-ticker-run";
+    if (runIndex > 0) {
+      run.setAttribute("aria-hidden", "true");
+    }
+
+    picked.forEach((item) => {
+      run.appendChild(createPortfolioTickerLogoNode(item));
+    });
+
+    portfolioLogoTickerTrack.appendChild(run);
+  }
+}
+
 function cardNode(item, index) {
   const fragment = template.content.cloneNode(true);
   const root = fragment.querySelector(".portfolio-card");
+  const logoLink = fragment.querySelector(".card-logo-link");
   const logo = fragment.querySelector(".card-logo");
   const placeholder = fragment.querySelector(".placeholder-logo");
   const title = fragment.querySelector(".card-title");
   const kindTag = fragment.querySelector(".kind-tag");
   const labelTag = fragment.querySelector(".label-tag");
+
+  if (logoLink) {
+    logoLink.href = item.url;
+    logoLink.setAttribute("aria-label", `${item.name} logo (opens in a new tab)`);
+  }
 
   title.textContent = item.name;
   title.href = item.url;
@@ -1112,6 +1238,7 @@ function wireScrollMotion() {
 
 wireFilters();
 wireShowMore();
+wirePortfolioLogoTicker();
 configurePortfolioLayout();
 wireStagger();
 wireReveal();

@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sora:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260225d" />
+    <link rel="stylesheet" href="./styles.css?v=20260225m" />
   </head>
   <body>
     <header class="site-header">
@@ -65,6 +65,15 @@
               </svg>
               <span class="chart-rocket"></span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio-logo-ticker" aria-label="Portfolio logo ticker">
+        <div class="portfolio-logo-ticker-shell">
+          <p class="portfolio-logo-ticker-label">Selected Portfolio</p>
+          <div class="portfolio-logo-ticker-viewport">
+            <div class="portfolio-logo-ticker-track" id="portfolio-logo-ticker-track"></div>
           </div>
         </div>
       </section>
@@ -204,6 +213,72 @@
           </section>
         </div>
       </section>
+
+      <section id="podcasts" class="section-observe section-light media-preview has-hover-labels">
+        <div class="hover-label-cloud cloud-podcasts" aria-hidden="true">
+          <span class="hover-label mobile-hide" style="--hl-x: 92%; --hl-y: 14%; --hl-r: -6deg; --hl-delay: -2.2s; --hl-dx: 6px; --hl-dy: -4px; --hl-dur: 10.2s; --hl-o: 0.86;">
+            We're hands-on investors
+          </span>
+          <span class="hover-label" style="--hl-x: 90%; --hl-y: 90%; --hl-r: -5deg; --hl-delay: -1.3s; --hl-dx: 6px; --hl-dy: 4px; --hl-dur: 10.6s; --hl-o: 0.84;">
+            Double down into winners
+          </span>
+          <span class="hover-label mobile-hide" style="--hl-x: 8%; --hl-y: 88%; --hl-r: 6deg; --hl-delay: -0.8s; --hl-dx: 7px; --hl-dy: 5px; --hl-dur: 10.7s; --hl-o: 0.84;">
+            We use modest leverage
+          </span>
+        </div>
+        <div class="container media-shell">
+          <div class="media-head">
+            <h2>LPs Have Opinions Too</h2>
+            <p class="media-subtext">A few conversations on investing, pacing, and why patience still wins.</p>
+          </div>
+
+          <div class="podcast-grid" aria-label="Podcast appearances">
+            <article class="podcast-card">
+              <a href="https://www.youtube.com/watch?v=W9EOu8RQVj4" target="_blank" rel="noreferrer noopener">
+                <img src="https://i.ytimg.com/vi/W9EOu8RQVj4/hqdefault.jpg" alt="Podcast episode one thumbnail" loading="lazy" decoding="async" />
+                <div class="podcast-copy">
+                  <p class="podcast-label">This Week in Startups</p>
+                  <p class="podcast-title">LP investment strategies, IRR focus, and more with Berkocorp's Joshua Berkowitz | E1882</p>
+                  <span class="podcast-link">Listen</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="podcast-card">
+              <a href="https://www.youtube.com/watch?v=g37vB3Mr0-U" target="_blank" rel="noreferrer noopener">
+                <img src="https://i.ytimg.com/vi/g37vB3Mr0-U/hqdefault.jpg" alt="Podcast episode two thumbnail" loading="lazy" decoding="async" />
+                <div class="podcast-copy">
+                  <p class="podcast-label">Swimming with Allocators</p>
+                  <p class="podcast-title">Patient Capital, Bold Bets: Constructing a Venture Book That Works</p>
+                  <span class="podcast-link">Listen</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="podcast-card">
+              <a href="https://www.youtube.com/watch?v=lI4EOVcl1io" target="_blank" rel="noreferrer noopener">
+                <img src="https://i.ytimg.com/vi/lI4EOVcl1io/hqdefault.jpg" alt="Podcast episode three thumbnail" loading="lazy" decoding="async" />
+                <div class="podcast-copy">
+                  <p class="podcast-label">How I Invest w/David Weisburd</p>
+                  <p class="podcast-title">Joshua Berkowitz of Berkocorp on Why LP’s Should Care about IRR% not TVPI | E24</p>
+                  <span class="podcast-link">Listen</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="podcast-card">
+              <a href="https://www.youtube.com/watch?v=cUryiZ6bafc" target="_blank" rel="noreferrer noopener">
+                <img src="https://i.ytimg.com/vi/cUryiZ6bafc/hqdefault.jpg" alt="Podcast episode four thumbnail" loading="lazy" decoding="async" />
+                <div class="podcast-copy">
+                  <p class="podcast-label">Liquidity</p>
+                  <p class="podcast-title">Major challenger to OpenAI, xAI, closing on $6B in funding | E1944</p>
+                  <span class="podcast-link">Listen</span>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer section-observe">
@@ -217,10 +292,12 @@
 
     <template id="portfolio-card-template">
       <article class="portfolio-card">
-        <div class="logo-shell" aria-hidden="true">
-          <img class="card-logo" alt="" loading="lazy" decoding="async" />
-          <div class="placeholder-logo"></div>
-        </div>
+        <a class="card-logo-link" target="_blank" rel="noreferrer noopener">
+          <div class="logo-shell">
+            <img class="card-logo" alt="" loading="lazy" decoding="async" />
+            <div class="placeholder-logo"></div>
+          </div>
+        </a>
         <div class="card-copy">
           <a class="card-title" target="_blank" rel="noreferrer noopener"></a>
           <div class="tag-row">
@@ -231,6 +308,6 @@
       </article>
     </template>
 
-    <script src="./script.js?v=20260225d"></script>
+    <script src="./script.js?v=20260225k"></script>
   </body>
 </html>
