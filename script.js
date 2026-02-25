@@ -1034,40 +1034,11 @@ function wireBrandMotionSystem() {
 }
 
 function wireScrollMotion() {
-  if (prefersReducedMotion.matches) {
-    renderMoonshotChart(0.3);
-    return;
-  }
-
-  const root = document.documentElement;
   const hero = document.querySelector(".hero");
-  let ticking = false;
   let resizeTimer = 0;
-  let heroOffsetTop = 0;
-  let heroHeight = 1;
-  let moonPoint = { x: 92, y: 11 };
 
-  function refreshGeometry() {
+  function paintStaticHeroChart() {
     if (hero) {
-      heroOffsetTop = hero.offsetTop || 0;
-      heroHeight = Math.max(hero.offsetHeight || 0, 1);
-    }
-    moonPoint = moonTargetInChart();
-  }
-
-  function update() {
-    ticking = false;
-
-    const viewportHeight = window.innerHeight || 1;
-    const scrollY = window.scrollY || window.pageYOffset || 0;
-    const maxScroll = Math.max(root.scrollHeight - viewportHeight, 1);
-    const scrollProgress = clamp(scrollY / maxScroll, 0, 1);
-    root.style.setProperty("--scroll-progress", scrollProgress.toFixed(4));
-
-    if (hero) {
-      const heroProgress = clamp((scrollY - heroOffsetTop) / Math.max(heroHeight * 0.86, 1), 0, 1.2);
-      const chartProgress = clamp(heroProgress / 0.72, 0, 1);
-
       hero.style.setProperty("--hero-bg-y", "0px");
       hero.style.setProperty("--hero-bg-s", "1");
       hero.style.setProperty("--hero-copy-y", "0px");
@@ -1075,39 +1046,21 @@ function wireScrollMotion() {
       hero.style.setProperty("--hero-logo-y", "0px");
       hero.style.setProperty("--hero-logo-r", "0deg");
       hero.style.setProperty("--hero-logo-s", "1");
-      hero.style.setProperty("--chart-progress", chartProgress.toFixed(4));
-      renderMoonshotChart(chartProgress, moonPoint);
+      hero.style.setProperty("--chart-progress", "1");
     }
-  }
-
-  function queueUpdate() {
-    if (ticking) {
-      return;
-    }
-    ticking = true;
-    window.requestAnimationFrame(update);
-  }
-
-  function handleViewportChange() {
-    refreshGeometry();
-    queueUpdate();
+    renderMoonshotChart(1, moonTargetInChart());
   }
 
   function handleResize() {
     window.clearTimeout(resizeTimer);
-    resizeTimer = window.setTimeout(handleViewportChange, 120);
+    resizeTimer = window.setTimeout(paintStaticHeroChart, 120);
   }
 
-  function handleOrientationChange() {
-    window.setTimeout(handleViewportChange, 120);
+  paintStaticHeroChart();
+  if (!prefersReducedMotion.matches) {
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("orientationchange", handleResize, { passive: true });
   }
-
-  refreshGeometry();
-
-  window.addEventListener("scroll", queueUpdate, { passive: true });
-  window.addEventListener("resize", handleResize);
-  window.addEventListener("orientationchange", handleOrientationChange, { passive: true });
-  update();
 }
 
 wireFilters();
