@@ -522,7 +522,8 @@ function clamp(value, min, max) {
 const HERO_CHART_START = { x: 12, y: 85 };
 const HERO_CHART_KINK = { x: 52, y: 66 };
 const HERO_CHART_DEFAULT_END = { x: 94, y: 10 };
-const HERO_CHART_ANIMATION_START = 0.2;
+const HERO_CHART_ANIMATION_START = 0.05;
+const HERO_CHART_SCROLL_COMPLETE = 0.44;
 const HERO_CHART_BASE_POINTS = buildMoonshotBasePoints();
 let cachedMoonAlignedPoints = null;
 let cachedMoonPointKey = "";
@@ -1064,7 +1065,7 @@ function wireScrollMotion() {
 
   function paintChartForScroll(scrollY) {
     const heroProgress = clamp((scrollY - heroOffsetTop) / Math.max(heroHeight * 0.86, 1), 0, 1.2);
-    const chartProgress = prefersReducedMotion.matches ? 1 : clamp(heroProgress / 0.72, 0, 1);
+    const chartProgress = prefersReducedMotion.matches ? 1 : clamp(heroProgress / HERO_CHART_SCROLL_COMPLETE, 0, 1);
 
     if (hero) {
       hero.style.setProperty("--chart-progress", chartProgress.toFixed(4));
