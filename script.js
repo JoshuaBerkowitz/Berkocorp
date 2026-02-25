@@ -511,6 +511,7 @@ const heroChartRoot = document.querySelector(".moonshot-chart");
 const heroChartPolyline = document.querySelector(".chart-polyline");
 const heroChartMoon = document.querySelector(".chart-moon");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const mobileScrollLiteQuery = window.matchMedia("(max-width: 900px), (pointer: coarse)");
 const FUNDS_PAGE_SIZE = 10;
 
 document.body.classList.add("js-enabled");
@@ -518,36 +519,22 @@ document.body.classList.add("js-enabled");
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
 }
-function moonTargetInChart() {
-  if (!heroChartRoot || !heroChartMoon) {
-    return { x: 92, y: 11 };
-  }
 
-  const chartRect = heroChartRoot.getBoundingClientRect();
-  const moonRect = heroChartMoon.getBoundingClientRect();
-  if (chartRect.width < 1 || chartRect.height < 1) {
-    return { x: 92, y: 11 };
-  }
+const HERO_CHART_START = { x: 12, y: 85 };
+const HERO_CHART_KINK = { x: 52, y: 66 };
+const HERO_CHART_DEFAULT_END = { x: 94, y: 10 };
+const HERO_CHART_ANIMATION_START = 0.2;
+const HERO_CHART_BASE_POINTS = buildMoonshotBasePoints();
+let cachedMoonAlignedPoints = null;
+let cachedMoonPointKey = "";
 
-  const x = ((moonRect.left + moonRect.width * 0.5 - chartRect.left) / chartRect.width) * 100;
-  const y = ((moonRect.top + moonRect.height * 0.5 - chartRect.top) / chartRect.height) * 100;
-  return {
-    x: clamp(x, 0, 100),
-    y: clamp(y, 0, 100),
-  };
-}
-
-function renderMoonshotChart(progress) {
-  if (!heroChartRoot || !heroChartPolyline) {
-    return;
-  }
-
-  const startX = 12;
-  const startY = 85;
-  const kinkX = 52;
-  const kinkY = 66;
-  const finalEndX = 94;
-  const finalEndY = 10;
+function buildMoonshotBasePoints() {
+  const startX = HERO_CHART_START.x;
+  const startY = HERO_CHART_START.y;
+  const kinkX = HERO_CHART_KINK.x;
+  const kinkY = HERO_CHART_KINK.y;
+  const finalEndX = HERO_CHART_DEFAULT_END.x;
+  const finalEndY = HERO_CHART_DEFAULT_END.y;
   const points = [];
   const firstSegmentSteps = 22;
   const secondSegmentSteps = 56;
@@ -567,7 +554,6 @@ function renderMoonshotChart(progress) {
     points.push({ x, y });
   }
 
-  const postKinkPoints = [];
   const trendAnchors = [
     { t: 0, y: kinkY },
     { t: 0.1, y: 64.2 },
@@ -609,80 +595,115 @@ function renderMoonshotChart(progress) {
         Math.sin(t * 72 + 0.18) * 0.1 +
         microChop) *
       volatility;
-    // Place the largest correction near the center of the overall chart.
     const sharpMidDip = t > 0.16 && t < 0.23 ? Math.sin(((t - 0.16) / 0.07) * Math.PI) * 3.05 : 0;
     const y = trendY + wiggle + sharpMidDip;
-    postKinkPoints.push({ x, y });
+    points.push({ x, y });
   }
 
-  const moonPoint = moonTargetInChart();
-  const fullPathPoints = points.concat(postKinkPoints);
+  return points;
+}
+
+function moonAlignedChartPoints(moonPoint) {
+  const key = `${moonPoint.x.toFixed(2)}|${moonPoint.y.toFixed(2)}`;
+  if (cachedMoonAlignedPoints && cachedMoonPointKey === key) {
+    return cachedMoonAlignedPoints;
+  }
+
+  cachedMoonPointKey = key;
+  cachedMoonAlignedPoints = HERO_CHART_BASE_POINTS.map((point) => ({ x: point.x, y: point.y }));
+  if (cachedMoonAlignedPoints.length) {
+    cachedMoonAlignedPoints[cachedMoonAlignedPoints.length - 1] = { x: moonPoint.x, y: moonPoint.y };
+  }
+  return cachedMoonAlignedPoints;
+}
+
+function pointAtRatio(pathPoints, ratio) {
+  if (!pathPoints.length) {
+    return { x: HERO_CHART_KINK.x, y: HERO_CHART_KINK.y };
+  }
+  if (pathPoints.length === 1) {
+    return pathPoints[0];
+  }
+
+  const clampedRatio = clamp(ratio, 0, 1);
+  const scaledIndex = clampedRatio * (pathPoints.length - 1);
+  const lowerIndex = Math.floor(scaledIndex);
+  const upperIndex = Math.min(lowerIndex + 1, pathPoints.length - 1);
+  const interpolation = scaledIndex - lowerIndex;
+  const from = pathPoints[lowerIndex];
+  const to = pathPoints[upperIndex];
+
+  return {
+    x: from.x + (to.x - from.x) * interpolation,
+    y: from.y + (to.y - from.y) * interpolation,
+  };
+}
+
+function slicePathByRatio(pathPoints, startRatio, endRatio) {
+  if (!pathPoints.length) {
+    return [{ x: HERO_CHART_KINK.x, y: HERO_CHART_KINK.y }];
+  }
+
+  const start = clamp(startRatio, 0, 1);
+  const end = clamp(Math.max(endRatio, start), start, 1);
+  const startScaled = start * (pathPoints.length - 1);
+  const endScaled = end * (pathPoints.length - 1);
+  const startPoint = pointAtRatio(pathPoints, start);
+  const endPoint = pointAtRatio(pathPoints, end);
+  const result = [startPoint];
+
+  const firstInterior = Math.ceil(startScaled);
+  const lastInterior = Math.floor(endScaled);
+
+  for (let index = firstInterior; index <= lastInterior; index += 1) {
+    const point = pathPoints[index];
+    if (!point) {
+      continue;
+    }
+    const previous = result[result.length - 1];
+    if (!previous || Math.abs(previous.x - point.x) > 0.001 || Math.abs(previous.y - point.y) > 0.001) {
+      result.push(point);
+    }
+  }
+
+  const previous = result[result.length - 1];
+  if (!previous || Math.abs(previous.x - endPoint.x) > 0.001 || Math.abs(previous.y - endPoint.y) > 0.001) {
+    result.push(endPoint);
+  }
+
+  return result;
+}
+
+function moonTargetInChart() {
+  if (!heroChartRoot || !heroChartMoon) {
+    return { x: 92, y: 11 };
+  }
+
+  const chartRect = heroChartRoot.getBoundingClientRect();
+  const moonRect = heroChartMoon.getBoundingClientRect();
+  if (chartRect.width < 1 || chartRect.height < 1) {
+    return { x: 92, y: 11 };
+  }
+
+  const x = ((moonRect.left + moonRect.width * 0.5 - chartRect.left) / chartRect.width) * 100;
+  const y = ((moonRect.top + moonRect.height * 0.5 - chartRect.top) / chartRect.height) * 100;
+  return {
+    x: clamp(x, 0, 100),
+    y: clamp(y, 0, 100),
+  };
+}
+
+function renderMoonshotChart(progress, moonPoint = moonTargetInChart()) {
+  if (!heroChartRoot || !heroChartPolyline) {
+    return;
+  }
+
+  const fullPathPoints = moonAlignedChartPoints(moonPoint);
   if (!fullPathPoints.length) {
     return;
   }
 
-  // Force the path to terminate at the moon so the endpoint (rocket) docks there.
-  fullPathPoints[fullPathPoints.length - 1] = { x: moonPoint.x, y: moonPoint.y };
-
-  function pointAtRatio(pathPoints, ratio) {
-    if (!pathPoints.length) {
-      return { x: kinkX, y: kinkY };
-    }
-    if (pathPoints.length === 1) {
-      return pathPoints[0];
-    }
-
-    const clampedRatio = clamp(ratio, 0, 1);
-    const scaledIndex = clampedRatio * (pathPoints.length - 1);
-    const lowerIndex = Math.floor(scaledIndex);
-    const upperIndex = Math.min(lowerIndex + 1, pathPoints.length - 1);
-    const interpolation = scaledIndex - lowerIndex;
-    const from = pathPoints[lowerIndex];
-    const to = pathPoints[upperIndex];
-
-    return {
-      x: from.x + (to.x - from.x) * interpolation,
-      y: from.y + (to.y - from.y) * interpolation,
-    };
-  }
-
-  function slicePathByRatio(pathPoints, startRatio, endRatio) {
-    if (!pathPoints.length) {
-      return [{ x: kinkX, y: kinkY }];
-    }
-
-    const start = clamp(startRatio, 0, 1);
-    const end = clamp(Math.max(endRatio, start), start, 1);
-    const startScaled = start * (pathPoints.length - 1);
-    const endScaled = end * (pathPoints.length - 1);
-    const startPoint = pointAtRatio(pathPoints, start);
-    const endPoint = pointAtRatio(pathPoints, end);
-    const result = [startPoint];
-
-    const firstInterior = Math.ceil(startScaled);
-    const lastInterior = Math.floor(endScaled);
-
-    for (let index = firstInterior; index <= lastInterior; index += 1) {
-      const point = pathPoints[index];
-      if (!point) {
-        continue;
-      }
-      const previous = result[result.length - 1];
-      if (!previous || Math.abs(previous.x - point.x) > 0.001 || Math.abs(previous.y - point.y) > 0.001) {
-        result.push(point);
-      }
-    }
-
-    const previous = result[result.length - 1];
-    if (!previous || Math.abs(previous.x - endPoint.x) > 0.001 || Math.abs(previous.y - endPoint.y) > 0.001) {
-      result.push(endPoint);
-    }
-
-    return result;
-  }
-
-  const animationStartRatio = 0.2;
-  const animatedEndRatio = animationStartRatio + progress * (1 - animationStartRatio);
+  const animatedEndRatio = HERO_CHART_ANIMATION_START + progress * (1 - HERO_CHART_ANIMATION_START);
   const visiblePoints = slicePathByRatio(fullPathPoints, 0, animatedEndRatio);
 
   heroChartPolyline.setAttribute(
@@ -1024,7 +1045,32 @@ function wireScrollMotion() {
     (section) => !section.classList.contains("hero")
   );
 
+  const motionProfile = {
+    mobileLite: mobileScrollLiteQuery.matches,
+  };
   let ticking = false;
+  let resizeTimer = 0;
+  let heroOffsetTop = 0;
+  let heroHeight = 1;
+  let moonPoint = { x: 92, y: 11 };
+
+  function setMobileScrollLiteClass(enabled) {
+    document.body.classList.toggle("mobile-scroll-lite", enabled);
+  }
+
+  function resetSectionDepth(section) {
+    section.style.setProperty("--section-scroll-y", "0px");
+    section.style.setProperty("--section-scroll-opacity", "0.62");
+    section.style.setProperty("--section-focus", "0.7");
+  }
+
+  function refreshGeometry() {
+    if (hero) {
+      heroOffsetTop = hero.offsetTop || 0;
+      heroHeight = Math.max(hero.offsetHeight || 0, 1);
+    }
+    moonPoint = moonTargetInChart();
+  }
 
   function update() {
     ticking = false;
@@ -1036,28 +1082,47 @@ function wireScrollMotion() {
     root.style.setProperty("--scroll-progress", scrollProgress.toFixed(4));
 
     if (hero) {
-      const rect = hero.getBoundingClientRect();
-      const heroProgress = clamp((-rect.top || 0) / Math.max(rect.height * 0.86, 1), 0, 1.2);
-      const copyOpacity = clamp(1 - heroProgress * 0.33, 0.56, 1);
+      let heroProgress = 0;
+      if (motionProfile.mobileLite) {
+        heroProgress = clamp((scrollY - heroOffsetTop) / Math.max(heroHeight * 0.86, 1), 0, 1.2);
+      } else {
+        const rect = hero.getBoundingClientRect();
+        heroProgress = clamp((-rect.top || 0) / Math.max(rect.height * 0.86, 1), 0, 1.2);
+      }
+
       const chartProgress = clamp(heroProgress / 0.72, 0, 1);
 
-      hero.style.setProperty("--hero-bg-y", `${(heroProgress * 64).toFixed(2)}px`);
-      hero.style.setProperty("--hero-bg-s", `${(1 + heroProgress * 0.09).toFixed(4)}`);
-      hero.style.setProperty("--hero-copy-y", `${(heroProgress * -34).toFixed(2)}px`);
-      hero.style.setProperty("--hero-copy-o", copyOpacity.toFixed(3));
-      hero.style.setProperty("--hero-logo-y", `${(heroProgress * 10).toFixed(2)}px`);
-      hero.style.setProperty("--hero-logo-r", `${(heroProgress * 1.3).toFixed(2)}deg`);
-      hero.style.setProperty("--hero-logo-s", `${(1 + heroProgress * 0.04).toFixed(4)}`);
+      if (motionProfile.mobileLite) {
+        hero.style.setProperty("--hero-bg-y", "0px");
+        hero.style.setProperty("--hero-bg-s", "1");
+        hero.style.setProperty("--hero-copy-y", "0px");
+        hero.style.setProperty("--hero-copy-o", "1");
+        hero.style.setProperty("--hero-logo-y", "0px");
+        hero.style.setProperty("--hero-logo-r", "0deg");
+        hero.style.setProperty("--hero-logo-s", "1");
+      } else {
+        const copyOpacity = clamp(1 - heroProgress * 0.33, 0.56, 1);
+        hero.style.setProperty("--hero-bg-y", `${(heroProgress * 64).toFixed(2)}px`);
+        hero.style.setProperty("--hero-bg-s", `${(1 + heroProgress * 0.09).toFixed(4)}`);
+        hero.style.setProperty("--hero-copy-y", `${(heroProgress * -34).toFixed(2)}px`);
+        hero.style.setProperty("--hero-copy-o", copyOpacity.toFixed(3));
+        hero.style.setProperty("--hero-logo-y", `${(heroProgress * 10).toFixed(2)}px`);
+        hero.style.setProperty("--hero-logo-r", `${(heroProgress * 1.3).toFixed(2)}deg`);
+        hero.style.setProperty("--hero-logo-s", `${(1 + heroProgress * 0.04).toFixed(4)}`);
+      }
+
       hero.style.setProperty("--chart-progress", chartProgress.toFixed(4));
-      renderMoonshotChart(chartProgress);
+      renderMoonshotChart(chartProgress, moonPoint);
+    }
+
+    if (motionProfile.mobileLite) {
+      return;
     }
 
     sections.forEach((section, index) => {
       const rect = section.getBoundingClientRect();
       if (rect.bottom < -120 || rect.top > viewportHeight + 120) {
-        section.style.setProperty("--section-scroll-y", "0px");
-        section.style.setProperty("--section-scroll-opacity", "0.62");
-        section.style.setProperty("--section-focus", "0.7");
+        resetSectionDepth(section);
         return;
       }
 
@@ -1080,8 +1145,46 @@ function wireScrollMotion() {
     window.requestAnimationFrame(update);
   }
 
+  function handleViewportChange() {
+    refreshGeometry();
+    queueUpdate();
+  }
+
+  function handleResize() {
+    if (motionProfile.mobileLite) {
+      return;
+    }
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(handleViewportChange, 110);
+  }
+
+  function handleOrientationChange() {
+    window.setTimeout(handleViewportChange, 90);
+  }
+
+  function handleMotionProfileChange(event) {
+    motionProfile.mobileLite = event.matches;
+    setMobileScrollLiteClass(motionProfile.mobileLite);
+    if (motionProfile.mobileLite) {
+      sections.forEach(resetSectionDepth);
+    }
+    handleViewportChange();
+  }
+
+  setMobileScrollLiteClass(motionProfile.mobileLite);
+  if (motionProfile.mobileLite) {
+    sections.forEach(resetSectionDepth);
+  }
+  refreshGeometry();
+
   window.addEventListener("scroll", queueUpdate, { passive: true });
-  window.addEventListener("resize", queueUpdate);
+  window.addEventListener("resize", handleResize);
+  window.addEventListener("orientationchange", handleOrientationChange, { passive: true });
+  if (typeof mobileScrollLiteQuery.addEventListener === "function") {
+    mobileScrollLiteQuery.addEventListener("change", handleMotionProfileChange);
+  } else if (typeof mobileScrollLiteQuery.addListener === "function") {
+    mobileScrollLiteQuery.addListener(handleMotionProfileChange);
+  }
   update();
 }
 
