@@ -1119,8 +1119,13 @@ function wireScrollMotion() {
       return;
     }
 
-    sections.forEach((section, index) => {
-      const rect = section.getBoundingClientRect();
+    const sectionMeasurements = sections.map((section, index) => ({
+      section,
+      index,
+      rect: section.getBoundingClientRect(),
+    }));
+
+    sectionMeasurements.forEach(({ section, index, rect }) => {
       if (rect.bottom < -120 || rect.top > viewportHeight + 120) {
         resetSectionDepth(section);
         return;
