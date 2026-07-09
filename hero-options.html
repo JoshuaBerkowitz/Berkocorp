@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berkocorp Hero Explorations</title>
+    <link rel="icon" type="image/x-icon" href="./assets/brand/favicon.ico" />
+    <link rel="stylesheet" href="./hero-options.css" />
+  </head>
+  <body>
+    <div class="scroll-track">
+      <div class="app-shell">
+        <header class="explore-header">
+          <a href="./index.html" class="brand-link" aria-label="Back to the Berkocorp homepage">
+            <img src="./assets/brand/transparent-logo-2.svg" alt="Berkocorp" />
+          </a>
+          <div class="explore-title">
+            <span>Hero exploration</span>
+            <strong>3 directions</strong>
+          </div>
+          <div class="progress-control">
+            <label for="progress">Scroll progress</label>
+            <input id="progress" type="range" min="0" max="100" value="16" />
+            <output for="progress">16%</output>
+          </div>
+        </header>
+
+        <main class="gallery">
+          <nav class="concept-picker" aria-label="Hero concepts">
+            <button class="concept-button is-active" type="button" data-option="0" aria-pressed="true">
+              <span class="concept-number">01</span>
+              <span><strong>Compounding signal</strong><small>Editorial + institutional</small></span>
+            </button>
+            <button class="concept-button" type="button" data-option="1" aria-pressed="false">
+              <span class="concept-number">02</span>
+              <span><strong>Long-horizon orbit</strong><small>Cinematic + memorable</small></span>
+            </button>
+            <button class="concept-button" type="button" data-option="2" aria-pressed="false">
+              <span class="concept-number">03</span>
+              <span><strong>Manager journey</strong><small>Strategic + explanatory</small></span>
+            </button>
+          </nav>
+
+          <section class="hero-preview" aria-label="Interactive Berkocorp hero preview">
+            <div class="hero-copy">
+              <p class="eyebrow">Berkocorp Family Office</p>
+              <h1><span>Long-horizon</span> capital for exceptional managers.</h1>
+              <p class="intro">
+                We are a Canadian family office investing across venture capital, private equity, and other niche
+                strategies through a mix of fund commitments and direct investments.
+              </p>
+              <div class="actions" aria-label="Preview actions">
+                <span class="primary-action">View portfolio</span>
+                <span class="secondary-action">Contact us</span>
+              </div>
+              <div class="concept-rationale" aria-live="polite">
+                <span class="rationale-index">01 / 03</span>
+                <p>Turns the chart into a credible investment signal: custom iconography, clearer hierarchy, and subtle risk/return context.</p>
+              </div>
+            </div>
+
+            <div class="visual-frame">
+              <div class="visual-option option-signal is-active" data-concept="0" aria-label="Compounding signal concept">
+                <div class="signal-meta">
+                  <span>Patient capital</span>
+                  <span>North America · Private markets</span>
+                </div>
+                <svg class="concept-svg" viewBox="0 0 680 480" role="img" aria-label="An investment trajectory rising toward a custom illustrated moon">
+                  <defs>
+                    <linearGradient id="signalArea" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#ff5c3d" stop-opacity=".2" />
+                      <stop offset="1" stop-color="#ff5c3d" stop-opacity="0" />
+                    </linearGradient>
+                    <radialGradient id="signalMoon" cx="35%" cy="30%">
+                      <stop offset="0" stop-color="#fff8df" />
+                      <stop offset=".58" stop-color="#eadcc4" />
+                      <stop offset="1" stop-color="#c7b89f" />
+                    </radialGradient>
+                    <filter id="signalShadow" x="-100%" y="-100%" width="300%" height="300%">
+                      <feDropShadow dx="0" dy="9" stdDeviation="9" flood-color="#243249" flood-opacity=".2" />
+                    </filter>
+                  </defs>
+                  <g class="signal-grid" aria-hidden="true">
+                    <path d="M74 86V405M186 86V405M298 86V405M410 86V405M522 86V405M634 86V405" />
+                    <path d="M74 405H634M74 325H634M74 245H634M74 165H634M74 86H634" />
+                  </g>
+                  <path class="signal-baseline" d="M74 405H634" />
+                  <path class="signal-area" d="M76 391 C130 389 154 371 193 365 C242 358 248 372 294 344 C339 316 351 329 393 286 C430 248 450 272 488 221 C525 170 540 187 576 127 C595 96 610 78 626 69 L626 405 L76 405 Z" />
+                  <path class="draw-path signal-line" data-path pathLength="1" d="M76 391 C130 389 154 371 193 365 C242 358 248 372 294 344 C339 316 351 329 393 286 C430 248 450 272 488 221 C525 170 540 187 576 127 C595 96 610 78 626 69" />
+                  <g class="milestone milestone-one">
+                    <circle cx="214" cy="361" r="5" />
+                    <text x="214" y="338">ENTRY</text>
+                  </g>
+                  <g class="milestone milestone-two">
+                    <circle cx="401" cy="278" r="5" />
+                    <text x="401" y="255">PARTNERSHIP</text>
+                  </g>
+                  <g class="moon-target">
+                    <circle cx="626" cy="69" r="31" fill="url(#signalMoon)" />
+                    <circle cx="613" cy="58" r="5" fill="#b8aa94" opacity=".65" />
+                    <circle cx="636" cy="77" r="8" fill="#b8aa94" opacity=".45" />
+                    <circle cx="632" cy="51" r="3" fill="#fff8e8" opacity=".7" />
+                  </g>
+                  <g class="rocket" data-rocket>
+                    <path class="rocket-flame" d="M-18 0L-31 -7L-27 0L-31 7Z" />
+                    <path class="rocket-body" d="M-18 -10 C2 -13 18 -8 29 0 C18 8 2 13 -18 10 L-8 0Z" />
+                    <path class="rocket-window" d="M8 -5A5 5 0 1 0 8 5A5 5 0 1 0 8 -5" />
+                    <path class="rocket-fin" d="M-12 -9L-21 -19L2 -10ZM-12 9L-21 19L2 10Z" />
+                  </g>
+                  <text class="axis-label" x="76" y="439">EARLY</text>
+                  <text class="axis-label" x="634" y="439" text-anchor="end">ENDURING</text>
+                </svg>
+                <div class="signal-footer"><span>Long-term value creation</span><strong>Time →</strong></div>
+              </div>
+
+              <div class="visual-option option-orbit" data-concept="1" aria-label="Long-horizon orbit concept" hidden>
+                <div class="orbit-topline"><span>BERKOCORP / LONG HORIZON</span><strong>∞</strong></div>
+                <svg class="concept-svg" viewBox="0 0 680 480" role="img" aria-label="A rocket crossing a deep navy orbital field toward the moon">
+                  <defs>
+                    <radialGradient id="spaceGlow" cx="72%" cy="28%" r="65%">
+                      <stop offset="0" stop-color="#38506e" stop-opacity=".72" />
+                      <stop offset=".55" stop-color="#182438" stop-opacity=".35" />
+                      <stop offset="1" stop-color="#0c1422" stop-opacity="0" />
+                    </radialGradient>
+                    <radialGradient id="orbitMoon" cx="32%" cy="25%">
+                      <stop offset="0" stop-color="#fff8dd" />
+                      <stop offset=".55" stop-color="#ead9b9" />
+                      <stop offset="1" stop-color="#a79882" />
+                    </radialGradient>
+                    <filter id="orbitGlow" x="-100%" y="-100%" width="300%" height="300%">
+                      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#ff7156" flood-opacity=".55" />
+                    </filter>
+                  </defs>
+                  <rect width="680" height="480" fill="url(#spaceGlow)" />
+                  <g class="stars" aria-hidden="true">
+                    <circle cx="58" cy="73" r="1.5" /><circle cx="117" cy="135" r="1" /><circle cx="172" cy="65" r="1.2" />
+                    <circle cx="229" cy="182" r="1.3" /><circle cx="297" cy="89" r="1" /><circle cx="351" cy="143" r="1.6" />
+                    <circle cx="416" cy="52" r="1.1" /><circle cx="469" cy="189" r="1.1" /><circle cx="531" cy="77" r="1.4" />
+                    <circle cx="87" cy="298" r="1" /><circle cx="143" cy="380" r="1.3" /><circle cx="228" cy="322" r="1.1" />
+                    <circle cx="338" cy="402" r="1" /><circle cx="417" cy="334" r="1.5" /><circle cx="548" cy="389" r="1.2" />
+                    <circle cx="620" cy="284" r="1.1" />
+                  </g>
+                  <ellipse class="orbit-ring orbit-ring-one" cx="504" cy="131" rx="168" ry="76" transform="rotate(-20 504 131)" />
+                  <ellipse class="orbit-ring orbit-ring-two" cx="504" cy="131" rx="218" ry="111" transform="rotate(-20 504 131)" />
+                  <path class="orbit-guide" d="M53 390 C154 429 238 359 293 308 C361 245 386 222 448 186 C509 150 546 128 594 92" />
+                  <path class="draw-path orbit-line" data-path pathLength="1" d="M53 390 C154 429 238 359 293 308 C361 245 386 222 448 186 C509 150 546 128 594 92" />
+                  <g class="orbit-moon" filter="url(#orbitGlow)">
+                    <circle cx="602" cy="86" r="50" fill="url(#orbitMoon)" />
+                    <circle cx="584" cy="69" r="8" fill="#958771" opacity=".5" />
+                    <circle cx="616" cy="102" r="12" fill="#958771" opacity=".4" />
+                    <circle cx="619" cy="60" r="5" fill="#fff8e6" opacity=".68" />
+                  </g>
+                  <g class="rocket orbit-rocket" data-rocket filter="url(#orbitGlow)">
+                    <path class="rocket-flame" d="M-18 0L-34 -8L-29 0L-34 8Z" />
+                    <path class="rocket-body" d="M-18 -10 C2 -13 18 -8 29 0 C18 8 2 13 -18 10 L-8 0Z" />
+                    <path class="rocket-window" d="M8 -5A5 5 0 1 0 8 5A5 5 0 1 0 8 -5" />
+                    <path class="rocket-fin" d="M-12 -9L-21 -19L2 -10ZM-12 9L-21 19L2 10Z" />
+                  </g>
+                  <text class="orbit-caption" x="54" y="82">CAPITAL THAT CAN WAIT</text>
+                  <text class="orbit-serif" x="54" y="122">Patience creates optionality.</text>
+                </svg>
+                <div class="orbit-progress"><span></span><b>01</b><i></i><b>02</b><i></i><b>03</b><em>COMPOUND</em></div>
+              </div>
+
+              <div class="visual-option option-journey" data-concept="2" aria-label="Manager journey concept" hidden>
+                <div class="journey-heading">
+                  <span>How value compounds</span>
+                  <strong>One relationship at a time.</strong>
+                </div>
+                <svg class="concept-svg" viewBox="0 0 680 480" role="img" aria-label="A rocket traveling through source, partner, and compound milestones toward the moon">
+                  <defs>
+                    <linearGradient id="journeyMoon" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#fff8e5" />
+                      <stop offset="1" stop-color="#d9c9ad" />
+                    </linearGradient>
+                    <filter id="journeyShadow" x="-100%" y="-100%" width="300%" height="300%">
+                      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#243249" flood-opacity=".16" />
+                    </filter>
+                  </defs>
+                  <path class="journey-ghost" d="M68 397 C137 393 141 327 216 321 C295 314 281 239 362 235 C448 231 426 147 516 143 C559 141 591 109 620 70" />
+                  <path class="draw-path journey-line" data-path pathLength="1" d="M68 397 C137 393 141 327 216 321 C295 314 281 239 362 235 C448 231 426 147 516 143 C559 141 591 109 620 70" />
+                  <g class="journey-card journey-card-one">
+                    <rect x="112" y="306" width="140" height="68" rx="12" />
+                    <text class="journey-count" x="130" y="333">01</text>
+                    <text class="journey-label" x="130" y="356">SOURCE THE EDGE</text>
+                  </g>
+                  <g class="journey-card journey-card-two">
+                    <rect x="302" y="220" width="150" height="68" rx="12" />
+                    <text class="journey-count" x="320" y="247">02</text>
+                    <text class="journey-label" x="320" y="270">PARTNER EARLY</text>
+                  </g>
+                  <g class="journey-card journey-card-three">
+                    <rect x="468" y="121" width="154" height="68" rx="12" />
+                    <text class="journey-count" x="486" y="148">03</text>
+                    <text class="journey-label" x="486" y="171">COMPOUND VALUE</text>
+                  </g>
+                  <g class="journey-moon">
+                    <circle cx="620" cy="70" r="34" fill="url(#journeyMoon)" />
+                    <path d="M620 36A34 34 0 0 0 620 104A27 34 0 0 1 620 36" fill="#243249" opacity=".14" />
+                    <circle cx="609" cy="59" r="4" fill="#b4a58e" opacity=".5" />
+                    <circle cx="630" cy="80" r="7" fill="#b4a58e" opacity=".38" />
+                  </g>
+                  <g class="rocket" data-rocket>
+                    <path class="rocket-flame" d="M-18 0L-31 -7L-27 0L-31 7Z" />
+                    <path class="rocket-body" d="M-18 -10 C2 -13 18 -8 29 0 C18 8 2 13 -18 10 L-8 0Z" />
+                    <path class="rocket-window" d="M8 -5A5 5 0 1 0 8 5A5 5 0 1 0 8 -5" />
+                    <path class="rocket-fin" d="M-12 -9L-21 -19L2 -10ZM-12 9L-21 19L2 10Z" />
+                  </g>
+                </svg>
+                <div class="journey-footer"><span>Principal-led decisions</span><span>Multi-generational perspective</span></div>
+              </div>
+            </div>
+          </section>
+
+          <div class="scroll-cue" aria-hidden="true"><span></span>Scroll to launch <b>↓</b></div>
+        </main>
+      </div>
+    </div>
+
+    <script src="./hero-options.js"></script>
+  </body>
+</html>

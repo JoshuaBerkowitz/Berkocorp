@@ -5,133 +5,116 @@ const investments = [
     url: "https://novacapcorp.com/",
     kind: "fund",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/novacapcorp.com",
   },
   {
-    name: "Imperial Capital",
+    name: "Imperial",
     url: "https://www.imperialcap.com/",
     kind: "fund",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/imperialcap.com",
   },
   {
-    name: "Ironbridge Equity Partners",
+    name: "Ironbridge",
     url: "https://www.ironbridgeequity.com/",
     kind: "fund",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/ironbridgeequity.com",
   },
   {
     name: "Altas",
     url: "https://www.altas.com/",
     kind: "fund",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/altas.com",
   },
   {
     name: "Atlas Grove",
     url: "https://www.atlasgrove.partners/",
     kind: "fund",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/atlasgrove.partners",
   },
   {
-    name: "Hale Capital Partners",
+    name: "Hale Capital",
     url: "https://halecapital.com/",
     kind: "fund",
     label: "private-equity",
-    logo: "./assets/placeholders/hale-capital-mark.svg",
+    logo: "./assets/images/hale-capital-mark.svg",
   },
   {
     name: "CPS",
     url: "https://cpscapital.com/",
     kind: "fund",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/cpscapital.com",
   },
   {
     name: "Kline Hill",
     url: "https://www.klinehill.com/",
     kind: "fund",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/klinehill.com",
   },
   {
-    name: "Victor Capital",
+    name: "Victor",
     url: "https://www.victorcapitalpartners.com/",
     kind: "fund",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/victorcapitalpartners.com",
   },
   {
-    name: "Legate LP",
+    name: "Legate",
     url: "https://www.legatelp.com/",
     kind: "fund",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/legatelp.com",
   },
   {
     name: "Renwave",
     url: "https://www.renwavekore.com/",
     kind: "fund",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/renwavekore.com",
   },
   {
-    name: "Shore Capital",
+    name: "Shore",
     url: "https://www.shorecp.com/",
     kind: "fund",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/shorecp.com",
   },
   {
     name: "Birch Hill",
     url: "https://www.birchhillequity.com/",
     kind: "fund",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/birchhillequity.com",
   },
   {
     name: "Equality Asset Management",
     url: "https://equalityassetmanagement.com/",
     kind: "fund",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/equalityassetmanagement.com",
   },
   {
     name: "Chicago Pacific Founders",
     url: "https://cpfounders.com/",
     kind: "fund",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/cpfounders.com",
   },
   {
     name: "Truelink",
     url: "https://truelinkcap.com/",
     kind: "fund",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/truelinkcap.com",
   },
   {
     name: "Afore",
     url: "https://afore.vc/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/afore.vc",
   },
   {
     name: "Ballistic",
     url: "https://ballisticventures.com/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/ballisticventures.com",
   },
   {
     name: "Browder Capital",
     url: "https://browdercapital.com/",
     kind: "fund",
     label: "venture-capital",
-    logo: "./assets/placeholders/browder-capital-wordmark.svg",
+    logo: "./assets/images/browder-capital-wordmark.svg",
     logoMode: "wordmark",
   },
   {
@@ -139,49 +122,43 @@ const investments = [
     url: "https://buckleyventures.com/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/buckleyventures.com",
   },
   {
     name: "Caffeinated",
     url: "https://caffeinated.com/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/caffeinated.com",
   },
   {
     name: "Compound",
     url: "https://compound.vc/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/compound.vc",
   },
   {
     name: "Discipulus",
     url: "https://discipulusventures.com/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/discipulusventures.com",
   },
   {
     name: "Framework",
     url: "https://www.framework.ventures/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/framework.ventures",
   },
   {
     name: "Dorm Room Fund",
     url: "https://dormroomfund.com/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/dormroomfund.com",
   },
   {
     name: "Eclipse",
     url: "https://eclipse.capital/",
     kind: "fund",
     label: "venture-capital",
-    logo: "./assets/placeholders/eclipse-logo.svg",
+    logo: "./assets/images/eclipse-logo.svg",
     logoMode: "wordmark",
   },
   {
@@ -189,303 +166,350 @@ const investments = [
     url: "https://foothill.ventures/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/foothill.ventures",
   },
   {
     name: "Ford Street",
     url: "https://fordstreetvc.com/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/fordstreetvc.com",
   },
   {
     name: "FPV",
     url: "https://fpvventures.com/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/fpvventures.com",
   },
   {
     name: "Fuse",
     url: "https://fuse.vc/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/fuse.vc",
   },
   {
-    name: "Garage Capital",
+    name: "Garage",
     url: "https://garage.vc/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/garage.vc",
   },
   {
     name: "GreenOaks",
     url: "https://greenoaks.com/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/greenoaks.com",
   },
   {
     name: "Horizon",
     url: "https://horizon.vc/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/horizon.vc",
+  },
+  {
+    name: "Humba Ventures",
+    url: "https://humbaventures.com/",
+    kind: "fund",
+    label: "venture-capital",
   },
   {
     name: "Iron Nation",
     url: "https://ironnation.org/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/ironnation.org",
   },
   {
     name: "Iterative",
     url: "https://iterative.vc/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/iterative.vc",
   },
   {
     name: "Julian Capital",
     url: "https://julian.capital/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/julian.capital",
   },
   {
     name: "KdT",
     url: "https://kdtvc.com/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/kdtvc.com",
   },
   {
-    name: "Leo Capital",
+    name: "Leo",
     url: "https://leo.capital/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/leo.capital",
   },
   {
     name: "Liquid 2",
     url: "https://liquid2.vc/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/liquid2.vc",
   },
   {
     name: "New Form",
     url: "https://www.newformcap.com/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/newformcap.com",
   },
   {
-    name: "Night Capital",
+    name: "Night",
     url: "https://nightcapvc.com/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/nightcapvc.com",
   },
   {
     name: "Northside",
     url: "https://northside.ventures/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/northside.ventures",
   },
   {
     name: "Powerset",
     url: "https://powerset.co/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/powerset.co",
   },
   {
     name: "Repeat VC",
     url: "https://repeat.vc/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/repeat.vc",
   },
   {
-    name: "Road Capital",
+    name: "Road",
     url: "https://roadcapitalmgmt.com/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/roadcapitalmgmt.com",
   },
   {
     name: "Space VC",
     url: "https://spacevc.com/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/spacevc.com",
   },
   {
     name: "Sunshine Lake",
     url: "https://sunshinelake.vc/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/sunshinelake.vc",
   },
   {
     name: "Topology",
     url: "https://topology.vc/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/topology.vc",
   },
   {
     name: "Variant",
     url: "https://variant.fund/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/variant.fund",
   },
   {
     name: "Valkyrie",
     url: "https://valkyrie.vc/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/valkyrie.vc",
   },
   {
     name: "Wayfinder",
     url: "https://wayfinder.com/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/wayfinder.com",
   },
   {
     name: "Worldbuild",
     url: "https://worldbuild.vc/",
     kind: "fund",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/worldbuild.vc",
   },
   {
     name: "Abingdon Software Group",
     url: "https://abingdon.software/",
     kind: "direct",
-    label: "venture-capital",
-    logo: "https://logo.clearbit.com/abingdon.software",
+    label: "private-equity",
   },
   {
     name: "Antares Nuclear",
     url: "https://antaresindustries.com/",
     kind: "direct",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/antaresindustries.com",
   },
   {
-    name: "Atlas RMS",
-    url: "https://www.atlasrms.com/",
+    name: "Actual",
+    url: "https://onactual.com/",
     kind: "direct",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/atlasrms.com",
+  },
+  {
+    name: "Brainbase",
+    url: "https://brainbaselabs.com/",
+    kind: "direct",
+    label: "venture-capital",
   },
   {
     name: "Deel",
     url: "https://www.deel.com/",
     kind: "direct",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/deel.com",
   },
   {
     name: "Owner",
     url: "https://www.owner.com/",
     kind: "direct",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/owner.com",
   },
   {
     name: "Paloma",
     url: "https://www.getpaloma.ai/",
     kind: "direct",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/getpaloma.ai",
   },
   {
     name: "Rivet Tax",
     url: "https://www.rivet.tax/",
     kind: "direct",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/rivet.tax",
   },
   {
     name: "Skyryse",
     url: "https://www.skyryse.com/",
     kind: "direct",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/skyryse.com",
   },
   {
     name: "Switch Growth",
     url: "https://switchgrowth.com/",
     kind: "direct",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/switchgrowth.com",
   },
   {
     name: "Titus",
     url: "https://gotitus.com/",
     kind: "direct",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/gotitus.com",
   },
   {
     name: "Underdog Fantasy",
     url: "https://www.underdogfantasy.com/",
     kind: "direct",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/underdogfantasy.com",
+  },
+  {
+    name: "Yuzu Health",
+    url: "https://yuzu.health/",
+    kind: "direct",
+    label: "venture-capital",
   },
   {
     name: "Zuper",
     url: "https://www.zuper.co/",
     kind: "direct",
     label: "venture-capital",
-    logo: "https://logo.clearbit.com/zuper.co",
   },
   {
     name: "AlumierMD",
     url: "https://www.alumiermd.com/",
     kind: "direct",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/alumiermd.com",
   },
   {
     name: "GlobalFaces Direct",
     url: "https://globalfacesdirect.com/",
     kind: "direct",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/globalfacesdirect.com",
   },
   {
     name: "Kii Health",
     url: "https://www.kiihealth.com/",
     kind: "direct",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/kiihealth.com",
   },
   {
     name: "Tree Care Partners",
     url: "https://treecare.partners/",
     kind: "direct",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/treecare.partners",
   },
   {
     name: "We Grow Brands",
     url: "https://wegrowbrands.org/",
     kind: "direct",
     label: "private-equity",
-    logo: "https://logo.clearbit.com/wegrowbrands.org",
   },
 ];
+
+const localLogoMap = {
+  "Abingdon Software Group": "./assets/images/portfolio/abingdon-software-group-011454585e70.webp",
+  Actual: "./assets/images/portfolio/actual-5146efa6237b.webp",
+  Afore: "./assets/images/portfolio/afore-8a37dde1662f.png",
+  Altas: "./assets/images/portfolio/altas-33d4f8cf7f6c.png",
+  AlumierMD: "./assets/images/portfolio/alumiermd-8fad35bc8871.png",
+  "Antares Nuclear": "./assets/images/portfolio/antares-nuclear-411a2d0e92f3.webp",
+  "Atlas Grove": "./assets/images/portfolio/atlas-grove-46ccb5fe2f50.jpg",
+  Ballistic: "./assets/images/portfolio/ballistic-715347fd467e.webp",
+  "Birch Hill": "./assets/images/portfolio/birch-hill-b8aa49eff371.png",
+  Brainbase: "./assets/images/portfolio/brainbase.svg",
+  "Buckley Ventures": "./assets/images/portfolio/buckley-ventures-5cfbbfc9ce29.webp",
+  CPS: "./assets/images/portfolio/cps-74fbdab86f18.png",
+  Caffeinated: "./assets/images/portfolio/caffeinated-c4fdd3ad7c2d.png",
+  "Chicago Pacific Founders": "./assets/images/portfolio/chicago-pacific-founders-6e0d136c9779.png",
+  Compound: "./assets/images/portfolio/compound-b0bd51f79e3c.png",
+  Deel: "./assets/images/portfolio/deel-1e3a557ec88c.ico",
+  Discipulus: "./assets/images/portfolio/discipulus-e3e0ca90ef79.ico",
+  "Dorm Room Fund": "./assets/images/portfolio/dorm-room-fund-3e71f7ebd0f6.ico",
+  "Equality Asset Management": "./assets/images/portfolio/equality-asset-management-1d9b36896182.svg",
+  FPV: "./assets/images/portfolio/fpv-4b81d7a172c1.webp",
+  Foothill: "./assets/images/portfolio/foothill-180223578846.png",
+  "Ford Street": "./assets/images/portfolio/ford-street-ee89aa46c5d0.png",
+  Framework: "./assets/images/portfolio/framework-9d6f83e89edf.svg",
+  Fuse: "./assets/images/portfolio/fuse-38442c9432a6.svg",
+  Garage: "./assets/images/portfolio/garage-22ebe308c340.png",
+  "GlobalFaces Direct": "./assets/images/portfolio/globalfaces-direct-8c6898c8616c.png",
+  GreenOaks: "./assets/images/portfolio/greenoaks-62fcddbad241.png",
+  Horizon: "./assets/images/portfolio/horizon-3d61498e2787.png",
+  "Humba Ventures": "./assets/images/portfolio/humba-ventures-bdc0975a7b10.ico",
+  Imperial: "./assets/images/portfolio/imperial.png",
+  "Iron Nation": "./assets/images/portfolio/iron-nation-880c0c63df10.png",
+  Ironbridge: "./assets/images/portfolio/ironbridge-dc7c5b2f1db4.png",
+  Iterative: "./assets/images/portfolio/iterative-0d86ceee28ee.png",
+  "Julian Capital": "./assets/images/portfolio/julian-capital-36f702ad0097.png",
+  KdT: "./assets/images/portfolio/kdt-191766793f0d.webp",
+  "Kii Health": "./assets/images/portfolio/kii-health-1807eead7afb.svg",
+  "Kline Hill": "./assets/images/portfolio/kline-hill-985dabdc86df.webp",
+  Legate: "./assets/images/portfolio/legate-a8e97782012d.webp",
+  Leo: "./assets/images/portfolio/leo-9fb8a84cfdad.webp",
+  "Liquid 2": "./assets/images/portfolio/liquid-2-0f8f36cc8659.svg",
+  "New Form": "./assets/images/portfolio/new-form-60ffbdf1ab99.png",
+  Night: "./assets/images/portfolio/night-capital.svg",
+  Northside: "./assets/images/portfolio/northside-91d482b1f562.png",
+  Novacap: "./assets/images/portfolio/novacap-c210c931c056.png",
+  Owner: "./assets/images/portfolio/owner-87050216020c.png",
+  Paloma: "./assets/images/portfolio/paloma-e9e4f1975983.svg",
+  Powerset: "./assets/images/portfolio/powerset-dcfbf7e73f6c.png",
+  Renwave: "./assets/images/portfolio/renwave-f4908cdbfb02.webp",
+  "Repeat VC": "./assets/images/portfolio/repeat-vc-68b4d1a4523f.svg",
+  "Rivet Tax": "./assets/images/portfolio/rivet-tax-1847f9becc39.png",
+  Road: "./assets/images/portfolio/road-6d30160dfffd.png",
+  Shore: "./assets/images/portfolio/shore-c4cb90888828.png",
+  Skyryse: "./assets/images/portfolio/skyryse-617057dcca25.png",
+  "Space VC": "./assets/images/portfolio/space-vc-19fc97a58d84.png",
+  "Sunshine Lake": "./assets/images/portfolio/sunshine-lake-966b382a3916.png",
+  "Switch Growth": "./assets/images/portfolio/switch-growth-cbc1aa1f1da7.png",
+  Titus: "./assets/images/portfolio/titus-73742769ac2d.ico",
+  Topology: "./assets/images/portfolio/topology-d7c51b33cd0b.png",
+  "Tree Care Partners": "./assets/images/portfolio/tree-care-partners-c80e236451e1.png",
+  Truelink: "./assets/images/portfolio/truelink-2ee881374e96.png",
+  "Underdog Fantasy": "./assets/images/portfolio/underdog-fantasy-a38037cdef83.png",
+  Valkyrie: "./assets/images/portfolio/valkyrie-043bbe696d54.png",
+  Variant: "./assets/images/portfolio/variant-f63e04fa8b7e.ico",
+  Victor: "./assets/images/portfolio/victor-54d607c98255.png",
+  Wayfinder: "./assets/images/portfolio/wayfinder-b17eb6f80908.png",
+  "We Grow Brands": "./assets/images/portfolio/we-grow-brands-3005a24372a8.webp",
+  Worldbuild: "./assets/images/portfolio/worldbuild-44bcf0f1d256.png",
+  "Yuzu Health": "./assets/images/portfolio/yuzu-health-df863e0679b5.svg",
+  Zuper: "./assets/images/portfolio/zuper-2d7a310283d6.svg",
+};
 
 const labelMap = {
   "venture-capital": "Venture Capital",
@@ -509,8 +533,8 @@ const fundShowMoreButton = document.getElementById("fund-show-more");
 const template = document.getElementById("portfolio-card-template");
 const portfolioLogoTickerTrack = document.getElementById("portfolio-logo-ticker-track");
 const heroChartRoot = document.querySelector(".moonshot-chart");
-const heroChartPolyline = document.querySelector(".chart-polyline");
-const heroChartMoon = document.querySelector(".chart-moon");
+const heroChartPath = document.querySelector(".chart-trajectory");
+const heroChartRocket = document.querySelector(".chart-rocket");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const FUNDS_PAGE_SIZE = 10;
 
@@ -520,228 +544,47 @@ function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
 }
 
-const HERO_CHART_START = { x: 12, y: 85 };
-const HERO_CHART_KINK = { x: 52, y: 66 };
-const HERO_CHART_DEFAULT_END = { x: 94, y: 10 };
 const HERO_CHART_ANIMATION_START = 0.05;
 const HERO_CHART_SCROLL_COMPLETE = 0.44;
-const HERO_CHART_BASE_POINTS = buildMoonshotBasePoints();
-let cachedMoonAlignedPoints = null;
-let cachedMoonPointKey = "";
 
-function buildMoonshotBasePoints() {
-  const startX = HERO_CHART_START.x;
-  const startY = HERO_CHART_START.y;
-  const kinkX = HERO_CHART_KINK.x;
-  const kinkY = HERO_CHART_KINK.y;
-  const finalEndX = HERO_CHART_DEFAULT_END.x;
-  const finalEndY = HERO_CHART_DEFAULT_END.y;
-  const points = [];
-  const firstSegmentSteps = 22;
-  const secondSegmentSteps = 56;
-
-  for (let index = 0; index <= firstSegmentSteps; index += 1) {
-    const t = index / firstSegmentSteps;
-    const x = startX + (kinkX - startX) * t;
-    const trendY = startY + (kinkY - startY) * t;
-    const microChop = Math.sin(t * 52 + 0.21) * 0.14 + Math.sin(t * 90 + 0.77) * 0.08;
-    const wiggle =
-      Math.sin(t * 14 + 0.54) * 0.46 +
-      Math.sin(t * 30 + 0.31) * 0.24 +
-      Math.sin(t * 64 + 0.14) * 0.12 +
-      microChop;
-    const earlyPullback = t > 0.27 && t < 0.36 ? Math.sin(((t - 0.27) / 0.09) * Math.PI) * 0.55 : 0;
-    const y = trendY + wiggle + earlyPullback;
-    points.push({ x, y });
-  }
-
-  const trendAnchors = [
-    { t: 0, y: kinkY },
-    { t: 0.1, y: 64.2 },
-    { t: 0.2, y: 61.8 },
-    { t: 0.3, y: 58.2 },
-    { t: 0.4, y: 54.6 },
-    { t: 0.48, y: 49.4 },
-    { t: 0.56, y: 42.8 },
-    { t: 0.62, y: 46.8 },
-    { t: 0.7, y: 38.4 },
-    { t: 0.78, y: 31.2 },
-    { t: 0.86, y: 23.4 },
-    { t: 0.93, y: 16.6 },
-    { t: 0.96, y: 24.2 },
-    { t: 1, y: finalEndY },
-  ];
-
-  function anchoredTrendY(t) {
-    for (let index = 1; index < trendAnchors.length; index += 1) {
-      const prev = trendAnchors[index - 1];
-      const next = trendAnchors[index];
-      if (t <= next.t) {
-        const localT = (t - prev.t) / Math.max(next.t - prev.t, 0.0001);
-        return prev.y + (next.y - prev.y) * localT;
-      }
-    }
-    return trendAnchors[trendAnchors.length - 1].y;
-  }
-
-  for (let index = 1; index <= secondSegmentSteps; index += 1) {
-    const t = index / secondSegmentSteps;
-    const x = kinkX + (finalEndX - kinkX) * t;
-    const trendY = anchoredTrendY(t);
-    const volatility = 0.68 + t * 0.24;
-    const microChop = Math.sin(t * 104 + 0.19) * 0.1 + Math.sin(t * 164 + 1.04) * 0.06;
-    const wiggle =
-      (Math.sin(t * 18 + 0.34) * 0.52 +
-        Math.sin(t * 40 + 1.02) * 0.24 +
-        Math.sin(t * 72 + 0.18) * 0.1 +
-        microChop) *
-      volatility;
-    const sharpMidDip = t > 0.16 && t < 0.23 ? Math.sin(((t - 0.16) / 0.07) * Math.PI) * 3.05 : 0;
-    const y = trendY + wiggle + sharpMidDip;
-    points.push({ x, y });
-  }
-
-  return points;
+function initialsForName(name) {
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 4)
+    .map((part) => part[0]?.toUpperCase() || "")
+    .join("");
 }
 
-function moonAlignedChartPoints(moonPoint) {
-  const key = `${moonPoint.x.toFixed(2)}|${moonPoint.y.toFixed(2)}`;
-  if (cachedMoonAlignedPoints && cachedMoonPointKey === key) {
-    return cachedMoonAlignedPoints;
-  }
-
-  cachedMoonPointKey = key;
-  cachedMoonAlignedPoints = HERO_CHART_BASE_POINTS.map((point) => ({ x: point.x, y: point.y }));
-  if (cachedMoonAlignedPoints.length) {
-    cachedMoonAlignedPoints[cachedMoonAlignedPoints.length - 1] = { x: moonPoint.x, y: moonPoint.y };
-  }
-  return cachedMoonAlignedPoints;
+function isLocalAssetPath(src) {
+  return typeof src === "string" && src.length > 0 && !/^(?:https?:)?\/\//i.test(src);
 }
 
-function pointAtRatio(pathPoints, ratio) {
-  if (!pathPoints.length) {
-    return { x: HERO_CHART_KINK.x, y: HERO_CHART_KINK.y };
-  }
-  if (pathPoints.length === 1) {
-    return pathPoints[0];
-  }
-
-  const clampedRatio = clamp(ratio, 0, 1);
-  const scaledIndex = clampedRatio * (pathPoints.length - 1);
-  const lowerIndex = Math.floor(scaledIndex);
-  const upperIndex = Math.min(lowerIndex + 1, pathPoints.length - 1);
-  const interpolation = scaledIndex - lowerIndex;
-  const from = pathPoints[lowerIndex];
-  const to = pathPoints[upperIndex];
-
-  return {
-    x: from.x + (to.x - from.x) * interpolation,
-    y: from.y + (to.y - from.y) * interpolation,
-  };
-}
-
-function slicePathByRatio(pathPoints, startRatio, endRatio) {
-  if (!pathPoints.length) {
-    return [{ x: HERO_CHART_KINK.x, y: HERO_CHART_KINK.y }];
-  }
-
-  const start = clamp(startRatio, 0, 1);
-  const end = clamp(Math.max(endRatio, start), start, 1);
-  const startScaled = start * (pathPoints.length - 1);
-  const endScaled = end * (pathPoints.length - 1);
-  const startPoint = pointAtRatio(pathPoints, start);
-  const endPoint = pointAtRatio(pathPoints, end);
-  const result = [startPoint];
-
-  const firstInterior = Math.ceil(startScaled);
-  const lastInterior = Math.floor(endScaled);
-
-  for (let index = firstInterior; index <= lastInterior; index += 1) {
-    const point = pathPoints[index];
-    if (!point) {
-      continue;
-    }
-    const previous = result[result.length - 1];
-    if (!previous || Math.abs(previous.x - point.x) > 0.001 || Math.abs(previous.y - point.y) > 0.001) {
-      result.push(point);
-    }
-  }
-
-  const previous = result[result.length - 1];
-  if (!previous || Math.abs(previous.x - endPoint.x) > 0.001 || Math.abs(previous.y - endPoint.y) > 0.001) {
-    result.push(endPoint);
-  }
-
-  return result;
-}
-
-function moonTargetInChart() {
-  if (!heroChartRoot || !heroChartMoon) {
-    return { x: 92, y: 11 };
-  }
-
-  const chartRect = heroChartRoot.getBoundingClientRect();
-  const moonRect = heroChartMoon.getBoundingClientRect();
-  if (chartRect.width < 1 || chartRect.height < 1) {
-    return { x: 92, y: 11 };
-  }
-
-  const x = ((moonRect.left + moonRect.width * 0.5 - chartRect.left) / chartRect.width) * 100;
-  const y = ((moonRect.top + moonRect.height * 0.5 - chartRect.top) / chartRect.height) * 100;
-  return {
-    x: clamp(x, 0, 100),
-    y: clamp(y, 0, 100),
-  };
-}
-
-function renderMoonshotChart(progress, moonPoint = moonTargetInChart()) {
-  if (!heroChartRoot || !heroChartPolyline) {
+function renderMoonshotChart(progress) {
+  if (!heroChartRoot || !heroChartPath || !heroChartRocket) {
     return;
   }
 
-  const fullPathPoints = moonAlignedChartPoints(moonPoint);
-  if (!fullPathPoints.length) {
-    return;
-  }
+  const animatedProgress = HERO_CHART_ANIMATION_START + progress * (1 - HERO_CHART_ANIMATION_START);
+  const pathLength = heroChartPath.getTotalLength();
+  const distance = pathLength * animatedProgress;
+  const rocketPoint = heroChartPath.getPointAtLength(distance);
+  const nextPoint = heroChartPath.getPointAtLength(Math.min(pathLength, distance + 2));
+  const rocketAngle = Math.atan2(nextPoint.y - rocketPoint.y, nextPoint.x - rocketPoint.x) * (180 / Math.PI);
 
-  const animatedEndRatio = HERO_CHART_ANIMATION_START + progress * (1 - HERO_CHART_ANIMATION_START);
-  const visiblePoints = slicePathByRatio(fullPathPoints, 0, animatedEndRatio);
-
-  heroChartPolyline.setAttribute(
-    "points",
-    visiblePoints.map((point) => `${point.x.toFixed(2)},${point.y.toFixed(2)}`).join(" ")
+  heroChartRoot.style.setProperty("--chart-draw", animatedProgress.toFixed(4));
+  heroChartRocket.setAttribute(
+    "transform",
+    `translate(${rocketPoint.x.toFixed(2)} ${rocketPoint.y.toFixed(2)}) rotate(${rocketAngle.toFixed(2)})`
   );
-
-  const rocketPoint = pointAtRatio(fullPathPoints, animatedEndRatio);
-
-  const lineToMoonAngle = Math.atan2(moonPoint.y - rocketPoint.y, moonPoint.x - rocketPoint.x) * (180 / Math.PI);
-  const emojiFacingOffset = 45;
-  const rocketAngle = lineToMoonAngle + emojiFacingOffset;
-  heroChartRoot.style.setProperty("--rocket-x", `${rocketPoint.x.toFixed(2)}%`);
-  heroChartRoot.style.setProperty("--rocket-y", `${rocketPoint.y.toFixed(2)}%`);
-  heroChartRoot.style.setProperty("--rocket-r", `${rocketAngle.toFixed(2)}deg`);
-}
-
-function getDomainFromUrl(url) {
-  try {
-    return new URL(url).hostname.replace(/^www\./, "");
-  } catch {
-    return "";
-  }
 }
 
 function logoCandidatesFor(item) {
-  const domain = getDomainFromUrl(item.url);
   const candidates = [];
+  const logo = item.logo || localLogoMap[item.name];
 
-  if (item.logo) {
-    candidates.push({ src: item.logo, type: "logo" });
-  }
-
-  if (domain) {
-    candidates.push({ src: `https://logo.clearbit.com/${domain}`, type: "logo" });
-    candidates.push({ src: `https://www.google.com/s2/favicons?domain=${domain}&sz=256`, type: "favicon" });
-    candidates.push({ src: `https://icons.duckduckgo.com/ip3/${domain}.ico`, type: "favicon" });
+  if (isLocalAssetPath(logo)) {
+    candidates.push({ src: logo, type: "logo" });
   }
 
   return candidates;
@@ -770,21 +613,16 @@ function createPortfolioTickerLogoNode(item) {
   logoMark.className = "portfolio-logo-mark";
 
   const img = document.createElement("img");
-  img.alt = `${item.name} logo`;
-  img.loading = "lazy";
+  img.alt = "";
+  img.loading = "eager";
   img.decoding = "async";
   img.referrerPolicy = "no-referrer";
 
   const fallback = document.createElement("span");
   fallback.className = "portfolio-logo-fallback";
-  const symbolText = item.name
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 4)
-    .map((part) => part[0]?.toUpperCase() || "")
-    .join("");
+  const symbolText = initialsForName(item.name);
   fallback.textContent = symbolText;
-  fallback.hidden = true;
+  fallback.hidden = false;
 
   const symbol = document.createElement("span");
   symbol.className = "portfolio-logo-symbol";
@@ -818,13 +656,21 @@ function createPortfolioTickerLogoNode(item) {
       fallback.hidden = false;
       return;
     }
-    fallback.hidden = true;
+    fallback.hidden = false;
     img.hidden = false;
     img.classList.toggle("is-favicon", next.type === "favicon");
     img.src = next.src;
   }
 
-  img.addEventListener("error", loadNextCandidate);
+  img.addEventListener("load", () => {
+    fallback.hidden = true;
+    img.hidden = false;
+  });
+
+  img.addEventListener("error", () => {
+    fallback.hidden = false;
+    loadNextCandidate();
+  });
   loadNextCandidate();
 
   return chip;
@@ -888,9 +734,9 @@ function cardNode(item, index) {
 
   kindTag.textContent = kindMap[item.kind];
   labelTag.textContent = labelMap[item.label] || item.label;
-  placeholder.textContent = "";
-  logo.alt = `${item.name} logo`;
-  logo.loading = "lazy";
+  placeholder.textContent = initialsForName(item.name);
+  logo.alt = "";
+  logo.loading = "eager";
   logo.decoding = "async";
   logo.referrerPolicy = "no-referrer";
 
@@ -900,10 +746,12 @@ function cardNode(item, index) {
     const next = candidates.shift();
     if (!next) {
       logo.hidden = true;
+      placeholder.hidden = false;
       return;
     }
 
     logo.hidden = false;
+    placeholder.hidden = false;
     const isFavicon = next.type === "favicon";
     logo.classList.toggle("is-favicon", isFavicon);
     logo.classList.toggle("is-trimmed", !isFavicon && item.logoMode === "trim");
@@ -913,9 +761,12 @@ function cardNode(item, index) {
 
   logo.addEventListener("load", () => {
     placeholder.hidden = true;
+    logo.hidden = false;
   });
 
   logo.addEventListener("error", () => {
+    logo.hidden = false;
+    placeholder.hidden = false;
     loadNextCandidate();
   });
 
@@ -929,6 +780,7 @@ function cardNode(item, index) {
 }
 
 function render() {
+  fundGrid.setAttribute("aria-busy", "true");
   fundGrid.innerHTML = "";
 
   const filtered = investments.filter((item) => {
@@ -952,6 +804,7 @@ function render() {
     if (combined.length <= FUNDS_PAGE_SIZE) {
       state.fundsExpanded = false;
       fundShowMoreButton.hidden = true;
+      fundShowMoreButton.setAttribute("aria-expanded", "false");
     } else {
       const hiddenCount = Math.max(combined.length - FUNDS_PAGE_SIZE, 0);
       fundShowMoreButton.hidden = false;
@@ -959,18 +812,27 @@ function render() {
       fundShowMoreButton.setAttribute("aria-expanded", state.fundsExpanded ? "true" : "false");
     }
   }
+
+  fundGrid.setAttribute("aria-busy", "false");
 }
 
 function wireFilters() {
   const kindButtons = document.querySelectorAll("[data-kind]");
   const labelButtons = document.querySelectorAll("[data-label]");
 
+  function setActiveButton(buttons, activeButton) {
+    buttons.forEach((candidate) => {
+      const isActive = candidate === activeButton;
+      candidate.classList.toggle("is-active", isActive);
+      candidate.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
+  }
+
   kindButtons.forEach((button) => {
     button.addEventListener("click", () => {
       state.kind = button.dataset.kind || "all";
       state.fundsExpanded = false;
-      kindButtons.forEach((candidate) => candidate.classList.remove("is-active"));
-      button.classList.add("is-active");
+      setActiveButton(kindButtons, button);
       render();
     });
   });
@@ -979,50 +841,46 @@ function wireFilters() {
     button.addEventListener("click", () => {
       state.label = button.dataset.label || "all";
       state.fundsExpanded = false;
-      labelButtons.forEach((candidate) => candidate.classList.remove("is-active"));
-      button.classList.add("is-active");
+      setActiveButton(labelButtons, button);
       render();
     });
   });
+
+  const activeKindButton = document.querySelector(`[data-kind="${state.kind}"]`);
+  const activeLabelButton = document.querySelector(`[data-label="${state.label}"]`);
+  setActiveButton(kindButtons, activeKindButton);
+  setActiveButton(labelButtons, activeLabelButton);
 }
 
-function wireReveal() {
-  const targets = document.querySelectorAll(".section-observe");
-  if (!("IntersectionObserver" in window)) {
-    targets.forEach((node) => node.classList.add("is-visible"));
-    return;
-  }
+function wireHashNavigation() {
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const hash = link.getAttribute("href");
+      if (!hash || hash === "#") {
+        return;
+      }
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        }
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
+      let target;
+      try {
+        target = document.getElementById(decodeURIComponent(hash.slice(1)));
+      } catch {
+        return;
+      }
+
+      if (!target) {
+        return;
+      }
+
+      event.preventDefault();
+      if (window.location.hash !== hash) {
+        window.history.pushState(null, "", hash);
+      }
+      target.scrollIntoView({
+        behavior: prefersReducedMotion.matches ? "auto" : "smooth",
+        block: "start",
       });
-    },
-    { threshold: 0.14 }
-  );
-
-  targets.forEach((node) => observer.observe(node));
-}
-
-function applyStaggerForGroups(groupSelector, childSelector, varName = "--reveal-order") {
-  document.querySelectorAll(groupSelector).forEach((group) => {
-    const items = Array.from(group.children).filter((child) => child.matches(childSelector));
-    items.forEach((node, index) => node.style.setProperty(varName, `${index + 1}`));
+    });
   });
-}
-
-function wireStagger() {
-  applyStaggerForGroups(".hero-copy", "*");
-  applyStaggerForGroups(".section-grid", "*");
-  applyStaggerForGroups(".invest-grid", "article");
-  applyStaggerForGroups(".button-group", ".filter-button");
-  applyStaggerForGroups(".split-layout", ".portfolio-column");
-  applyStaggerForGroups(".footer-inner", "*");
 }
 
 function configurePortfolioLayout() {
@@ -1052,141 +910,19 @@ function wireShowMore() {
   });
 }
 
-function wireBrandMotionSystem() {
-  if (prefersReducedMotion.matches || !window.matchMedia("(pointer: fine)").matches) {
-    return;
-  }
-
-  const root = document.documentElement;
-  const glow = document.createElement("div");
-  glow.className = "brand-cursor-glow";
-  document.body.appendChild(glow);
-  document.body.classList.add("brand-motion-system");
-
-  let activeTiltTarget = null;
-  let pointerX = window.innerWidth * 0.5;
-  let pointerY = window.innerHeight * 0.22;
-  let glowRaf = 0;
-
-  const tiltSelector = ".portfolio-card, .invest-grid article, .filter-button, .show-more-button";
-
-  function queueGlowPaint() {
-    if (glowRaf) {
-      return;
-    }
-
-    glowRaf = window.requestAnimationFrame(() => {
-      glowRaf = 0;
-      glow.style.transform = `translate3d(${(pointerX - 170).toFixed(2)}px, ${(pointerY - 170).toFixed(2)}px, 0)`;
-    });
-  }
-
-  function updatePointerShift() {
-    const viewportWidth = Math.max(window.innerWidth || 0, 1);
-    const viewportHeight = Math.max(window.innerHeight || 0, 1);
-    const normalizedX = clamp((pointerX / viewportWidth - 0.5) * 2, -1, 1);
-    const normalizedY = clamp((pointerY / viewportHeight - 0.5) * 2, -1, 1);
-
-    root.style.setProperty("--pointer-shift-x", `${(normalizedX * 18).toFixed(2)}px`);
-    root.style.setProperty("--pointer-shift-y", `${(normalizedY * 14).toFixed(2)}px`);
-  }
-
-  function clearTilt(node) {
-    if (!node) {
-      return;
-    }
-    node.style.removeProperty("transform");
-  }
-
-  function applyTilt(node, event) {
-    const rect = node.getBoundingClientRect();
-    if (rect.width < 2 || rect.height < 2) {
-      return;
-    }
-
-    const offsetX = clamp((event.clientX - rect.left) / rect.width - 0.5, -0.5, 0.5);
-    const offsetY = clamp((event.clientY - rect.top) / rect.height - 0.5, -0.5, 0.5);
-    const rotateX = clamp(-offsetY * 6.2, -6.2, 6.2);
-    const rotateY = clamp(offsetX * 7.2, -7.2, 7.2);
-    const lift = node.matches(".portfolio-card, .invest-grid article") ? -2.8 : -1.5;
-
-    node.style.transform =
-      `perspective(920px) rotateX(${rotateX.toFixed(2)}deg) ` +
-      `rotateY(${rotateY.toFixed(2)}deg) translate3d(0, ${lift.toFixed(2)}px, 0)`;
-  }
-
-  document.addEventListener(
-    "pointermove",
-    (event) => {
-      if (event.pointerType && event.pointerType !== "mouse" && event.pointerType !== "pen") {
-        return;
-      }
-
-      pointerX = event.clientX;
-      pointerY = event.clientY;
-      queueGlowPaint();
-      updatePointerShift();
-
-      const nextTiltTarget = event.target instanceof Element ? event.target.closest(tiltSelector) : null;
-      if (activeTiltTarget && activeTiltTarget !== nextTiltTarget) {
-        clearTilt(activeTiltTarget);
-      }
-      activeTiltTarget = nextTiltTarget;
-      if (activeTiltTarget) {
-        applyTilt(activeTiltTarget, event);
-      }
-    },
-    { passive: true }
-  );
-
-  window.addEventListener("pointerout", (event) => {
-    if (event.relatedTarget) {
-      return;
-    }
-    clearTilt(activeTiltTarget);
-    activeTiltTarget = null;
-    root.style.setProperty("--pointer-shift-x", "0px");
-    root.style.setProperty("--pointer-shift-y", "0px");
-  });
-
-  window.addEventListener("blur", () => {
-    clearTilt(activeTiltTarget);
-    activeTiltTarget = null;
-    root.style.setProperty("--pointer-shift-x", "0px");
-    root.style.setProperty("--pointer-shift-y", "0px");
-  });
-
-  queueGlowPaint();
-  updatePointerShift();
-}
-
 function wireScrollMotion() {
   const hero = document.querySelector(".hero");
   let ticking = false;
   let resizeTimer = 0;
 
-  function applyStaticHeroState() {
-    if (hero) {
-      hero.style.setProperty("--hero-bg-y", "0px");
-      hero.style.setProperty("--hero-bg-s", "1");
-      hero.style.setProperty("--hero-copy-y", "0px");
-      hero.style.setProperty("--hero-copy-o", "1");
-      hero.style.setProperty("--hero-logo-y", "0px");
-      hero.style.setProperty("--hero-logo-r", "0deg");
-      hero.style.setProperty("--hero-logo-s", "1");
-    }
-  }
-
   let heroOffsetTop = 0;
   let heroHeight = 1;
-  let moonPoint = { x: 92, y: 11 };
 
   function refreshGeometry() {
     if (hero) {
       heroOffsetTop = hero.offsetTop || 0;
       heroHeight = Math.max(hero.offsetHeight || 0, 1);
     }
-    moonPoint = moonTargetInChart();
   }
 
   function paintChartForScroll(scrollY) {
@@ -1196,7 +932,7 @@ function wireScrollMotion() {
     if (hero) {
       hero.style.setProperty("--chart-progress", chartProgress.toFixed(4));
     }
-    renderMoonshotChart(chartProgress, moonPoint);
+    renderMoonshotChart(chartProgress);
   }
 
   function update() {
@@ -1222,7 +958,6 @@ function wireScrollMotion() {
     resizeTimer = window.setTimeout(handleViewportChange, 120);
   }
 
-  applyStaticHeroState();
   refreshGeometry();
   queueUpdate();
 
@@ -1240,7 +975,6 @@ wireFilters();
 wireShowMore();
 wirePortfolioLogoTicker();
 configurePortfolioLayout();
-wireStagger();
-wireReveal();
+wireHashNavigation();
 wireScrollMotion();
 render();

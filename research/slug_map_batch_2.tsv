@@ -1,0 +1,26 @@
+company	legal_name	status	batch	selected_name	selected_batch	slug	website	match_rule
+Osmosis	Gulp AI Inc.	Active	W25	Osmosis	W25	osmosis	https://osmosis.ai/	exact_name+batch
+Subtrace	Subtrace, Inc.	Active	W25	Subtrace	W25	subtrace	https://subtrace.dev	exact_name+batch
+Leaping AI	Leaping AI Inc.	Active	W25	Leaping AI	W25	leaping-ai	https://www.leapingai.com	exact_name+batch
+Vesence	Versenium, Inc.	Active	X25	Vesence	X25	vesence	https://vesence.com	exact_name+batch
+Sim	Sim Studio	Active	X25	Sim	X25	sim	https://sim.ai	exact_name+batch
+RunRL	RunRL, Inc.	Active	X25	RunRL	X25	runrl	https://runrl.com	exact_name+batch
+Human Behavior	Make Dough, Inc.	Active	X25	Human Behavior	X25	human-behavior	https://www.humanbehavior.co/	exact_name+batch
+Partcl	Partcl, Inc.	Active	X25	Partcl	X25	partcl	https://partcl.com/	exact_name+batch
+QFEX	QFEX Holdings, Inc.	Active	X25	QFEX	X25	qfex	https://qfex.com	exact_name+batch
+SalesPatriot	Salespatriot, Inc.	Active	W25	SalesPatriot	W25	salespatriot	https://www.salespatriot.com/	exact_name+batch
+YouLearn	Youlearn Inc.	Active	X25	YouLearn	X25	youlearn	https://www.youlearn.ai/	exact_name+batch
+Tinfoil	Tinfoil, Inc.	Active	X25	Tinfoil	X25	tinfoil	https://tinfoil.sh	exact_name+batch
+Atum Works	Atum Works Inc.	Active	X25	Atum Works	X25	atum-works	https://atum.works/	exact_name+batch
+Casco	Transmittr, Inc.	Active	X25	Casco	X25	casco	https://casco.com	exact_name+batch
+Novoflow	Novoflow, Inc.	Active	X25	Novoflow	X25	novoflow	https://www.novoflow.io/	exact_name+batch
+Pollen	Daymi, Inc.	Active	W26	Pollen	W26	pollen	https://www.pollen.cx/	exact_name+batch
+Design Arena	Arcada Labs Incorporated	Active	S25	Design Arena	S25	design-arena	https://www.designarena.ai/	exact_name+batch
+Janet	Janet AI, Inc.	Active	S25	Janet AI	S25	tryjanet	https://janet.ai	batch
+Nuntius	Nuntius, Inc.	Dead	S25	Nuntius	S25	nuntius	https://www.nuntius.ai	exact_name+batch
+Autosana	Autosana, Inc.	Active	S25	Autosana	S25	autosana	https://autosana.ai	exact_name+batch
+Relling	Relling Corp.	Active	S25	Relling	S25	relling	https://relling.co	exact_name+batch
+Solva	Solva Technology Inc	Active	S25	Solva	S25	solva	https://solvatechnology.com	exact_name+batch
+Nozomio	Nozomio Inc.	Active	S25	Nozomio	S25	nozomio	https://www.trynia.ai/	exact_name+batch
+GETASAP	Blaze Market Incorporated	Active	S25	GETASAP	S25	getasap	https://www.getasap.us	exact_name+batch
+Juxta	Juxta Technology, Inc.	Active	S25	Juxta	S25	juxta	https://juxta.com	exact_name+batch

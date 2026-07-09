@@ -1,0 +1,12 @@
+url	slug	yc_name	yc_batch	news_count	news_date	news_title	news_url	parse_status
+https://www.ycombinator.com/companies/gauge	gauge	Gauge	S24	0				ok
+https://www.ycombinator.com/companies/archil	archil	Archil	F24	2	Jun 02, 2025	Archil - All of your data, on every instance, instantly	https://archil.com/post/archil-file-system-to-data-company	ok
+https://www.ycombinator.com/companies/archil	archil	Archil	F24	2	Dec 05, 2024	The Quest for a Distributed POSIX-Compatible Filesystem	https://materializedview.io/p/the-quest-for-a-distributed-posix-fs	ok
+https://www.ycombinator.com/companies/crustdata	crustdata	Crustdata	F24	1	Oct 23, 2025	Crustdata closes $6M seed round	https://crustdata.com/blog/crustdata-closes-6m-seed-round	ok
+https://www.ycombinator.com/companies/sunset	sunset	Sunset	F24	0				ok
+https://www.ycombinator.com/companies/friday	friday	Friday	F24	0				ok
+https://www.ycombinator.com/companies/gecko-security	gecko-security	Gecko Security	F24	0				ok
+https://www.ycombinator.com/companies/maritime-fusion	maritime-fusion	Maritime Fusion	W25	1	Nov 24, 2025	This startup wants to build a fusion reactor — on a boat | TechCrunch	https://techcrunch.com/2025/11/24/this-startup-wants-to-build-a-fusion-reactor-on-a-boat/	ok
+https://www.ycombinator.com/companies/mastra	mastra	Mastra	W25	0				ok
+https://www.ycombinator.com/companies/mentra	mentra	Mentra	W25	1	Jul 01, 2025	Mentra Raises $8 Million To Launch Open-Source OS For Smart Glasses	https://www.forbes.com/sites/charliefink/2025/07/01/mentra-raises-8-million-to-launch-open-source-os-for-smart-glasses/	ok
+https://www.ycombinator.com/companies/revise-robotics	revise-robotics	Revise Robotics	W25	0				ok

@@ -1,0 +1,26 @@
+company	legal_name	status	batch	selected_name	selected_batch	slug	website	match_rule
+Cartage	Cartage AI Inc.	Active	S24	Cartage	S24	cartage	https://cartage.ai	exact_name+batch
+Anthrogen	Arctic Capture Inc.	Active	S24	Anthrogen	S24	anthrogen	https://anthrogen.com	exact_name+batch
+True3D Labs	True3D Technologies Inc	Active	W21	True3D Labs	W21	true3d-labs	https://true3d.com/	exact_name+batch
+Zeropath	Zeropath Corp.	Active	S24	ZeroPath	S24	zeropath	https://zeropath.com	exact_name+batch
+Ligo Biosciences	Ligo Biosceinces Corp,	Active	S24	Ligo Biosciences	S24	ligo-biosciences	https://www.ligo.bio	exact_name+batch
+Maitai	Maitai Inc.	Active	S24	Maitai	S24	maitai	https://trymaitai.com	exact_name+batch
+Stack Auth	Stackframe Inc	Active	S24	Stack Auth	S24	stack-auth	https://stack-auth.com	exact_name+batch
+Biocartesian	Coordna Bio Inc	Active	S24	Biocartesian	S24	biocartesian	https://www.biocartesian.com	exact_name+batch
+Deepsilicon	Deepsilicon Corp.	Dead	S24	deepsilicon	S24	deepsilicon	https://www.deepsilicon.net/	exact_name+batch
+Parahelp	Copilot Labs Inc	Active	S24	Parahelp	S24	parahelp	https://parahelp.com/	exact_name+batch
+Gauge	Gauge Technologies Inc.	Active	S24	Gauge	S24	gauge	https://withgauge.com	exact_name+batch
+Archil	Regatta Storage Inc.	Active	F24	Archil	F24	archil	https://archil.com	exact_name+batch
+Crustdata	Crustdata Technologies Inc.	Active	F24	Crustdata	F24	crustdata	https://crustdata.com	exact_name+batch
+Sunset	Sunset Software Inc	Active	F24	Sunset	F24	sunset	https://www.hellosunset.com/	exact_name+batch
+Friday	Friday Inc	Active	F24	Friday	F24	friday	https://www.friday.so	exact_name+batch
+Gecko Security	Gecko Security Inc	Active	F24	Gecko Security	F24	gecko-security	https://gecko.security	exact_name+batch
+Maritime Fusion	Maritime Fusion Inc	Active	W25	Maritime Fusion	W25	maritime-fusion	https://maritimefusion.com	exact_name+batch
+Mastra	Kepler Software Inc	Active	W25	Mastra	W25	mastra	https://mastra.ai	exact_name+batch
+Mentra	Mentra Labs Inc	Active	W25	Mentra	W25	mentra	https://mentra.glass	exact_name+batch
+Revise Robotics	Revise Robotics Inc.	Active	W25	Revise Robotics	W25	revise-robotics	https://www.reviserobotics.com/	exact_name+batch
+Haleum	Pysion Works Inc	Active	W25	Haleum	W25	haleum	https://haleum.ai/	exact_name+batch
+Bindwell	Bindwell Inc	Active	W25	Bindwell	W25	bindwell	https://www.bindwell.ai/	exact_name+batch
+Edexia	Edexia Inc	Active	W25	Edexia	W25	edexia	https://www.edexia.com/	exact_name+batch
+Enhanced Radar	Enhanced Radar Corporation	Active	W25	Enhanced Radar	W25	enhanced-radar	https://www.enhancedradar.com/	exact_name+batch
+Auricle	Auricle Health Inc.	Active	W21	Auricle	W21	auricle	https://auricle.com	exact_name+batch

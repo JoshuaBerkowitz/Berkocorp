@@ -1,0 +1,11 @@
+url	slug	yc_name	yc_batch	news_count	news_date	news_title	news_url	parse_status
+https://www.ycombinator.com/companies/gpt	gpt	Nexus	F25	0				ok
+https://www.ycombinator.com/companies/veria-labs	veria-labs	Veria Labs	F25	0				ok
+https://www.ycombinator.com/companies/sf-tensor	sf-tensor	SF Tensor	F25	0				ok
+https://www.ycombinator.com/companies/minro	minro	Minro	F25	0				ok
+https://www.ycombinator.com/companies/prox	prox	Prox	F25	0				ok
+https://www.ycombinator.com/companies/locus	locus	Locus	F25	0				ok
+https://www.ycombinator.com/companies/sorce	sorce	Sorce	F25	0				ok
+https://www.ycombinator.com/companies/dome	dome	Dome	F25	1	Nov 13, 2025	The Top Startups To Watch From Y Combinator’s Fall 2025 Batch	https://www.forbes.com/sites/dariashunina/2025/11/13/the-top-startups-to-watch-from-y-combinators-fall-2025-batch/	ok
+https://www.ycombinator.com/companies/wardstone	wardstone	Wardstone	F25	0				ok
+https://www.ycombinator.com/companies/zavo	zavo	Zavo	F25	0				ok

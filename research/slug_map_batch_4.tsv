@@ -1,0 +1,26 @@
+company	legal_name	status	batch	selected_name	selected_batch	slug	website	match_rule
+Locus	Locus Technologies Inc	Active	F25	Locus	F25	locus	https://paywithlocus.com	exact_name+batch
+Sorce	redantai, Inc.	Active	F25	Sorce	F25	sorce	https://sorce.jobs	exact_name+batch
+Dome	Dome API Inc.	Active	F25	Dome	F25	dome	https://domeapi.io	exact_name+batch
+Wardstone	Wardstone Inc.	Active	F25	Wardstone	F25	wardstone	https://www.wardstone.space	exact_name+batch
+Zavo	Zavo Inc	Active	F25	Zavo	F25	zavo	https://zavopay.com	exact_name+batch
+Crunched	Crunched Inc	Active	F25	Crunched	F25	crunched	https://usecrunched.com/	exact_name+batch
+Milliray		Active	W26	Milliray	W26	milliray	https://milliray.com/	exact_name+batch
+Luel	Luel	Active	W26	Luel	W26	luel	https://luel.ai	exact_name+batch
+o11	O11 Inc.	Active	W26	o11	W26	o11	https://o11.ai	exact_name+batch
+Carrot Labs	Carrot Labs AI, Inc.	Active	W26	Carrot Labs	W26	carrot-labs	https://carrotlabs.ai/	exact_name+batch
+Aemon	Omnial AI, Inc	Active	W26	Aemon	W26	aemon	https://aemon.ai/	exact_name+batch
+Autumn AI	Autumn AI, Inc.	Active	W26	Autumn AI	W26	autumn-ai	https://autumnai.com	exact_name+batch
+Pax Historia	Pax Historia, Co.	Active	W26	Pax Historia	W26	pax-historia	https://www.paxhistoria.co	exact_name+batch
+GrazeMate		Active	W26	GrazeMate	W26	grazemate	https://grazemate.com	exact_name+batch
+Hex Security	Anytool, Inc.	Active	W26	Hex Security	W26	hex-security	https://hex.co	exact_name+batch
+Byteport	Byteport, Inc	Active	W26	Byteport	W26	byteport	https://byteport.com/	exact_name+batch
+Fixture	Fixture, Inc.	Active	W26	Fixture	W26	fixture	https://fixture.app	exact_name+batch
+Confluence Labs	Confluence Labs, Inc.	Active	W26	Confluence Labs	W26	confluence-labs	https://confluence.sh	exact_name+batch
+General Astronautics	General Astronautics Corp	Active	W26	General Astronautics	W26	generalastro	https://generalastro.com/	exact_name+batch
+Piris Labs	Piris Labs Inc.	Acive	W26	Piris Labs	W26	pirislabs	https://pirislabs.io/	exact_name+batch
+Wayco	Wayco AI, Inc.	Active	W26	Wayco	W26	wayco	https://wayco.ai	exact_name+batch
+Forum	Forum Markets Group Inc.,	Active	W26	Forum	W26	forum	https://www.forum.market/	exact_name+batch
+Prana		Active	W26	Prana	W26	prana-health	https://pranadoc.com	exact_name+batch
+Ashr		Active	W26	Ashr	W26	ashr	https://ashr.io	exact_name+batch
+Origami Robotics		Active	W26	Origami Robotics	W26	origami-robotics	https://www.origami-robotics.com	exact_name+batch

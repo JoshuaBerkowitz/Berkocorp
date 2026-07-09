@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" role="img" aria-labelledby="title desc">
+  <title id="title">Brainbase</title>
+  <desc id="desc">Brainbase wordmark.</desc>
+  <rect width="640" height="220" rx="24" fill="#f7f7f4" />
+  <g fill="#151515">
+    <path d="M72 58h55c34 0 55 15 55 42 0 16-8 28-23 35 21 6 32 20 32 41 0 31-24 48-62 48H72V58Zm52 57c17 0 26-6 26-19 0-12-9-18-26-18H104v37h20Zm4 68c20 0 30-7 30-22 0-14-10-21-30-21h-24v43h24Z" />
+    <circle cx="217" cy="169" r="18" />
+  </g>
+  <text x="252" y="151" fill="#151515" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700" letter-spacing="-3">brainbase</text>
+</svg>

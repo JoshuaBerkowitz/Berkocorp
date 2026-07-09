@@ -8,21 +8,30 @@
       name="description"
       content="Berkocorp is a Canadian family office investing across venture capital, private equity, and other niche strategies through a mix of fund commitments and direct investments."
     />
-    <link rel="icon" type="image/x-icon" href="./assets/brand/favicon.ico" />
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/brand/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sora:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
+    <meta name="theme-color" content="#f5f1e8" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Berkocorp" />
+    <meta property="og:title" content="Berkocorp | Family Office" />
+    <meta
+      property="og:description"
+      content="A Canadian family office investing across venture capital, private equity, and other niche strategies."
     />
-    <link rel="stylesheet" href="./styles.css?v=20260225m" />
+    <meta property="og:image" content="./assets/images/berkocorp-social-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Berkocorp | Family Office" />
+    <meta
+      name="twitter:description"
+      content="A Canadian family office investing across venture capital, private equity, and other niche strategies."
+    />
+    <meta name="twitter:image" content="./assets/images/berkocorp-social-preview.png" />
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-shell">
         <a class="header-logo-link" href="#top" aria-label="Berkocorp home">
-          <img src="./assets/brand/transparent-logo-2.svg" alt="Berkocorp" class="header-logo" />
+          <img src="./assets/images/berkocorp-logo.svg" alt="Berkocorp" class="header-logo" />
         </a>
         <nav class="site-nav" aria-label="Section navigation">
           <a href="#about">About Us</a>
@@ -55,15 +64,52 @@
           </div>
           <div class="hero-logo-frame" aria-hidden="true">
             <div class="moonshot-chart">
-              <span class="chart-grid"></span>
-              <span class="chart-axis axis-x"></span>
-              <span class="chart-axis axis-y"></span>
-              <span class="chart-axis-label axis-label-x">Time</span>
-              <span class="chart-moon"></span>
-              <svg class="chart-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <polyline class="chart-polyline" points="12,85 52,58 82,26"></polyline>
+              <div class="chart-meta">
+                <span>Patient capital</span>
+              </div>
+              <svg class="chart-svg" viewBox="0 0 680 480" role="presentation">
+                <defs>
+                  <linearGradient id="hero-chart-area" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#ff5c3d" stop-opacity="0.2"></stop>
+                    <stop offset="1" stop-color="#ff5c3d" stop-opacity="0"></stop>
+                  </linearGradient>
+                  <radialGradient id="hero-chart-moon" cx="35%" cy="30%">
+                    <stop offset="0" stop-color="#fff8df"></stop>
+                    <stop offset="0.58" stop-color="#eadcc4"></stop>
+                    <stop offset="1" stop-color="#c7b89f"></stop>
+                  </radialGradient>
+                </defs>
+                <g class="chart-grid">
+                  <path d="M74 86V405M186 86V405M298 86V405M410 86V405M522 86V405M634 86V405"></path>
+                  <path d="M74 405H634M74 325H634M74 245H634M74 165H634M74 86H634"></path>
+                </g>
+                <path class="chart-baseline" d="M74 405H634"></path>
+                <path
+                  class="chart-area"
+                  d="M76 391 C130 389 154 371 193 365 C242 358 248 372 294 344 C339 316 351 329 393 286 C430 248 450 272 488 221 C525 170 540 187 576 127 C595 96 610 78 626 69 L626 405 L76 405 Z"
+                ></path>
+                <path
+                  class="chart-trajectory"
+                  pathLength="1"
+                  d="M76 391 C130 389 154 371 193 365 C242 358 248 372 294 344 C339 316 351 329 393 286 C430 248 450 272 488 221 C525 170 540 187 576 127 C595 96 610 78 626 69"
+                ></path>
+                <g class="chart-moon">
+                  <circle cx="626" cy="69" r="31" fill="url(#hero-chart-moon)"></circle>
+                  <circle cx="613" cy="58" r="5" class="moon-crater crater-dark"></circle>
+                  <circle cx="636" cy="77" r="8" class="moon-crater crater-soft"></circle>
+                  <circle cx="632" cy="51" r="3" class="moon-crater crater-light"></circle>
+                </g>
+                <g class="chart-rocket">
+                  <path class="rocket-flame" d="M-18 0L-31 -7L-27 0L-31 7Z"></path>
+                  <path class="rocket-body" d="M-18 -10 C2 -13 18 -8 29 0 C18 8 2 13 -18 10 L-8 0Z"></path>
+                  <path class="rocket-window" d="M8 -5A5 5 0 1 0 8 5A5 5 0 1 0 8 -5"></path>
+                  <path class="rocket-fin" d="M-12 -9L-21 -19L2 -10ZM-12 9L-21 19L2 10Z"></path>
+                </g>
               </svg>
-              <span class="chart-rocket"></span>
+              <div class="chart-footer">
+                <span>Long-term value creation</span>
+                <strong>Time →</strong>
+              </div>
             </div>
           </div>
         </div>
@@ -190,15 +236,19 @@
         </div>
 
         <div class="container filter-row" role="toolbar" aria-label="Portfolio filters">
-          <div class="button-group" data-filter-group="kind">
-            <button type="button" class="filter-button is-active" data-kind="all">All</button>
-            <button type="button" class="filter-button" data-kind="fund">Funds</button>
-            <button type="button" class="filter-button" data-kind="direct">Direct</button>
+          <div class="button-group" data-filter-group="kind" role="group" aria-label="Investment type">
+            <button type="button" class="filter-button is-active" data-kind="all" aria-pressed="true">All</button>
+            <button type="button" class="filter-button" data-kind="fund" aria-pressed="false">Funds</button>
+            <button type="button" class="filter-button" data-kind="direct" aria-pressed="false">Direct</button>
           </div>
-          <div class="button-group" data-filter-group="label">
-            <button type="button" class="filter-button is-active" data-label="all">ALL</button>
-            <button type="button" class="filter-button" data-label="venture-capital">Venture Capital</button>
-            <button type="button" class="filter-button" data-label="private-equity">Private Equity</button>
+          <div class="button-group" data-filter-group="label" role="group" aria-label="Strategy">
+            <button type="button" class="filter-button is-active" data-label="all" aria-pressed="true">All</button>
+            <button type="button" class="filter-button" data-label="venture-capital" aria-pressed="false">
+              Venture Capital
+            </button>
+            <button type="button" class="filter-button" data-label="private-equity" aria-pressed="false">
+              Private Equity
+            </button>
           </div>
         </div>
 
@@ -206,10 +256,12 @@
           <section class="portfolio-column" aria-labelledby="funds-heading">
             <div class="column-head">
               <h3 id="funds-heading">Investments</h3>
-              <span class="count" id="fund-count">0</span>
+              <span class="count" id="fund-count" aria-live="polite">0</span>
             </div>
-            <div class="portfolio-grid" id="fund-grid"></div>
-            <button type="button" class="show-more-button" id="fund-show-more" hidden>Show more</button>
+            <div class="portfolio-grid" id="fund-grid" role="list"></div>
+            <button type="button" class="show-more-button" id="fund-show-more" aria-controls="fund-grid" hidden>
+              Show more
+            </button>
           </section>
         </div>
       </section>
@@ -235,7 +287,7 @@
           <div class="podcast-grid" aria-label="Podcast appearances">
             <article class="podcast-card">
               <a href="https://www.youtube.com/watch?v=W9EOu8RQVj4" target="_blank" rel="noreferrer noopener">
-                <img src="https://i.ytimg.com/vi/W9EOu8RQVj4/hqdefault.jpg" alt="Podcast episode one thumbnail" loading="lazy" decoding="async" />
+                <img src="./assets/images/youtube-this-week-in-startups.jpg" alt="YouTube thumbnail for This Week in Startups episode 1882" loading="lazy" decoding="async" />
                 <div class="podcast-copy">
                   <p class="podcast-label">This Week in Startups</p>
                   <p class="podcast-title">LP investment strategies, IRR focus, and more with Berkocorp's Joshua Berkowitz | E1882</p>
@@ -246,7 +298,7 @@
 
             <article class="podcast-card">
               <a href="https://www.youtube.com/watch?v=g37vB3Mr0-U" target="_blank" rel="noreferrer noopener">
-                <img src="https://i.ytimg.com/vi/g37vB3Mr0-U/hqdefault.jpg" alt="Podcast episode two thumbnail" loading="lazy" decoding="async" />
+                <img src="./assets/images/youtube-swimming-with-allocators.jpg" alt="YouTube thumbnail for Patient Capital, Bold Bets" loading="lazy" decoding="async" />
                 <div class="podcast-copy">
                   <p class="podcast-label">Swimming with Allocators</p>
                   <p class="podcast-title">Patient Capital, Bold Bets: Constructing a Venture Book That Works</p>
@@ -257,10 +309,10 @@
 
             <article class="podcast-card">
               <a href="https://www.youtube.com/watch?v=lI4EOVcl1io" target="_blank" rel="noreferrer noopener">
-                <img src="https://i.ytimg.com/vi/lI4EOVcl1io/hqdefault.jpg" alt="Podcast episode three thumbnail" loading="lazy" decoding="async" />
+                <img src="./assets/images/youtube-how-i-invest.jpg" alt="YouTube thumbnail for Joshua Berkowitz on How I Invest" loading="lazy" decoding="async" />
                 <div class="podcast-copy">
                   <p class="podcast-label">How I Invest w/David Weisburd</p>
-                  <p class="podcast-title">Joshua Berkowitz of Berkocorp on Why LP’s Should Care about IRR% not TVPI | E24</p>
+                  <p class="podcast-title">Joshua Berkowitz of Berkocorp on Why LPs Should Care about IRR% not TVPI | E24</p>
                   <span class="podcast-link">Listen</span>
                 </div>
               </a>
@@ -268,7 +320,7 @@
 
             <article class="podcast-card">
               <a href="https://www.youtube.com/watch?v=cUryiZ6bafc" target="_blank" rel="noreferrer noopener">
-                <img src="https://i.ytimg.com/vi/cUryiZ6bafc/hqdefault.jpg" alt="Podcast episode four thumbnail" loading="lazy" decoding="async" />
+                <img src="./assets/images/youtube-liquidity.jpg" alt="YouTube thumbnail for Liquidity episode 1944" loading="lazy" decoding="async" />
                 <div class="podcast-copy">
                   <p class="podcast-label">Liquidity</p>
                   <p class="podcast-title">Major challenger to OpenAI, xAI, closing on $6B in funding | E1944</p>
@@ -283,7 +335,7 @@
 
     <footer class="site-footer section-observe">
       <div class="container footer-inner">
-        <img src="./assets/brand/transparent-logo-2.svg" alt="Berkocorp" class="footer-logo" />
+        <img src="./assets/images/berkocorp-logo.svg" alt="Berkocorp" class="footer-logo" />
         <p>
           Contact: <a href="mailto:joshua@berkocorp.ca">joshua@berkocorp.ca</a>
         </p>
@@ -291,7 +343,7 @@
     </footer>
 
     <template id="portfolio-card-template">
-      <article class="portfolio-card">
+      <article class="portfolio-card" role="listitem">
         <a class="card-logo-link" target="_blank" rel="noreferrer noopener">
           <div class="logo-shell">
             <img class="card-logo" alt="" loading="lazy" decoding="async" />
@@ -308,6 +360,6 @@
       </article>
     </template>
 
-    <script src="./script.js?v=20260225k"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

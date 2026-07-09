@@ -1,0 +1,26 @@
+company	legal_name	status	batch	selected_name	selected_batch	slug	website	match_rule
+BootLoop	BootLoop Inc.	Active	S25	BootLoop	S25	bootloop	https://bootloop.ai/	exact_name+batch
+Orange Slice	Orange Slice AI, Inc.	Active	S25	Orange Slice	S25	orange-slice	https://orangeslice.ai	exact_name+batch
+Channel 3	Channel3, Inc.	Active	S25	Channel3	S25	channel3	https://trychannel3.com	batch
+Luminal	Luminal AI, Inc.	Active	S25	Luminal	S25	luminal	https://luminal.com	exact_name+batch
+Proliferate	Keystone Automation Inc.	Active	S25	Proliferate	S25	proliferate	https://proliferate.com?utm_source=yc&utm_medium=referral&utm_campaign=profile	exact_name+batch
+Monarcha	Monarcha, Inc.	Active	S25	Monarcha	S25	monarcha	https://monarcha.ai	exact_name+batch
+Pingo	Pingo AI, Inc.	Active	S25	Pingo AI	S25	pingo-ai	https://pingo.ai	batch
+Perseus	Perseus Defense, Inc.	Active	S25	Perseus Defense	S25	perseus-defense	https://perseusdefense.com	batch
+Kopra	Kopra Bio, Inc.	Active	S25	Kopra Bio	S24	kopra-bio	https://kopra.bio	top_hit
+Autumn	Recase, Inc.	Active	S25	Autumn	S25	autumn	https://useautumn.com	exact_name+batch
+Opennote	Opennote, Inc.	Active	S25	Opennote	S25	opennote	https://opennote.com	exact_name+batch
+Slashy	Karvix, Inc.	Active	S25	Slashy	S25	slashy	https://www.slashy.com/	exact_name+batch
+DeepGrove	DeepGrove	Active	S25	DeepGrove	S25	deepgrove	https://deepgrove.ai	exact_name+batch
+Stellon Labs	Stellon Labs INC.	Active	S25	Stellon Labs	S25	stellon-labs	https://stellonlabs.com/	exact_name+batch
+Hillclimb	Plun, Inc.	Active	F25	hillclimb	F25	hillclimb	https://hillclimb.com	exact_name+batch
+Selfin	Selfin Inc	Active	F25	Selfin	F25	selfin	https://selfin.app	exact_name+batch
+Structured AI	Structured Software Inc	Active	F25	Structured AI	F25	structured-ai	https://www.getstructured.ai/	exact_name+batch
+Piggy Robotics	Rigmanic inc	Active	S24	Piggy Robotics	F25	piggy-robotics	https://piggyrobotics.com	exact_name
+Multifactor	Multifactor Inc	Active	F25	Multifactor	F25	multifactor	https://multifactor.com	exact_name+batch
+Icarus	Ikaros Industries Inc	Active	F25	Icarus	F25	icarus	https://www.icarus.one/	exact_name+batch
+Nexus	Nexus Enterprise Inc	Active	F25	Nexus	F25	gpt	https://agent.nexus	exact_name+batch
+Veria Labs	Veria Labs, Inc.	Active	F25	Veria Labs	F25	veria-labs	https://verialabs.com	exact_name+batch
+SF Tensor	San Francisco Tensor Company	Active	F25	SF Tensor	F25	sf-tensor	https://sf-tensor.com	exact_name+batch
+Iris	Minro.inc	Active	F25	Minro	F25	minro	https://minro.com/	batch
+Prox	Dart Labs Inc	Active	F25	Prox	F25	prox	https://prox.inc	exact_name+batch

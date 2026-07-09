@@ -1,0 +1,101 @@
+company	legal_name	status	batch	selected_name	selected_batch	slug	website	match_rule
+Cartage	Cartage AI Inc.	Active	S24	Cartage	S24	cartage	https://cartage.ai	exact_name+batch
+Anthrogen	Arctic Capture Inc.	Active	S24	Anthrogen	S24	anthrogen	https://anthrogen.com	exact_name+batch
+True3D Labs	True3D Technologies Inc	Active	W21	True3D Labs	W21	true3d-labs	https://true3d.com/	exact_name+batch
+Zeropath	Zeropath Corp.	Active	S24	ZeroPath	S24	zeropath	https://zeropath.com	exact_name+batch
+Ligo Biosciences	Ligo Biosceinces Corp,	Active	S24	Ligo Biosciences	S24	ligo-biosciences	https://www.ligo.bio	exact_name+batch
+Maitai	Maitai Inc.	Active	S24	Maitai	S24	maitai	https://trymaitai.com	exact_name+batch
+Stack Auth	Stackframe Inc	Active	S24	Stack Auth	S24	stack-auth	https://stack-auth.com	exact_name+batch
+Biocartesian	Coordna Bio Inc	Active	S24	Biocartesian	S24	biocartesian	https://www.biocartesian.com	exact_name+batch
+Deepsilicon	Deepsilicon Corp.	Dead	S24	deepsilicon	S24	deepsilicon	https://www.deepsilicon.net/	exact_name+batch
+Parahelp	Copilot Labs Inc	Active	S24	Parahelp	S24	parahelp	https://parahelp.com/	exact_name+batch
+Gauge	Gauge Technologies Inc.	Active	S24	Gauge	S24	gauge	https://withgauge.com	exact_name+batch
+Archil	Regatta Storage Inc.	Active	F24	Archil	F24	archil	https://archil.com	exact_name+batch
+Crustdata	Crustdata Technologies Inc.	Active	F24	Crustdata	F24	crustdata	https://crustdata.com	exact_name+batch
+Sunset	Sunset Software Inc	Active	F24	Sunset	F24	sunset	https://www.hellosunset.com/	exact_name+batch
+Friday	Friday Inc	Active	F24	Friday	F24	friday	https://www.friday.so	exact_name+batch
+Gecko Security	Gecko Security Inc	Active	F24	Gecko Security	F24	gecko-security	https://gecko.security	exact_name+batch
+Maritime Fusion	Maritime Fusion Inc	Active	W25	Maritime Fusion	W25	maritime-fusion	https://maritimefusion.com	exact_name+batch
+Mastra	Kepler Software Inc	Active	W25	Mastra	W25	mastra	https://mastra.ai	exact_name+batch
+Mentra	Mentra Labs Inc	Active	W25	Mentra	W25	mentra	https://mentra.glass	exact_name+batch
+Revise Robotics	Revise Robotics Inc.	Active	W25	Revise Robotics	W25	revise-robotics	https://www.reviserobotics.com/	exact_name+batch
+Haleum	Pysion Works Inc	Active	W25	Haleum	W25	haleum	https://haleum.ai/	exact_name+batch
+Bindwell	Bindwell Inc	Active	W25	Bindwell	W25	bindwell	https://www.bindwell.ai/	exact_name+batch
+Edexia	Edexia Inc	Active	W25	Edexia	W25	edexia	https://www.edexia.com/	exact_name+batch
+Enhanced Radar	Enhanced Radar Corporation	Active	W25	Enhanced Radar	W25	enhanced-radar	https://www.enhancedradar.com/	exact_name+batch
+Auricle	Auricle Health Inc.	Active	W21	Auricle	W21	auricle	https://auricle.com	exact_name+batch
+Osmosis	Gulp AI Inc.	Active	W25	Osmosis	W25	osmosis	https://osmosis.ai/	exact_name+batch
+Subtrace	Subtrace, Inc.	Active	W25	Subtrace	W25	subtrace	https://subtrace.dev	exact_name+batch
+Leaping AI	Leaping AI Inc.	Active	W25	Leaping AI	W25	leaping-ai	https://www.leapingai.com	exact_name+batch
+Vesence	Versenium, Inc.	Active	X25	Vesence	X25	vesence	https://vesence.com	exact_name+batch
+Sim	Sim Studio	Active	X25	Sim	X25	sim	https://sim.ai	exact_name+batch
+RunRL	RunRL, Inc.	Active	X25	RunRL	X25	runrl	https://runrl.com	exact_name+batch
+Human Behavior	Make Dough, Inc.	Active	X25	Human Behavior	X25	human-behavior	https://www.humanbehavior.co/	exact_name+batch
+Partcl	Partcl, Inc.	Active	X25	Partcl	X25	partcl	https://partcl.com/	exact_name+batch
+QFEX	QFEX Holdings, Inc.	Active	X25	QFEX	X25	qfex	https://qfex.com	exact_name+batch
+SalesPatriot	Salespatriot, Inc.	Active	W25	SalesPatriot	W25	salespatriot	https://www.salespatriot.com/	exact_name+batch
+YouLearn	Youlearn Inc.	Active	X25	YouLearn	X25	youlearn	https://www.youlearn.ai/	exact_name+batch
+Tinfoil	Tinfoil, Inc.	Active	X25	Tinfoil	X25	tinfoil	https://tinfoil.sh	exact_name+batch
+Atum Works	Atum Works Inc.	Active	X25	Atum Works	X25	atum-works	https://atum.works/	exact_name+batch
+Casco	Transmittr, Inc.	Active	X25	Casco	X25	casco	https://casco.com	exact_name+batch
+Novoflow	Novoflow, Inc.	Active	X25	Novoflow	X25	novoflow	https://www.novoflow.io/	exact_name+batch
+Pollen	Daymi, Inc.	Active	W26	Pollen	W26	pollen	https://www.pollen.cx/	exact_name+batch
+Design Arena	Arcada Labs Incorporated	Active	S25	Design Arena	S25	design-arena	https://www.designarena.ai/	exact_name+batch
+Janet	Janet AI, Inc.	Active	S25	Janet AI	S25	tryjanet	https://janet.ai	batch
+Nuntius	Nuntius, Inc.	Dead	S25	Nuntius	S25	nuntius	https://www.nuntius.ai	exact_name+batch
+Autosana	Autosana, Inc.	Active	S25	Autosana	S25	autosana	https://autosana.ai	exact_name+batch
+Relling	Relling Corp.	Active	S25	Relling	S25	relling	https://relling.co	exact_name+batch
+Solva	Solva Technology Inc	Active	S25	Solva	S25	solva	https://solvatechnology.com	exact_name+batch
+Nozomio	Nozomio Inc.	Active	S25	Nozomio	S25	nozomio	https://www.trynia.ai/	exact_name+batch
+GETASAP	Blaze Market Incorporated	Active	S25	GETASAP	S25	getasap	https://www.getasap.us	exact_name+batch
+Juxta	Juxta Technology, Inc.	Active	S25	Juxta	S25	juxta	https://juxta.com	exact_name+batch
+BootLoop	BootLoop Inc.	Active	S25	BootLoop	S25	bootloop	https://bootloop.ai/	exact_name+batch
+Orange Slice	Orange Slice AI, Inc.	Active	S25	Orange Slice	S25	orange-slice	https://orangeslice.ai	exact_name+batch
+Channel 3	Channel3, Inc.	Active	S25	Channel3	S25	channel3	https://trychannel3.com	batch
+Luminal	Luminal AI, Inc.	Active	S25	Luminal	S25	luminal	https://luminal.com	exact_name+batch
+Proliferate	Keystone Automation Inc.	Active	S25	Proliferate	S25	proliferate	https://proliferate.com?utm_source=yc&utm_medium=referral&utm_campaign=profile	exact_name+batch
+Monarcha	Monarcha, Inc.	Active	S25	Monarcha	S25	monarcha	https://monarcha.ai	exact_name+batch
+Pingo	Pingo AI, Inc.	Active	S25	Pingo AI	S25	pingo-ai	https://pingo.ai	batch
+Perseus	Perseus Defense, Inc.	Active	S25	Perseus Defense	S25	perseus-defense	https://perseusdefense.com	batch
+Kopra	Kopra Bio, Inc.	Active	S25	Kopra Bio	S24	kopra-bio	https://kopra.bio	top_hit
+Autumn	Recase, Inc.	Active	S25	Autumn	S25	autumn	https://useautumn.com	exact_name+batch
+Opennote	Opennote, Inc.	Active	S25	Opennote	S25	opennote	https://opennote.com	exact_name+batch
+Slashy	Karvix, Inc.	Active	S25	Slashy	S25	slashy	https://www.slashy.com/	exact_name+batch
+DeepGrove	DeepGrove	Active	S25	DeepGrove	S25	deepgrove	https://deepgrove.ai	exact_name+batch
+Stellon Labs	Stellon Labs INC.	Active	S25	Stellon Labs	S25	stellon-labs	https://stellonlabs.com/	exact_name+batch
+Hillclimb	Plun, Inc.	Active	F25	hillclimb	F25	hillclimb	https://hillclimb.com	exact_name+batch
+Selfin	Selfin Inc	Active	F25	Selfin	F25	selfin	https://selfin.app	exact_name+batch
+Structured AI	Structured Software Inc	Active	F25	Structured AI	F25	structured-ai	https://www.getstructured.ai/	exact_name+batch
+Piggy Robotics	Rigmanic inc	Active	S24	Piggy Robotics	F25	piggy-robotics	https://piggyrobotics.com	exact_name
+Multifactor	Multifactor Inc	Active	F25	Multifactor	F25	multifactor	https://multifactor.com	exact_name+batch
+Icarus	Ikaros Industries Inc	Active	F25	Icarus	F25	icarus	https://www.icarus.one/	exact_name+batch
+Nexus	Nexus Enterprise Inc	Active	F25	Nexus	F25	gpt	https://agent.nexus	exact_name+batch
+Veria Labs	Veria Labs, Inc.	Active	F25	Veria Labs	F25	veria-labs	https://verialabs.com	exact_name+batch
+SF Tensor	San Francisco Tensor Company	Active	F25	SF Tensor	F25	sf-tensor	https://sf-tensor.com	exact_name+batch
+Iris	Minro.inc	Active	F25	Minro	F25	minro	https://minro.com/	batch
+Prox	Dart Labs Inc	Active	F25	Prox	F25	prox	https://prox.inc	exact_name+batch
+Locus	Locus Technologies Inc	Active	F25	Locus	F25	locus	https://paywithlocus.com	exact_name+batch
+Sorce	redantai, Inc.	Active	F25	Sorce	F25	sorce	https://sorce.jobs	exact_name+batch
+Dome	Dome API Inc.	Active	F25	Dome	F25	dome	https://domeapi.io	exact_name+batch
+Wardstone	Wardstone Inc.	Active	F25	Wardstone	F25	wardstone	https://www.wardstone.space	exact_name+batch
+Zavo	Zavo Inc	Active	F25	Zavo	F25	zavo	https://zavopay.com	exact_name+batch
+Crunched	Crunched Inc	Active	F25	Crunched	F25	crunched	https://usecrunched.com/	exact_name+batch
+Milliray		Active	W26	Milliray	W26	milliray	https://milliray.com/	exact_name+batch
+Luel	Luel	Active	W26	Luel	W26	luel	https://luel.ai	exact_name+batch
+o11	O11 Inc.	Active	W26	o11	W26	o11	https://o11.ai	exact_name+batch
+Carrot Labs	Carrot Labs AI, Inc.	Active	W26	Carrot Labs	W26	carrot-labs	https://carrotlabs.ai/	exact_name+batch
+Aemon	Omnial AI, Inc	Active	W26	Aemon	W26	aemon	https://aemon.ai/	exact_name+batch
+Autumn AI	Autumn AI, Inc.	Active	W26	Autumn AI	W26	autumn-ai	https://autumnai.com	exact_name+batch
+Pax Historia	Pax Historia, Co.	Active	W26	Pax Historia	W26	pax-historia	https://www.paxhistoria.co	exact_name+batch
+GrazeMate		Active	W26	GrazeMate	W26	grazemate	https://grazemate.com	exact_name+batch
+Hex Security	Anytool, Inc.	Active	W26	Hex Security	W26	hex-security	https://hex.co	exact_name+batch
+Byteport	Byteport, Inc	Active	W26	Byteport	W26	byteport	https://byteport.com/	exact_name+batch
+Fixture	Fixture, Inc.	Active	W26	Fixture	W26	fixture	https://fixture.app	exact_name+batch
+Confluence Labs	Confluence Labs, Inc.	Active	W26	Confluence Labs	W26	confluence-labs	https://confluence.sh	exact_name+batch
+General Astronautics	General Astronautics Corp	Active	W26	General Astronautics	W26	generalastro	https://generalastro.com/	exact_name+batch
+Piris Labs	Piris Labs Inc.	Acive	W26	Piris Labs	W26	pirislabs	https://pirislabs.io/	exact_name+batch
+Wayco	Wayco AI, Inc.	Active	W26	Wayco	W26	wayco	https://wayco.ai	exact_name+batch
+Forum	Forum Markets Group Inc.,	Active	W26	Forum	W26	forum	https://www.forum.market/	exact_name+batch
+Prana		Active	W26	Prana	W26	prana-health	https://pranadoc.com	exact_name+batch
+Ashr		Active	W26	Ashr	W26	ashr	https://ashr.io	exact_name+batch
+Origami Robotics		Active	W26	Origami Robotics	W26	origami-robotics	https://www.origami-robotics.com	exact_name+batch
