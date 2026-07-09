@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" role="img" aria-labelledby="title desc">
+  <title id="title">Night Capital</title>
+  <desc id="desc">Night Capital wordmark.</desc>
+  <rect width="640" height="220" rx="24" fill="#fafafa" />
+  <path d="M71 53h21l54 77V53h31v116h-21l-54-77v77H71V53Z" fill="#333333" />
+  <path d="M207 53h31v116h-31V53Zm60 0h31v116h-31V53Zm60 0h94v27h-31v89h-32V80h-31V53Z" fill="#333333" />
+  <text x="71" y="198" fill="#777777" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="9">NIGHT CAPITAL</text>
+</svg>

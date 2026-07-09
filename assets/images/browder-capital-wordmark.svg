@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">Browder Capital logo</title>
+  <desc id="desc">Browder Capital wordmark on a dark teal background.</desc>
+  <rect width="1200" height="320" fill="#022d35" />
+  <text
+    x="600"
+    y="208"
+    text-anchor="middle"
+    fill="#f4f7f8"
+    font-family="Times New Roman, Georgia, serif"
+    font-size="144"
+    letter-spacing="0.5"
+  >
+    Browder Capital
+  </text>
+</svg>
