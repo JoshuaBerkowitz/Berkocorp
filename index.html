@@ -6,78 +6,96 @@
     <title>Berkocorp | Family Office</title>
     <meta
       name="description"
-      content="Berkocorp is a Canadian family office investing across venture capital, private equity, and other niche strategies through a mix of fund commitments and direct investments."
+      content="Berkocorp is a Canadian family office investing across venture capital, private equity, and other niche strategies through fund commitments and direct investments."
     />
-    <meta name="theme-color" content="#f5f1e8" />
+    <meta name="theme-color" content="#0e2a23" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Berkocorp" />
     <meta property="og:title" content="Berkocorp | Family Office" />
     <meta
       property="og:description"
-      content="A Canadian family office investing across venture capital, private equity, and other niche strategies."
+      content="A Canadian family office investing across private equity, venture capital, and other niche strategies."
     />
-    <meta property="og:image" content="./assets/images/berkocorp-social-preview.png" />
+    <meta property="og:image" content="./assets/brand-v3/berkocorp-brand-concept.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Berkocorp | Family Office" />
-    <meta
-      name="twitter:description"
-      content="A Canadian family office investing across venture capital, private equity, and other niche strategies."
-    />
-    <meta name="twitter:image" content="./assets/images/berkocorp-social-preview.png" />
-    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
-    <link rel="stylesheet" href="./styles.css" />
+    <meta name="twitter:description" content="A Canadian family office investing across private equity, venture capital, and other niche strategies." />
+    <meta name="twitter:image" content="./assets/brand-v3/berkocorp-brand-concept.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/berkocorp-favicon-32.png?v=2" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/berkocorp-favicon-192.png?v=2" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/berkocorp-apple-touch-icon.png?v=2" />
+    <link rel="stylesheet" href="./styles.css?v=3.0.9" />
   </head>
-  <body>
+  <body data-version="3.0">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
     <header class="site-header">
+      <div class="page-progress" aria-hidden="true"></div>
       <div class="container nav-shell">
         <a class="header-logo-link" href="#top" aria-label="Berkocorp home">
-          <img src="./assets/images/berkocorp-logo.svg" alt="Berkocorp" class="header-logo" />
+          <img src="./assets/brand-v3/berkocorp-logo-live.png" alt="Berkocorp" class="header-logo" />
         </a>
         <nav class="site-nav" aria-label="Section navigation">
-          <a href="#about">About Us</a>
-          <a href="#invest">How We Invest</a>
-          <a href="#portfolio">Portfolio</a>
+          <a href="#about"><span>01</span> About</a>
+          <a href="#invest"><span>02</span> Approach</a>
+          <a href="#portfolio"><span>03</span> Portfolio</a>
+          <a href="#podcasts"><span>04</span> Field Notes</a>
         </nav>
+        <a class="header-contact" href="mailto:joshua@berkocorp.ca">Contact <span>↗</span></a>
       </div>
     </header>
 
-    <main id="top">
-      <section class="hero section-observe has-hover-labels">
-        <div class="hero-background"></div>
-        <div class="hover-label-cloud cloud-hero" aria-hidden="true">
-          <span class="hover-label mobile-hide" style="--hl-x: 7%; --hl-y: 86%; --hl-r: 6deg; --hl-delay: -2.2s; --hl-dx: -6px; --hl-dy: 5px; --hl-dur: 9.7s; --hl-o: 0.84;">
-            It's early, but we're excited about the trajectory
-          </span>
-        </div>
+    <main id="main-content">
+      <section id="top" class="hero section-observe">
+        <div class="hero-grain" aria-hidden="true"></div>
         <div class="container hero-layout">
           <div class="hero-copy">
-            <p class="eyebrow">Berkocorp Family Office</p>
+            <p class="eyebrow"><span></span> Berkocorp Family Office / Canada</p>
             <h1><span class="no-wrap">Long-horizon</span> capital for exceptional managers.</h1>
             <p class="hero-text">
               We are a Canadian family office investing across venture capital, private equity, and other niche
-              strategies through a mix of fund commitments and direct investments.
+              strategies through fund commitments and direct investments.
             </p>
             <div class="hero-actions" aria-label="Primary actions">
-              <a class="hero-action action-primary" href="#portfolio">View Portfolio</a>
-              <a class="hero-action action-secondary" href="mailto:joshua@berkocorp.ca">Contact Us</a>
+              <a class="hero-action action-primary" href="#portfolio">See investments <span>↓</span></a>
+              <a class="hero-action action-secondary" href="mailto:joshua@berkocorp.ca">Contact <span>↗</span></a>
             </div>
-          </div>
-          <div class="hero-logo-frame" aria-hidden="true">
-            <div class="moonshot-chart">
-              <div class="chart-meta">
-                <span>Patient capital</span>
+            <dl class="hero-facts" aria-label="Berkocorp investment profile">
+              <div>
+                <dt>Format</dt>
+                <dd>Funds + Directs</dd>
               </div>
-              <svg class="chart-svg" viewBox="0 0 680 480" role="presentation">
+              <div>
+                <dt>Security</dt>
+                <dd>Equity only</dd>
+              </div>
+              <div>
+                <dt>Horizon</dt>
+                <dd>Patient by default</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-field" aria-label="A compounding signal chart with a rocket following a long-term investment trajectory toward the moon">
+            <div class="field-topline">
+              <span>Patient capital</span>
+              <span>North America · Private markets</span>
+            </div>
+            <div class="moonshot-stage" aria-hidden="true">
+              <svg class="moonshot-chart" viewBox="0 0 680 480" role="presentation">
                 <defs>
-                  <linearGradient id="hero-chart-area" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0" stop-color="#ff5c3d" stop-opacity="0.2"></stop>
-                    <stop offset="1" stop-color="#ff5c3d" stop-opacity="0"></stop>
+                  <linearGradient id="heroSignalArea" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#c66a3d" stop-opacity=".22"></stop>
+                    <stop offset="1" stop-color="#c66a3d" stop-opacity="0"></stop>
                   </linearGradient>
-                  <radialGradient id="hero-chart-moon" cx="35%" cy="30%">
+                  <radialGradient id="heroSignalMoon" cx="35%" cy="30%">
                     <stop offset="0" stop-color="#fff8df"></stop>
-                    <stop offset="0.58" stop-color="#eadcc4"></stop>
+                    <stop offset=".58" stop-color="#eadcc4"></stop>
                     <stop offset="1" stop-color="#c7b89f"></stop>
                   </radialGradient>
+                  <filter id="heroSignalShadow" x="-100%" y="-100%" width="300%" height="300%">
+                    <feDropShadow dx="0" dy="9" stdDeviation="9" flood-color="#0e2a23" flood-opacity=".2"></feDropShadow>
+                  </filter>
                 </defs>
                 <g class="chart-grid">
                   <path d="M74 86V405M186 86V405M298 86V405M410 86V405M522 86V405M634 86V405"></path>
@@ -90,255 +108,278 @@
                 ></path>
                 <path
                   class="chart-trajectory"
-                  pathLength="1"
                   d="M76 391 C130 389 154 371 193 365 C242 358 248 372 294 344 C339 316 351 329 393 286 C430 248 450 272 488 221 C525 170 540 187 576 127 C595 96 610 78 626 69"
                 ></path>
-                <g class="chart-moon">
-                  <circle cx="626" cy="69" r="31" fill="url(#hero-chart-moon)"></circle>
-                  <circle cx="613" cy="58" r="5" class="moon-crater crater-dark"></circle>
-                  <circle cx="636" cy="77" r="8" class="moon-crater crater-soft"></circle>
-                  <circle cx="632" cy="51" r="3" class="moon-crater crater-light"></circle>
+                <g class="chart-points">
+                  <circle cx="214" cy="361" r="5"></circle>
+                  <circle cx="401" cy="278" r="5"></circle>
+                </g>
+                <g class="chart-moon" filter="url(#heroSignalShadow)">
+                  <circle cx="626" cy="69" r="31" fill="url(#heroSignalMoon)"></circle>
+                  <circle cx="613" cy="58" r="5" fill="#b8aa94" opacity=".65"></circle>
+                  <circle cx="636" cy="77" r="8" fill="#b8aa94" opacity=".45"></circle>
+                  <circle cx="632" cy="51" r="3" fill="#fff8e8" opacity=".7"></circle>
                 </g>
                 <g class="chart-rocket">
-                  <path class="rocket-flame" d="M-18 0L-31 -7L-27 0L-31 7Z"></path>
-                  <path class="rocket-body" d="M-18 -10 C2 -13 18 -8 29 0 C18 8 2 13 -18 10 L-8 0Z"></path>
-                  <path class="rocket-window" d="M8 -5A5 5 0 1 0 8 5A5 5 0 1 0 8 -5"></path>
-                  <path class="rocket-fin" d="M-12 -9L-21 -19L2 -10ZM-12 9L-21 19L2 10Z"></path>
+                  <path class="flight-rocket-flame" d="M-18 0L-34 -8L-29 0L-34 8Z"></path>
+                  <path class="flight-rocket-body" d="M-18 -11 C3 -14 20 -9 31 0 C20 9 3 14 -18 11 L-8 0Z"></path>
+                  <path class="flight-rocket-window" d="M9 -5A5 5 0 1 0 9 5A5 5 0 1 0 9 -5"></path>
+                  <path class="flight-rocket-fin" d="M-12 -10L-22 -21L3 -11ZM-12 10L-22 21L3 11Z"></path>
                 </g>
+                <text class="chart-axis-label" x="76" y="439">EARLY</text>
+                <text class="chart-axis-label" x="634" y="439" text-anchor="end">ENDURING</text>
               </svg>
-              <div class="chart-footer">
-                <span>Long-term value creation</span>
-                <strong>Time →</strong>
-              </div>
             </div>
+            <div class="field-footer">
+              <span>Long-term value creation</span>
+              <span>Time →</span>
+            </div>
+            <p class="hero-note">It’s early, but we’re excited about the trajectory.</p>
+          </div>
+        </div>
+        <div class="hero-marquee" aria-hidden="true">
+          <div>
+            <span>Long Horizon</span><i>✦</i><span>Equity Only</span><i>✦</i><span>People-first Investing</span><i>✦</i><span>Niche Strategies</span><i>✦</i><span>Family-owned</span><i>✦</i><span>Private Markets</span><i>✦</i><span>Partnering with Exceptional People</span><i>✦</i>
+            <span>Long Horizon</span><i>✦</i><span>Equity Only</span><i>✦</i><span>People-first Investing</span><i>✦</i><span>Niche Strategies</span><i>✦</i><span>Family-owned</span><i>✦</i><span>Private Markets</span><i>✦</i><span>Partnering with Exceptional People</span><i>✦</i>
           </div>
         </div>
       </section>
 
-      <section class="portfolio-logo-ticker" aria-label="Portfolio logo ticker">
+      <section class="portfolio-logo-ticker" aria-label="Selected portfolio logos">
         <div class="portfolio-logo-ticker-shell">
-          <p class="portfolio-logo-ticker-label">Selected Portfolio</p>
+          <div class="ticker-label-wrap">
+            <p class="portfolio-logo-ticker-label">Selected portfolio</p>
+            <span>A few names from the portfolio →</span>
+          </div>
           <div class="portfolio-logo-ticker-viewport">
             <div class="portfolio-logo-ticker-track" id="portfolio-logo-ticker-track"></div>
           </div>
         </div>
       </section>
 
-      <section id="about" class="section-observe section-light has-hover-labels">
-        <div class="hover-label-cloud cloud-about" aria-hidden="true">
-          <span class="hover-label mobile-hide" style="--hl-x: 95%; --hl-y: 26%; --hl-r: -8deg; --hl-delay: -1.2s; --hl-dx: 7px; --hl-dy: -3px; --hl-dur: 10.9s; --hl-o: 0.82;">
-            It was a tough vintage
-          </span>
-          <span class="hover-label is-accent" style="--hl-x: 95%; --hl-y: 70%; --hl-r: -5deg; --hl-delay: -2.8s; --hl-dx: -5px; --hl-dy: 6px; --hl-dur: 9.9s; --hl-o: 0.9;">
-            We mark conservatively
-          </span>
-          <span class="hover-label mobile-hide" style="--hl-x: 6%; --hl-y: 84%; --hl-r: 7deg; --hl-delay: -1.9s; --hl-dx: 6px; --hl-dy: 5px; --hl-dur: 11.6s; --hl-o: 0.8;">
-            We're the first call
-          </span>
-        </div>
-        <div class="container section-grid">
-          <h2>About Us</h2>
-          <div class="section-copy">
-            <p>
-              Berkocorp is the investment office of the Berkowitz family, with roots in Vancouver and operations in
-              Toronto.
-            </p>
-            <p>
-              Originating from a real estate business established in the 1950s, Berkocorp now focuses on private
-              equity and venture capital in North America, while continuing to manage legacy real estate holdings.
-            </p>
-            <ul class="about-highlights" aria-label="Berkocorp background highlights">
-              <li>Family owned and operated, with principal-led decision making.</li>
-              <li>Patient, long-term investors with a multi-generational perspective.</li>
-              <li>Concentrated in private markets, with a North America focus.</li>
-            </ul>
+      <section id="about" class="section-observe about-section">
+        <div class="container section-frame">
+          <div class="section-index" aria-hidden="true">
+            <span>01</span>
           </div>
-        </div>
-      </section>
-
-      <section id="invest" class="section-observe section-band has-hover-labels">
-        <div class="hover-label-cloud cloud-invest" aria-hidden="true">
-          <span class="hover-label is-accent" style="--hl-x: 95%; --hl-y: 24%; --hl-r: -6deg; --hl-delay: -0.9s; --hl-dx: 4px; --hl-dy: -5px; --hl-dur: 10.3s; --hl-o: 0.9;">
-            Top quartile fund
-          </span>
-          <span class="hover-label" style="--hl-x: 6%; --hl-y: 56%; --hl-r: 6deg; --hl-delay: -2.4s; --hl-dx: -8px; --hl-dy: 4px; --hl-dur: 9.4s; --hl-o: 0.83;">
-            We're oversubscribed
-          </span>
-          <span class="hover-label mobile-hide" style="--hl-x: 95%; --hl-y: 86%; --hl-r: -7deg; --hl-delay: -1.4s; --hl-dx: 7px; --hl-dy: -4px; --hl-dur: 11.8s; --hl-o: 0.81;">
-            Founder friendly
-          </span>
-          <span class="hover-label mobile-hide" style="--hl-x: 6%; --hl-y: 88%; --hl-r: 8deg; --hl-delay: -3.1s; --hl-dx: -6px; --hl-dy: 6px; --hl-dur: 10.8s; --hl-o: 0.79;">
-            Our deals are all proprietary
-          </span>
-        </div>
-        <div class="container section-grid">
-          <h2>How We Invest</h2>
-          <div class="section-copy">
-            <p>
-              We back managers with differentiated perspectives, talents, and ecosystem positions that can sustain a
-              long-term competitive advantage.
-            </p>
-            <p>
-              We favor specialty and niche strategies, with disciplined pacing designed to build durable
-              relationships over time.
-            </p>
-          </div>
-        </div>
-
-        <div class="container invest-grid" aria-label="How we invest details">
-          <article class="invest-card">
-            <p class="item-label">Manager Edge</p>
-            <p class="item-value">Differentiated by design</p>
-            <p>We look for unique perspective, talent, or positioning that compounds over time.</p>
-          </article>
-          <article class="invest-card">
-            <p class="item-label">Niche Bias</p>
-            <p class="item-value">Strategies that don't scale</p>
-            <p>We are drawn to niche sectors and hard-to-understand strategies where specialist insight matters.</p>
-          </article>
-          <article class="invest-card">
-            <p class="item-label">Security Type</p>
-            <p class="item-value">Equity only</p>
-            <p>We are optimists investing exclusively in equity for long-term value creation.</p>
-          </article>
-          <article class="invest-card">
-            <p class="item-label">Deployment Format</p>
-            <p class="item-value">Funds and directs</p>
-            <p>We make fund commitments, and direct investments alongside our partners.</p>
-          </article>
-          <article class="invest-card">
-            <p class="item-label">Geography</p>
-            <p class="item-value">North America focused</p>
-            <p>Primary focus is the U.S. and Canada, with select investments in Europe and Israel.</p>
-          </article>
-          <article class="invest-card">
-            <p class="item-label">Pacing</p>
-            <p class="item-value">Consistent deployment</p>
-            <p>We deploy at a steady pace to support long-term partnerships.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="portfolio" class="section-observe section-light has-hover-labels">
-        <div class="hover-label-cloud cloud-portfolio" aria-hidden="true">
-          <span class="hover-label is-accent" style="--hl-x: 95%; --hl-y: 26%; --hl-r: 7deg; --hl-delay: -1.7s; --hl-dx: -7px; --hl-dy: 3px; --hl-dur: 9.8s; --hl-o: 0.91;">
-            DPI soon
-          </span>
-          <span class="hover-label mobile-hide" style="--hl-x: 6%; --hl-y: 88%; --hl-r: -6deg; --hl-delay: -0.6s; --hl-dx: 8px; --hl-dy: -5px; --hl-dur: 11.2s; --hl-o: 0.82;">
-            IPO in the next 1-3 years
-          </span>
-        </div>
-        <div class="container section-grid portfolio-intro">
-          <h2>Portfolio</h2>
-          <div class="section-copy">
-            <p>Use filters to refine the list and click any entry to visit the manager website.</p>
-          </div>
-        </div>
-
-        <div class="container filter-row" role="toolbar" aria-label="Portfolio filters">
-          <div class="button-group" data-filter-group="kind" role="group" aria-label="Investment type">
-            <button type="button" class="filter-button is-active" data-kind="all" aria-pressed="true">All</button>
-            <button type="button" class="filter-button" data-kind="fund" aria-pressed="false">Funds</button>
-            <button type="button" class="filter-button" data-kind="direct" aria-pressed="false">Direct</button>
-          </div>
-          <div class="button-group" data-filter-group="label" role="group" aria-label="Strategy">
-            <button type="button" class="filter-button is-active" data-label="all" aria-pressed="true">All</button>
-            <button type="button" class="filter-button" data-label="venture-capital" aria-pressed="false">
-              Venture Capital
-            </button>
-            <button type="button" class="filter-button" data-label="private-equity" aria-pressed="false">
-              Private Equity
-            </button>
-          </div>
-        </div>
-
-        <div class="container split-layout single-column">
-          <section class="portfolio-column" aria-labelledby="funds-heading">
-            <div class="column-head">
-              <h3 id="funds-heading">Investments</h3>
-              <span class="count" id="fund-count" aria-live="polite">0</span>
+          <div class="about-content">
+            <div class="section-heading">
+              <h2>About Us</h2>
             </div>
-            <div class="portfolio-grid" id="fund-grid" role="list"></div>
-            <button type="button" class="show-more-button" id="fund-show-more" aria-controls="fund-grid" hidden>
-              Show more
-            </button>
-          </section>
-        </div>
-      </section>
-
-      <section id="podcasts" class="section-observe section-light media-preview has-hover-labels">
-        <div class="hover-label-cloud cloud-podcasts" aria-hidden="true">
-          <span class="hover-label mobile-hide" style="--hl-x: 92%; --hl-y: 14%; --hl-r: -6deg; --hl-delay: -2.2s; --hl-dx: 6px; --hl-dy: -4px; --hl-dur: 10.2s; --hl-o: 0.86;">
-            We're hands-on investors
-          </span>
-          <span class="hover-label" style="--hl-x: 90%; --hl-y: 90%; --hl-r: -5deg; --hl-delay: -1.3s; --hl-dx: 6px; --hl-dy: 4px; --hl-dur: 10.6s; --hl-o: 0.84;">
-            Double down into winners
-          </span>
-          <span class="hover-label mobile-hide" style="--hl-x: 8%; --hl-y: 88%; --hl-r: 6deg; --hl-delay: -0.8s; --hl-dx: 7px; --hl-dy: 5px; --hl-dur: 10.7s; --hl-o: 0.84;">
-            We use modest leverage
-          </span>
-        </div>
-        <div class="container media-shell">
-          <div class="media-head">
-            <h2>LPs Have Opinions Too</h2>
-            <p class="media-subtext">A few conversations on investing, pacing, and why patience still wins.</p>
-          </div>
-
-          <div class="podcast-grid" aria-label="Podcast appearances">
-            <article class="podcast-card">
-              <a href="https://www.youtube.com/watch?v=W9EOu8RQVj4" target="_blank" rel="noreferrer noopener">
-                <img src="./assets/images/youtube-this-week-in-startups.jpg" alt="YouTube thumbnail for This Week in Startups episode 1882" loading="lazy" decoding="async" />
-                <div class="podcast-copy">
-                  <p class="podcast-label">This Week in Startups</p>
-                  <p class="podcast-title">LP investment strategies, IRR focus, and more with Berkocorp's Joshua Berkowitz | E1882</p>
-                  <span class="podcast-link">Listen</span>
-                </div>
-              </a>
-            </article>
-
-            <article class="podcast-card">
-              <a href="https://www.youtube.com/watch?v=g37vB3Mr0-U" target="_blank" rel="noreferrer noopener">
-                <img src="./assets/images/youtube-swimming-with-allocators.jpg" alt="YouTube thumbnail for Patient Capital, Bold Bets" loading="lazy" decoding="async" />
-                <div class="podcast-copy">
-                  <p class="podcast-label">Swimming with Allocators</p>
-                  <p class="podcast-title">Patient Capital, Bold Bets: Constructing a Venture Book That Works</p>
-                  <span class="podcast-link">Listen</span>
-                </div>
-              </a>
-            </article>
-
-            <article class="podcast-card">
-              <a href="https://www.youtube.com/watch?v=lI4EOVcl1io" target="_blank" rel="noreferrer noopener">
-                <img src="./assets/images/youtube-how-i-invest.jpg" alt="YouTube thumbnail for Joshua Berkowitz on How I Invest" loading="lazy" decoding="async" />
-                <div class="podcast-copy">
-                  <p class="podcast-label">How I Invest w/David Weisburd</p>
-                  <p class="podcast-title">Joshua Berkowitz of Berkocorp on Why LPs Should Care about IRR% not TVPI | E24</p>
-                  <span class="podcast-link">Listen</span>
-                </div>
-              </a>
-            </article>
-
-            <article class="podcast-card">
-              <a href="https://www.youtube.com/watch?v=cUryiZ6bafc" target="_blank" rel="noreferrer noopener">
-                <img src="./assets/images/youtube-liquidity.jpg" alt="YouTube thumbnail for Liquidity episode 1944" loading="lazy" decoding="async" />
-                <div class="podcast-copy">
-                  <p class="podcast-label">Liquidity</p>
-                  <p class="podcast-title">Major challenger to OpenAI, xAI, closing on $6B in funding | E1944</p>
-                  <span class="podcast-link">Listen</span>
-                </div>
-              </a>
-            </article>
+            <div class="about-story">
+              <div class="section-copy">
+                <p class="lede">
+                  Berkocorp is the investment office of the Berkowitz family, with roots in Vancouver and operations
+                  in Toronto.
+                </p>
+                <p>
+                  Originating from a real estate business established in the 1950s, we now focus on private equity
+                  and venture capital in North America while continuing to manage legacy real estate holdings.
+                </p>
+              </div>
+              <div class="origin-card" aria-label="Berkocorp family business heritage">
+                <span>Where it began</span>
+                <strong>1950s</strong>
+                <p>A family real estate business, followed by several decades of investing.</p>
+              </div>
+            </div>
+            <ol class="about-highlights" aria-label="Berkocorp background highlights">
+              <li><span>01</span><strong>Family owned and operated</strong><p>Investment decisions are made by the principals.</p></li>
+              <li><span>02</span><strong>A long holding period</strong><p>We can hold investments across market and fund cycles.</p></li>
+              <li><span>03</span><strong>Focused on private markets</strong><p>Most activity is in the U.S. and Canada.</p></li>
+            </ol>
           </div>
         </div>
+        <p class="margin-note note-vintage note-lime">It was a tough vintage</p>
+        <p class="margin-note note-mark note-accent">We mark conservatively</p>
+        <p class="margin-note note-about">We're the first call</p>
       </section>
+
+      <section id="invest" class="section-observe invest-section">
+        <div class="container section-frame section-frame-dark">
+          <div class="section-index" aria-hidden="true">
+            <span>02</span>
+          </div>
+          <div class="invest-content">
+            <div class="section-heading section-heading-light">
+              <h2>How We Invest</h2>
+              <div class="section-copy">
+                <p>We back managers with differentiated perspectives, talents, and ecosystem positions.</p>
+              </div>
+            </div>
+
+            <div class="invest-grid" aria-label="How we invest details">
+              <article class="invest-card card-coral">
+                <span class="card-number">01 / 06</span>
+                <p class="item-label">Manager edge</p>
+                <p class="item-value">A reason to exist</p>
+                <p>A perspective, capability, or position that is difficult to reproduce.</p>
+              </article>
+              <article class="invest-card card-paper">
+                <span class="card-number">02 / 06</span>
+                <p class="item-label">Niche bias</p>
+                <p class="item-value">Strategies that don’t scale</p>
+                <p>Hard-to-understand corners where specialist insight actually matters.</p>
+              </article>
+              <article class="invest-card card-lime">
+                <span class="card-number">03 / 06</span>
+                <p class="item-label">Security type</p>
+                <p class="item-value">Equity only</p>
+                <p>We are optimists investing for long-term value creation.</p>
+              </article>
+              <article class="invest-card card-paper">
+                <span class="card-number">04 / 06</span>
+                <p class="item-label">Deployment</p>
+                <p class="item-value">Funds and directs</p>
+                <p>Fund commitments and direct investments alongside our partners.</p>
+              </article>
+              <article class="invest-card card-blue">
+                <span class="card-number">05 / 06</span>
+                <p class="item-label">Geography</p>
+                <p class="item-value">North America focused</p>
+                <p>Primarily the U.S. and Canada, with select investments elsewhere.</p>
+              </article>
+              <article class="invest-card card-coral">
+                <span class="card-number">06 / 06</span>
+                <p class="item-label">Pacing</p>
+                <p class="item-value">Consistent deployment</p>
+                <p>Steady pacing in service of durable, long-term partnerships.</p>
+              </article>
+            </div>
+
+          </div>
+        </div>
+        <p class="margin-note note-top-quartile note-accent">Top quartile fund</p>
+        <p class="margin-note note-oversubscribed">We're oversubscribed</p>
+        <p class="margin-note note-founder-friendly note-lime">Founder friendly</p>
+        <p class="margin-note note-proprietary">Our deals are all proprietary</p>
+      </section>
+
+      <section id="portfolio" class="section-observe portfolio-section">
+        <div class="container section-frame">
+          <div class="section-index" aria-hidden="true">
+            <span>03</span>
+          </div>
+          <div class="portfolio-content">
+            <div class="section-heading portfolio-heading">
+              <h2>Portfolio</h2>
+              <p class="portfolio-instruction">Use filters to refine the list and click any entry to visit the manager website.</p>
+            </div>
+
+            <div class="filter-row" role="toolbar" aria-label="Portfolio filters">
+              <div class="filter-block">
+                <span>Investment type</span>
+                <div class="button-group" data-filter-group="kind" role="group" aria-label="Investment type">
+                  <button type="button" class="filter-button is-active" data-kind="all" aria-pressed="true">All</button>
+                  <button type="button" class="filter-button" data-kind="fund" aria-pressed="false">Funds</button>
+                  <button type="button" class="filter-button" data-kind="direct" aria-pressed="false">Direct</button>
+                </div>
+              </div>
+              <div class="filter-block">
+                <span>Strategy</span>
+                <div class="button-group" data-filter-group="label" role="group" aria-label="Strategy">
+                  <button type="button" class="filter-button is-active" data-label="all" aria-pressed="true">All</button>
+                  <button type="button" class="filter-button" data-label="venture-capital" aria-pressed="false">Venture</button>
+                  <button type="button" class="filter-button" data-label="private-equity" aria-pressed="false">Private Equity</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="split-layout single-column">
+              <section class="portfolio-column" aria-labelledby="funds-heading">
+                <div class="column-head">
+                  <h3 id="funds-heading">Investments</h3>
+                  <span class="count" id="fund-count" aria-live="polite">0</span>
+                </div>
+                <div class="portfolio-grid" id="fund-grid" role="list"></div>
+                <button type="button" class="show-more-button" id="fund-show-more" aria-controls="fund-grid" hidden>
+                  Show more
+                </button>
+              </section>
+            </div>
+          </div>
+        </div>
+        <p class="margin-note note-dpi note-accent">DPI soon</p>
+        <p class="margin-note note-ipo">IPO in the next 1-3 years</p>
+      </section>
+
+      <section id="podcasts" class="section-observe media-preview">
+        <div class="container section-frame section-frame-media">
+          <div class="section-index" aria-hidden="true">
+            <span>04</span>
+          </div>
+          <div class="media-shell">
+            <div class="media-head section-heading">
+              <h2>LPs Have Opinions Too</h2>
+              <p class="media-subtext">A few conversations on investing, pacing, and why patience still wins.</p>
+            </div>
+
+            <div class="podcast-grid" aria-label="Podcast appearances">
+              <article class="podcast-card">
+                <a href="https://www.youtube.com/watch?v=W9EOu8RQVj4" target="_blank" rel="noreferrer noopener">
+                  <div class="podcast-image-wrap"><span>01</span><img src="./assets/images/youtube-this-week-in-startups.jpg" alt="This Week in Startups episode 1882" loading="lazy" decoding="async" /></div>
+                  <div class="podcast-copy">
+                    <p class="podcast-label">This Week in Startups</p>
+                    <p class="podcast-title">LP investment strategies, IRR focus, and more with Joshua Berkowitz</p>
+                    <span class="podcast-link">Watch the conversation</span>
+                  </div>
+                </a>
+              </article>
+
+              <article class="podcast-card">
+                <a href="https://www.youtube.com/watch?v=g37vB3Mr0-U" target="_blank" rel="noreferrer noopener">
+                  <div class="podcast-image-wrap"><span>02</span><img src="./assets/images/youtube-swimming-with-allocators.jpg" alt="Patient Capital, Bold Bets podcast episode" loading="lazy" decoding="async" /></div>
+                  <div class="podcast-copy">
+                    <p class="podcast-label">Swimming with Allocators</p>
+                    <p class="podcast-title">Patient Capital, Bold Bets: Constructing a Venture Book That Works</p>
+                    <span class="podcast-link">Watch the conversation</span>
+                  </div>
+                </a>
+              </article>
+
+              <article class="podcast-card">
+                <a href="https://www.youtube.com/watch?v=lI4EOVcl1io" target="_blank" rel="noreferrer noopener">
+                  <div class="podcast-image-wrap"><span>03</span><img src="./assets/images/youtube-how-i-invest.jpg" alt="Joshua Berkowitz on How I Invest" loading="lazy" decoding="async" /></div>
+                  <div class="podcast-copy">
+                    <p class="podcast-label">How I Invest</p>
+                    <p class="podcast-title">Why LPs Should Care About IRR, Not Just TVPI</p>
+                    <span class="podcast-link">Watch the conversation</span>
+                  </div>
+                </a>
+              </article>
+
+              <article class="podcast-card">
+                <a href="https://www.youtube.com/watch?v=cUryiZ6bafc" target="_blank" rel="noreferrer noopener">
+                  <div class="podcast-image-wrap"><span>04</span><img src="./assets/images/youtube-liquidity.jpg" alt="Liquidity episode 1944" loading="lazy" decoding="async" /></div>
+                  <div class="podcast-copy">
+                    <p class="podcast-label">Liquidity</p>
+                    <p class="podcast-title">Major challenger to OpenAI, xAI, closing on $6B in funding</p>
+                    <span class="podcast-link">Watch the conversation</span>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </div>
+        </div>
+        <p class="margin-note note-hands-on note-lime">We're hands-on investors</p>
+        <p class="margin-note note-double-down note-dark">Double down into winners</p>
+        <p class="margin-note note-leverage">We use modest leverage</p>
+      </section>
+
     </main>
 
     <footer class="site-footer section-observe">
       <div class="container footer-inner">
-        <img src="./assets/images/berkocorp-logo.svg" alt="Berkocorp" class="footer-logo" />
-        <p>
-          Contact: <a href="mailto:joshua@berkocorp.ca">joshua@berkocorp.ca</a>
-        </p>
+        <div class="footer-brand">
+          <img src="./assets/brand-v3/berkocorp-logo-live-reverse.png" alt="Berkocorp" class="footer-logo" />
+          <p>The investment office of the Berkowitz family.</p>
+        </div>
+        <div class="footer-meta">
+          <p class="footer-contact">Contact: <a href="mailto:joshua@berkocorp.ca">joshua@berkocorp.ca</a></p>
+          <p>Vancouver roots / Toronto operations</p>
+          <p>© <span id="footer-year">2026</span> Berkocorp <span class="version-chip">v3.0</span></p>
+        </div>
+        <a class="footer-top" href="#top">Back to top ↑</a>
       </div>
     </footer>
 
@@ -357,9 +398,10 @@
             <span class="tag label-tag"></span>
           </div>
         </div>
+        <a class="card-arrow" target="_blank" rel="noreferrer noopener">↗</a>
       </article>
     </template>
 
-    <script src="./script.js"></script>
+    <script src="./script.js?v=3.0.4"></script>
   </body>
 </html>

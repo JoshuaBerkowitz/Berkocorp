@@ -282,8 +282,8 @@ const investments = [
     label: "venture-capital",
   },
   {
-    name: "Space VC",
-    url: "https://spacevc.com/",
+    name: "Ambition Capital",
+    url: "https://ambition.capital/",
     kind: "fund",
     label: "venture-capital",
   },
@@ -304,6 +304,7 @@ const investments = [
     url: "https://variant.fund/",
     kind: "fund",
     label: "venture-capital",
+    logoMode: "wordmark",
   },
   {
     name: "Valkyrie",
@@ -384,6 +385,12 @@ const investments = [
     label: "venture-capital",
   },
   {
+    name: "The Lumber Manufactory",
+    url: "https://www.lumbermanufactory.com/",
+    kind: "direct",
+    label: "venture-capital",
+  },
+  {
     name: "Titus",
     url: "https://gotitus.com/",
     kind: "direct",
@@ -406,6 +413,7 @@ const investments = [
     url: "https://www.zuper.co/",
     kind: "direct",
     label: "venture-capital",
+    logoMode: "wordmark",
   },
   {
     name: "AlumierMD",
@@ -493,7 +501,7 @@ const localLogoMap = {
   Road: "./assets/images/portfolio/road-6d30160dfffd.png",
   Shore: "./assets/images/portfolio/shore-c4cb90888828.png",
   Skyryse: "./assets/images/portfolio/skyryse-617057dcca25.png",
-  "Space VC": "./assets/images/portfolio/space-vc-19fc97a58d84.png",
+  "Ambition Capital": "./assets/images/portfolio/ambition-capital.svg",
   "Sunshine Lake": "./assets/images/portfolio/sunshine-lake-966b382a3916.png",
   "Switch Growth": "./assets/images/portfolio/switch-growth-cbc1aa1f1da7.png",
   Titus: "./assets/images/portfolio/titus-73742769ac2d.ico",
@@ -502,13 +510,13 @@ const localLogoMap = {
   Truelink: "./assets/images/portfolio/truelink-2ee881374e96.png",
   "Underdog Fantasy": "./assets/images/portfolio/underdog-fantasy-a38037cdef83.png",
   Valkyrie: "./assets/images/portfolio/valkyrie-043bbe696d54.png",
-  Variant: "./assets/images/portfolio/variant-f63e04fa8b7e.ico",
+  Variant: "./assets/images/portfolio/variant.svg",
   Victor: "./assets/images/portfolio/victor-54d607c98255.png",
   Wayfinder: "./assets/images/portfolio/wayfinder-b17eb6f80908.png",
   "We Grow Brands": "./assets/images/portfolio/we-grow-brands-3005a24372a8.webp",
   Worldbuild: "./assets/images/portfolio/worldbuild-44bcf0f1d256.png",
   "Yuzu Health": "./assets/images/portfolio/yuzu-health-df863e0679b5.svg",
-  Zuper: "./assets/images/portfolio/zuper-2d7a310283d6.svg",
+  Zuper: "./assets/images/portfolio/zuper.svg",
 };
 
 const labelMap = {
@@ -536,7 +544,7 @@ const heroChartRoot = document.querySelector(".moonshot-chart");
 const heroChartPath = document.querySelector(".chart-trajectory");
 const heroChartRocket = document.querySelector(".chart-rocket");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const FUNDS_PAGE_SIZE = 10;
+const FUNDS_PAGE_SIZE = 9;
 
 document.body.classList.add("js-enabled");
 
@@ -571,12 +579,16 @@ function renderMoonshotChart(progress) {
   const rocketPoint = heroChartPath.getPointAtLength(distance);
   const nextPoint = heroChartPath.getPointAtLength(Math.min(pathLength, distance + 2));
   const rocketAngle = Math.atan2(nextPoint.y - rocketPoint.y, nextPoint.x - rocketPoint.x) * (180 / Math.PI);
+  const remainingDistance = Math.max(pathLength - distance, 0);
 
   heroChartRoot.style.setProperty("--chart-draw", animatedProgress.toFixed(4));
+  heroChartPath.style.strokeDasharray = `${pathLength.toFixed(2)} ${pathLength.toFixed(2)}`;
+  heroChartPath.style.strokeDashoffset = remainingDistance.toFixed(2);
   heroChartRocket.setAttribute(
     "transform",
     `translate(${rocketPoint.x.toFixed(2)} ${rocketPoint.y.toFixed(2)}) rotate(${rocketAngle.toFixed(2)})`
   );
+  heroChartRoot.classList.add("is-ready");
 }
 
 function logoCandidatesFor(item) {
@@ -719,6 +731,7 @@ function cardNode(item, index) {
   const logo = fragment.querySelector(".card-logo");
   const placeholder = fragment.querySelector(".placeholder-logo");
   const title = fragment.querySelector(".card-title");
+  const arrow = fragment.querySelector(".card-arrow");
   const kindTag = fragment.querySelector(".kind-tag");
   const labelTag = fragment.querySelector(".label-tag");
 
@@ -730,6 +743,8 @@ function cardNode(item, index) {
   title.textContent = item.name;
   title.href = item.url;
   title.setAttribute("aria-label", `${item.name} (opens in a new tab)`);
+  arrow.href = item.url;
+  arrow.setAttribute("aria-label", `Visit ${item.name} (opens in a new tab)`);
   root.classList.toggle("has-wordmark-logo", item.logoMode === "wordmark");
 
   kindTag.textContent = kindMap[item.kind];
@@ -971,10 +986,63 @@ function wireScrollMotion() {
   }
 }
 
+function wirePageChrome() {
+  const navLinks = Array.from(document.querySelectorAll('.site-nav a[href^="#"]'));
+  const navSections = navLinks
+    .map((link) => {
+      const id = link.getAttribute("href")?.slice(1);
+      return id ? { link, section: document.getElementById(id) } : null;
+    })
+    .filter((item) => item?.section);
+  const footerYear = document.getElementById("footer-year");
+  let ticking = false;
+
+  if (footerYear) {
+    footerYear.textContent = String(new Date().getFullYear());
+  }
+
+  function paintPageChrome() {
+    ticking = false;
+    const scrollTop = window.scrollY || window.pageYOffset || 0;
+    const scrollRange = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+    const progress = clamp(scrollTop / scrollRange, 0, 1);
+    const marker = scrollTop + window.innerHeight * 0.34;
+    let activeLink = null;
+
+    navSections.forEach(({ link, section }) => {
+      if (section.offsetTop <= marker) {
+        activeLink = link;
+      }
+    });
+
+    document.documentElement.style.setProperty("--page-progress", progress.toFixed(4));
+    navLinks.forEach((link) => {
+      if (link === activeLink) {
+        link.setAttribute("aria-current", "true");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  }
+
+  function queuePaint() {
+    if (ticking) {
+      return;
+    }
+    ticking = true;
+    window.requestAnimationFrame(paintPageChrome);
+  }
+
+  window.addEventListener("scroll", queuePaint, { passive: true });
+  window.addEventListener("resize", queuePaint);
+  paintPageChrome();
+}
+
 wireFilters();
 wireShowMore();
 wirePortfolioLogoTicker();
 configurePortfolioLayout();
 wireHashNavigation();
 wireScrollMotion();
+wirePageChrome();
 render();

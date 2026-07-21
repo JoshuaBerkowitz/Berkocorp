@@ -1,6 +1,8 @@
-# Berkocorp static website
+# Berkocorp static website — v3.0
 
 This repository contains a completely static version of the Berkocorp website. It uses plain HTML, CSS, and JavaScript and does not require Node.js, npm, React, Vite, a database, or a server-side API.
+
+Version 3.0 introduces the Berkocorp Horizon identity: a new architectural B mark, editorial wordmark, evergreen/copper/ivory palette, production logo lockups, favicon, social source, design tokens, and a compact brand guide. The underlying editorial investment-memo site structure and portfolio data remain intact.
 
 ## Project structure
 
@@ -12,7 +14,8 @@ This repository contains a completely static version of the Berkocorp website. I
 ├── assets/
 │   ├── images/
 │   ├── icons/
-│   └── fonts/
+│   ├── fonts/
+│   └── brand-v3/
 ├── pages/
 ├── README.md
 └── .nojekyll
@@ -48,4 +51,5 @@ The `.nojekyll` file tells GitHub Pages to serve the project exactly as uploaded
 - Edit presentation and responsive behavior in `styles.css`.
 - Edit portfolio data and interactions in `script.js`.
 - Keep all site images in `assets/images` and icons in `assets/icons`.
+- Use the production brand masters and usage guidance in `assets/brand-v3`.
 - No compilation or build command is required after an edit.
