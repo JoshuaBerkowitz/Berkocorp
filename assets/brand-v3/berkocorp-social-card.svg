@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Berkocorp — built for the long horizon</title>
+  <desc id="desc">Berkocorp brand card in evergreen, copper, warm ivory, and mineral sage.</desc>
+  <rect width="1200" height="630" fill="#F3EBDD" />
+  <path d="M0 0h1200v18H0z" fill="#0E2A23" />
+  <circle cx="1048" cy="108" r="210" fill="none" stroke="#7C9188" stroke-width="1" opacity=".55" />
+  <circle cx="1048" cy="108" r="136" fill="none" stroke="#C66A3D" stroke-width="1" opacity=".5" />
+  <path d="M80 508h1040" stroke="#0E2A23" stroke-width="1" opacity=".25" />
+  <g transform="translate(80 70) scale(1.06)">
+    <defs>
+      <mask id="card-horizon-cut">
+        <rect width="108" height="124" fill="white" />
+        <rect y="59" width="108" height="6" fill="black" />
+      </mask>
+    </defs>
+    <g mask="url(#card-horizon-cut)">
+      <path fill="#0E2A23" fill-rule="evenodd" d="M8 8h49c24 0 39 12 39 31 0 12-7 21-19 25 14 4 23 14 23 29 0 19-16 27-42 27H8V8Zm17 14v34h31c15 0 23-6 23-17 0-11-8-17-23-17H25Zm0 47v37h33c16 0 25-6 25-18 0-13-9-19-26-19H25Z" />
+      <path d="M41 106V43c0-14 8-22 19-22 12 0 20 9 20 23v62" fill="none" stroke="#C66A3D" stroke-width="5" />
+    </g>
+  </g>
+  <text x="232" y="155" fill="#0E2A23" font-family="Iowan Old Style, Baskerville, Times New Roman, serif" font-size="64" font-weight="500" letter-spacing="7">BERKOCORP</text>
+  <text x="80" y="340" fill="#0E2A23" font-family="Iowan Old Style, Baskerville, Times New Roman, serif" font-size="88" font-weight="500">Built for the long horizon.</text>
+  <text x="80" y="405" fill="#536A63" font-family="Avenir Next, Avenir, Segoe UI, sans-serif" font-size="24" letter-spacing="1.2">PATIENT CAPITAL  /  CLEAR CONVICTION</text>
+  <text x="80" y="557" fill="#0E2A23" font-family="Avenir Next, Avenir, Segoe UI, sans-serif" font-size="18" font-weight="600" letter-spacing="3">FAMILY OFFICE  ·  CANADA</text>
+  <circle cx="1086" cy="548" r="10" fill="#C66A3D" />
+</svg>

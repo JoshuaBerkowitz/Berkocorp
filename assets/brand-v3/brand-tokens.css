@@ -1,0 +1,13 @@
+:root {
+  --berko-evergreen: #0e2a23;
+  --berko-evergreen-deep: #061712;
+  --berko-copper: #c66a3d;
+  --berko-copper-dark: #a64d2c;
+  --berko-ivory: #f3ebdd;
+  --berko-ivory-bright: #fbf7ef;
+  --berko-sage: #7c9188;
+  --berko-stone: #ded5c5;
+  --berko-display: "Iowan Old Style", Baskerville, "Times New Roman", serif;
+  --berko-sans: "Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif;
+  --berko-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}

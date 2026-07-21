@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 124" role="img" aria-labelledby="title desc">
+  <title id="title">Berkocorp horizon B mark</title>
+  <desc id="desc">An architectural B monogram divided by a horizontal horizon line with a copper inner arch.</desc>
+  <defs>
+    <mask id="horizon-cut">
+      <rect width="108" height="124" fill="white" />
+      <rect y="59" width="108" height="6" fill="black" />
+    </mask>
+  </defs>
+  <g mask="url(#horizon-cut)">
+    <path
+      fill="#0E2A23"
+      fill-rule="evenodd"
+      d="M8 8h49c24 0 39 12 39 31 0 12-7 21-19 25 14 4 23 14 23 29 0 19-16 27-42 27H8V8Zm17 14v34h31c15 0 23-6 23-17 0-11-8-17-23-17H25Zm0 47v37h33c16 0 25-6 25-18 0-13-9-19-26-19H25Z"
+    />
+    <path
+      d="M41 106V43c0-14 8-22 19-22 12 0 20 9 20 23v62"
+      fill="none"
+      stroke="#C66A3D"
+      stroke-width="5"
+      stroke-linecap="square"
+    />
+  </g>
+</svg>

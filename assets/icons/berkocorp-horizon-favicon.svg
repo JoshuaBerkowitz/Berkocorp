@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Berkocorp">
+  <rect width="64" height="64" rx="12" fill="#0E2A23" />
+  <path fill="#F3EBDD" fill-rule="evenodd" d="M15 10h20c10 0 16 5 16 13 0 5-3 9-8 11 6 1 10 6 10 12 0 8-7 12-18 12H15V10Zm9 8v12h11c5 0 8-2 8-6s-3-6-8-6H24Zm0 22v10h11c6 0 9-2 9-5s-3-5-9-5H24Z" />
+  <path d="M8 33h48" stroke="#0E2A23" stroke-width="4" />
+  <path d="M30 50V25c0-5 3-8 7-8s7 3 7 8v25" fill="none" stroke="#C66A3D" stroke-width="2.5" />
+  <path d="M8 33h48" stroke="#0E2A23" stroke-width="4" />
+</svg>

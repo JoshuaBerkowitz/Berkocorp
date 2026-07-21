@@ -1,0 +1,15 @@
+<svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Ambition Capital</title>
+  <path d="M13.5585 9.72422L0.22153 19.2798C0.168271 19.3153 0.0306848 19.3685 0.0306848 19.3242V19.0667L0.0351231 10.1059C-0.0447655 9.88843 0.0129317 9.70203 0.1949 9.56L13.5452 0L27.0863 9.69759V19.4129L13.5629 9.72422H13.5585Z" fill="url(#ambition-top)"/>
+  <path d="M20.3274 24.2464L13.5413 29.1063L6.76855 24.242L13.568 19.3821L20.3274 24.2464Z" fill="url(#ambition-bottom)"/>
+  <defs>
+    <linearGradient id="ambition-top" x1="13.5431" y1="0" x2="13.5431" y2="19.4129" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DA6D3F"/>
+      <stop offset="1" stop-color="#C03900"/>
+    </linearGradient>
+    <linearGradient id="ambition-bottom" x1="13.548" y1="19.3821" x2="13.548" y2="29.1063" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DA6D3F"/>
+      <stop offset="1" stop-color="#C03900"/>
+    </linearGradient>
+  </defs>
+</svg>
