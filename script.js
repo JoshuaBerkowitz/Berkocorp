@@ -234,6 +234,12 @@ const investments = [
     label: "venture-capital",
   },
   {
+    name: "Keel",
+    url: "https://keel.club/",
+    kind: "fund",
+    label: "venture-capital",
+  },
+  {
     name: "Leo",
     url: "https://leo.capital/",
     kind: "fund",
@@ -278,6 +284,12 @@ const investments = [
   {
     name: "Road",
     url: "https://roadcapitalmgmt.com/",
+    kind: "fund",
+    label: "venture-capital",
+  },
+  {
+    name: "Selva Ventures",
+    url: "https://selvaventures.com/",
     kind: "fund",
     label: "venture-capital",
   },
@@ -345,6 +357,12 @@ const investments = [
   {
     name: "Brainbase",
     url: "https://brainbaselabs.com/",
+    kind: "direct",
+    label: "venture-capital",
+  },
+  {
+    name: "Canada Rocket Company",
+    url: "https://www.canadarocketcompany.com/",
     kind: "direct",
     label: "venture-capital",
   },
@@ -458,6 +476,7 @@ const localLogoMap = {
   Ballistic: "./assets/images/portfolio/ballistic-715347fd467e.webp",
   "Birch Hill": "./assets/images/portfolio/birch-hill-b8aa49eff371.png",
   Brainbase: "./assets/images/portfolio/brainbase.svg",
+  "Canada Rocket Company": "./assets/images/portfolio/canada-rocket-company-official.png",
   "Buckley Ventures": "./assets/images/portfolio/buckley-ventures-5cfbbfc9ce29.webp",
   CPS: "./assets/images/portfolio/cps-74fbdab86f18.png",
   Caffeinated: "./assets/images/portfolio/caffeinated-c4fdd3ad7c2d.png",
@@ -483,6 +502,7 @@ const localLogoMap = {
   Iterative: "./assets/images/portfolio/iterative-0d86ceee28ee.png",
   "Julian Capital": "./assets/images/portfolio/julian-capital-36f702ad0097.png",
   KdT: "./assets/images/portfolio/kdt-191766793f0d.webp",
+  Keel: "./assets/images/portfolio/keel-club-official.png",
   "Kii Health": "./assets/images/portfolio/kii-health-1807eead7afb.svg",
   "Kline Hill": "./assets/images/portfolio/kline-hill-985dabdc86df.webp",
   Legate: "./assets/images/portfolio/legate-a8e97782012d.webp",
@@ -498,7 +518,8 @@ const localLogoMap = {
   Renwave: "./assets/images/portfolio/renwave-f4908cdbfb02.webp",
   "Repeat VC": "./assets/images/portfolio/repeat-vc-68b4d1a4523f.svg",
   "Rivet Tax": "./assets/images/portfolio/rivet-tax-1847f9becc39.png",
-  Road: "./assets/images/portfolio/road-6d30160dfffd.png",
+  Road: "./assets/images/portfolio/road-capital-management-evergreen.png",
+  "Selva Ventures": "./assets/images/portfolio/selva-ventures-official.png",
   Shore: "./assets/images/portfolio/shore-c4cb90888828.png",
   Skyryse: "./assets/images/portfolio/skyryse-617057dcca25.png",
   "Ambition Capital": "./assets/images/portfolio/ambition-capital.svg",
@@ -514,7 +535,7 @@ const localLogoMap = {
   Victor: "./assets/images/portfolio/victor-54d607c98255.png",
   Wayfinder: "./assets/images/portfolio/wayfinder-b17eb6f80908.png",
   "We Grow Brands": "./assets/images/portfolio/we-grow-brands-3005a24372a8.webp",
-  Worldbuild: "./assets/images/portfolio/worldbuild-44bcf0f1d256.png",
+  Worldbuild: "./assets/images/portfolio/worldbuild-linkedin-logo.png",
   "Yuzu Health": "./assets/images/portfolio/yuzu-health-df863e0679b5.svg",
   Zuper: "./assets/images/portfolio/zuper.svg",
 };
