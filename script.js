@@ -525,6 +525,7 @@ const localLogoMap = {
   "Ambition Capital": "./assets/images/portfolio/ambition-capital.svg",
   "Sunshine Lake": "./assets/images/portfolio/sunshine-lake-966b382a3916.png",
   "Switch Growth": "./assets/images/portfolio/switch-growth-cbc1aa1f1da7.png",
+  "The Lumber Manufactory": "./assets/images/portfolio/the-lumber-manufactory-mark.svg",
   Titus: "./assets/images/portfolio/titus-73742769ac2d.ico",
   Topology: "./assets/images/portfolio/topology-d7c51b33cd0b.png",
   "Tree Care Partners": "./assets/images/portfolio/tree-care-partners-c80e236451e1.png",
